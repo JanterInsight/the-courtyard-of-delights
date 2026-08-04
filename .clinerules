@@ -1,0 +1,56 @@
+# Project Template - Clinerules
+# This file defines the assistant rules and behaviors for this project.
+
+## Project Identification
+- **Name**: the-courtyard-of-delights
+- **Version**: 1.0
+- **Preferred language**: English
+
+## Global Instructions
+1. Keep code clean and well-structured following best practices.
+2. Use relative paths from the project root directory.
+3. Document changes made.
+4. Do not delete existing files without permission.
+5. All changes made by the agent must be committed immediately.
+6. Always write commit messages in English.
+
+## Auto-commit Rule
+- **ALWAYS** after modifying project files, execute:
+  ```bash
+  python .agents\skills\auto-commit\scripts/commit_agent.py
+  ```
+- This automates git commits with descriptive messages.
+
+## Available Skills
+Skills are defined in `.agents/project.yaml` in the `skill_usage_guide` section.
+Consult that guide to determine which skill to apply in each situation.
+
+Main skills organized by category:
+- **Always to use**: auto-commit
+- **Web Dev**: browser-testing-with-devtools, frontend-design, frontend-ui-engineering
+- **Review/Performance**: review-team, performance-optimization, code-simplification, code-review-and-quality
+- **Testing**: debugging-and-error-recovery
+- **Others**: documentation-and-adrs, spec-driven-development, site-specification
+
+## Git Conventions
+- Commit messages always in English.
+- Commit after each significant change.
+- Do not commit sensitive files (.env, credentials, etc.).
+
+## Code Rules
+- Keep code clean and well-structured.
+- Use relative paths from the project root directory.
+- Document changes made.
+- Do not delete existing files without explicit permission.
+
+## Context Files
+- `README.md`: Main project documentation.
+
+## Project Structure
+- `.agents/`: Agent configuration (proyecto.yaml, skills, scripts)
+- `.gitignore`: Files ignored by git
+- `.clinerules`: This file - assistant rules
+
+## Notes
+- For more details on skills, consult `.agents/Skills.md` and `.agents/project.yaml`.
+- The `.agents/` directory contains the local agent configuration.

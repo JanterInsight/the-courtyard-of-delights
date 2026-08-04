@@ -1,0 +1,30 @@
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.footer {
+  background-color: var(--marron-chocolate);
+  color: var(--blanco);
+  text-align: center;
+  padding: var(--spacing-lg) 0;
+}
+
+.footer-text {
+  font-size: var(--font-size-sm);
+  margin: 0;
+}
+
+.footer-heart {
+  color: var(--dorado-miel);
+}
+
+.footer-link {
+  color: var(--amarillo-vainilla);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer-link:hover {
+  color: var(--blanco);
+  text-decoration: none;
+}

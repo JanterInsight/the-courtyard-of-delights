@@ -1,0 +1,90 @@
+# EditorConfig is awesome: https://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+
+# Unix-style newlines with a newline ending every file
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# Matches multiple files with brace expansion notation
+# Use 4 spaces for indentation in all files
+[*.{js,ts,jsx,tsx,json,css,scss,less,html,xml,yaml,yml,md,py,rb,go,rs,java,c,cpp,h,hpp,cs,php,swift,kt,scala,sh,bash}]
+indent_style = space
+indent_size = 4
+
+# Use 2 spaces for indentation in YAML files
+[*.{yml,yaml}]
+indent_size = 2
+
+# Use tabs for Makefiles
+[Makefile]
+indent_style = tab
+
+# Use tabs for Go files
+[*.go]
+indent_style = tab
+
+# Python-specific settings
+[*.py]
+indent_style = space
+indent_size = 4
+
+# JavaScript/TypeScript-specific settings
+[*.{js,jsx,ts,tsx}]
+indent_style = space
+indent_size = 2
+
+# HTML-specific settings
+[*.{html,htmx}]
+indent_style = space
+indent_size = 2
+
+# CSS/SCSS-specific settings
+[*.{css,scss,less}]
+indent_style = space
+indent_size = 2
+
+# JSON-specific settings
+[*.json]
+indent_style = space
+indent_size = 2
+
+# Markdown-specific settings
+[*.md]
+trim_trailing_whitespace = false
+# Don't wrap text in markdown files
+max_line_length = off
+
+# Shell scripts
+[*.{sh,bash}]
+indent_style = space
+indent_size = 2
+
+# Batch files (Windows)
+[*.{bat,cmd}]
+end_of_line = crlf
+indent_style = space
+indent_size = 2
+
+# SQL files
+[*.sql]
+indent_style = space
+indent_size = 2
+
+# Dockerfile
+[Dockerfile]
+indent_style = space
+indent_size = 2
+
+# .env files
+[.env*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 2

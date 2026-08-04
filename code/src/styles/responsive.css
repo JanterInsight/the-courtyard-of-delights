@@ -1,0 +1,320 @@
+/* ============================================
+   RESPONSIVE - El Patio de las Delicias
+   ============================================ */
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+  /* Adjusted typography variables */
+  :root {
+    --font-size-hero: 2.5rem;
+    --font-size-xxl: 2rem;
+    --font-size-xl: 1.5rem;
+    --font-size-lg: 1.25rem;
+    --font-size-md: 1rem;
+  }
+
+  /* Navigation */
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    max-width: 300px;
+    height: 100vh;
+    background-color: var(--blanco);
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 100px;
+    gap: var(--spacing-md);
+    box-shadow: -4px 0 20px var(--sombra-fuerte);
+    transition: right var(--transition-normal);
+  }
+
+  .nav-menu.active {
+    right: 0;
+  }
+
+  .nav-link {
+    font-size: var(--font-size-lg);
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Hero */
+  .hero {
+    min-height: 80vh;
+  }
+
+  .hero-title {
+    font-size: var(--font-size-hero);
+  }
+
+  .hero-subtitle {
+    font-size: var(--font-size-lg);
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  /* About Us */
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .about-text {
+    padding-right: 0;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-sm);
+  }
+
+  /* Products */
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Gallery */
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-sm);
+  }
+
+  .lightbox-prev {
+    left: 10px;
+  }
+
+  .lightbox-next {
+    right: 10px;
+  }
+
+  .lightbox-nav {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  /* Schedule */
+  .schedule-card {
+    padding: var(--spacing-lg);
+  }
+
+  .schedule-icon {
+    font-size: 3rem;
+  }
+
+  .schedule-time {
+    font-size: var(--font-size-xl);
+  }
+
+  /* Contact */
+  .contact-content {
+    grid-template-columns: 1fr;
+  }
+
+  /* Back to top button */
+  .back-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
+  }
+}
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+  :root {
+    --font-size-hero: 2rem;
+    --font-size-xxl: 1.75rem;
+    --font-size-xl: 1.25rem;
+    --font-size-lg: 1.1rem;
+    --font-size-md: 0.95rem;
+    --spacing-xxl: 3rem;
+    --spacing-xl: 2rem;
+  }
+
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
+
+  .nav {
+    padding: 0 var(--spacing-sm);
+  }
+
+  .logo {
+    font-size: var(--font-size-lg);
+  }
+
+  .hero {
+    min-height: 70vh;
+  }
+
+  .hero-content {
+    padding: var(--spacing-md);
+  }
+
+  .hero-title {
+    font-size: var(--font-size-hero);
+  }
+
+  .hero-subtitle {
+    font-size: var(--font-size-md);
+  }
+
+  .section {
+    padding: var(--spacing-xl) 0;
+  }
+
+  .section-title {
+    font-size: var(--font-size-xxl);
+  }
+
+  /* Gallery */
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-item {
+    aspect-ratio: 4/3;
+  }
+
+  /* Lightbox on mobile */
+  .lightbox-content {
+    max-width: 95%;
+  }
+
+  .lightbox-close {
+    top: -35px;
+    right: 0;
+    width: 35px;
+    height: 35px;
+    font-size: 1.2rem;
+  }
+
+  .lightbox-nav {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+
+  .lightbox-prev {
+    left: 5px;
+  }
+
+  .lightbox-next {
+    right: 5px;
+  }
+
+  .lightbox-counter {
+    bottom: -30px;
+    font-size: var(--font-size-xs);
+  }
+
+  /* Products */
+  .product-image {
+    height: 200px;
+  }
+
+  /* Stats */
+  .stat-card {
+    padding: var(--spacing-md);
+  }
+
+  .stat-number {
+    font-size: var(--font-size-xl);
+  }
+
+  /* Contact */
+  .contact-card {
+    padding: var(--spacing-md);
+  }
+
+  .contact-icon {
+    font-size: 2.5rem;
+  }
+
+  /* Footer */
+  .footer {
+    padding: var(--spacing-md) 0;
+  }
+
+  .footer-text {
+    font-size: var(--font-size-xs);
+    padding: 0 var(--spacing-sm);
+  }
+}
+
+/* Very small screens (less than 360px) */
+@media (max-width: 360px) {
+  :root {
+    --font-size-hero: 1.75rem;
+    --font-size-xxl: 1.5rem;
+    --font-size-xl: 1.1rem;
+  }
+
+  .nav-menu {
+    width: 85%;
+  }
+
+  .btn {
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: var(--font-size-sm);
+  }
+}
+
+/* Large screens (more than 1400px) */
+@media (min-width: 1400px) {
+  :root {
+    --font-size-hero: 4.5rem;
+    --font-size-xxl: 3.5rem;
+  }
+
+  .container {
+    max-width: 1400px;
+  }
+}
+
+/* Accessibility improvements: respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  :root {
+    --texto-oscuro: #000000;
+    --marron-chocolate: #000000;
+  }
+
+  .btn {
+    border: 2px solid currentColor;
+  }
+}
+
+/* Dark mode (if user prefers) */
+@media (prefers-color-scheme: dark) {
+  /* Optional: implement dark theme if desired */
+  /* For now we keep the light design for brand consistency */
+}

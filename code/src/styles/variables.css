@@ -1,0 +1,79 @@
+/* ============================================
+   CSS VARIABLES - El Patio de las Delicias
+   ============================================ */
+
+:root {
+  /* Color palette - Light mode */
+  --marron-chocolate: #8B4513;
+  --dorado-miel: #D4A017;
+  --blanco: #FFFDF8;
+  --crema-vainilla: #FFF4E8;
+  --texto-oscuro: #2D2D2D;
+  --gris-calido: #6B6B6B;
+  --gris-claro: #F5F5F5;
+  --gris-medio: #9E9E9E;
+  --sombra: rgba(0, 0, 0, 0.1);
+  --sombra-fuerte: rgba(0, 0, 0, 0.2);
+
+  /* Support colors */
+  --fresa: #E63946;
+  --mango: #F4A261;
+  --verde-menta: #6BCB77;
+  --menta: #6BCB77;
+  --arandano: #5E60CE;
+  --chocolate: #6F4E37;
+  --vainilla: #FFF1D6;
+
+  /* Typography */
+  --fuente-titulos: 'Fredoka', 'Baloo 2', cursive, sans-serif;
+  --fuente-texto: 'Poppins', sans-serif;
+
+  /* Font sizes */
+  --font-size-xs: 0.875rem;
+  --font-size-sm: 1rem;
+  --font-size-md: 1.125rem;
+  --font-size-lg: 1.5rem;
+  --font-size-xl: 2rem;
+  --font-size-xxl: 3rem;
+  --font-size-hero: 4rem;
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-xxl: 5rem;
+
+  /* Borders */
+  --border-radius-sm: 8px;
+  --border-radius-md: 12px;
+  --border-radius-lg: 20px;
+  --border-radius-full: 50%;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+
+  /* Layout */
+  --max-width: 1200px;
+  --header-height: 80px;
+}
+
+/* ============================================
+   DARK MODE
+   ============================================ */
+[data-theme="dark"] {
+  --marron-chocolate: #FFD166;
+  --dorado-miel: #F4A261;
+  --blanco: #121212;
+  --crema-vainilla: #1E1E1E;
+  --vainilla: #2A2A2A;
+  --texto-oscuro: #F8F8F8;
+  --gris-calido: #CFCFCF;
+  --gris-claro: #222222;
+  --gris-medio: #808080;
+  --sombra: rgba(0, 0, 0, 0.4);
+  --sombra-fuerte: rgba(0, 0, 0, 0.6);
+}

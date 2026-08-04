@@ -1,0 +1,45 @@
+/* ============================================
+   SCHEDULE
+   ============================================ */
+
+.schedule {
+  background: linear-gradient(135deg, var(--marron-chocolate) 0%, var(--texto-oscuro) 100%);
+  color: var(--blanco);
+  text-align: center;
+}
+
+.schedule .section-title {
+  color: var(--blanco);
+}
+
+.schedule .section-subtitle {
+  color: var(--crema);
+}
+
+.schedule-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius-lg);
+  max-width: 600px;
+  margin: 0 auto;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.schedule-icon {
+  font-size: 4rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.schedule-time {
+  font-family: var(--fuente-titulos);
+  font-size: var(--font-size-xxl);
+  font-weight: 700;
+  color: var(--amarillo-vainilla);
+  margin: var(--spacing-md) 0;
+}
+
+.schedule-days {
+  font-size: var(--font-size-lg);
+  color: var(--crema);
+}

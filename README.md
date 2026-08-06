@@ -56,7 +56,7 @@ Automatically deployed to GitHub Pages on push to `master`.
 - 💬 WhatsApp: +53 58993196
 - 🕒 3:00 PM - 11:00 PM (Every day)
 
-## � License
+## 📄 License
 
 Created for **El Patio de las Delicias**.
 

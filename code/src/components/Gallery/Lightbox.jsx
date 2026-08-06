@@ -64,7 +64,7 @@ export function Lightbox({ images, currentIndex, isOpen, onClose, onPrev, onNext
 
         <img
           className="lightbox-image"
-          src={currentImage.src}
+          src={encodeURI(currentImage.src)}
           alt={currentImage.alt}
         />
 

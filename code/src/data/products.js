@@ -4,7 +4,7 @@ export const products = [
     title: '🍦 Helados Artesanales',
     description:
       'Más de 10 sabores de helados artesanales elaborados con ingredientes naturales y frescos. Desde los clásicos hasta creaciones únicas.',
-    image: 'images/ice cream/only_ice_cream_01.jpg',
+    image: 'images/ice-cream/only_ice_cream_01.jpg',
     alt: 'Helados artesanales de El Patio de las Delicias - variedad de sabores',
   },
   {
@@ -28,7 +28,7 @@ export const products = [
     title: '🍨 Helados + Confituras',
     description:
       'La combinación perfecta: nuestros helados artesanales acompañados de deliciosas confituras caseras. Una experiencia única de sabor.',
-    image: 'images/ice cream & confiture/icecream_confiture_1.jpg',
+    image: 'images/ice-cream-confiture/icecream_confiture_1.jpg',
     alt: 'Combinación de helados y confituras de El Patio de las Delicias',
   },
 ];

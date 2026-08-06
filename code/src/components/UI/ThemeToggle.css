@@ -26,10 +26,12 @@
   width: 24px;
   height: 24px;
   color: var(--texto-oscuro);
-  transition: color var(--transition-fast);
+  filter: brightness(0);
+  transition: all var(--transition-fast);
 }
 
 /* Dark mode: make theme toggle icon white */
 [data-theme="dark"] .theme-icon {
   color: var(--blanco);
+  filter: brightness(0) invert(1);
 }

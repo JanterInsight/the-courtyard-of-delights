@@ -1,7 +1,7 @@
 export const galleryImages = [
   {
     id: 1,
-    src: 'images/ice cream/only_ice_cream_01.jpg',
+    src: 'images/ice-cream/only_ice_cream_01.jpg',
     alt: 'Helado de vainilla con sirope de chocolate',
   },
   {

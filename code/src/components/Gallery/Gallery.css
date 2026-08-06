@@ -155,3 +155,10 @@
   color: var(--blanco);
   font-size: var(--font-size-sm);
 }
+
+/* Show more button */
+.gallery-show-more {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--spacing-xl);
+}

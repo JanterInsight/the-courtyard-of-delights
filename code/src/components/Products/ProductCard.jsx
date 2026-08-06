@@ -23,7 +23,8 @@ export function ProductCard({ product }) {
         src={encodeURI(product.image)}
         alt={product.alt}
         className="product-image"
-        loading="lazy"
+        loading="eager"
+        fetchPriority="high"
         width="400"
         height="250"
         onLoad={() => setImageLoaded(true)}

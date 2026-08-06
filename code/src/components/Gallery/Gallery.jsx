@@ -7,6 +7,7 @@ import { Lightbox } from './Lightbox';
 export function Gallery() {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [visibleCount, setVisibleCount] = useState(8);
 
   const openLightbox = useCallback((index) => {
     setCurrentIndex(index);
@@ -25,6 +26,13 @@ export function Gallery() {
     setCurrentIndex((prev) => (prev + 1) % galleryImages.length);
   }, []);
 
+  const showMore = () => {
+    setVisibleCount(galleryImages.length);
+  };
+
+  const visibleImages = galleryImages.slice(0, visibleCount);
+  const hasMore = visibleCount < galleryImages.length;
+
   return (
     <section id="galeria" className="section gallery" aria-labelledby="gallery-title">
       <div className="container">
@@ -34,7 +42,7 @@ export function Gallery() {
         </div>
 
         <div className="gallery-grid">
-          {galleryImages.map((image, index) => (
+          {visibleImages.map((image, index) => (
             <GalleryItem
               key={image.id}
               image={image}
@@ -43,6 +51,14 @@ export function Gallery() {
             />
           ))}
         </div>
+
+        {hasMore && (
+          <div className="gallery-show-more">
+            <button className="btn btn-secondary" onClick={showMore}>
+              Ver más ({galleryImages.length - visibleCount} fotos restantes)
+            </button>
+          </div>
+        )}
       </div>
 
       <Lightbox

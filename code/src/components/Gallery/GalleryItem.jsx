@@ -35,6 +35,7 @@ export function GalleryItem({ image, index, onClick }) {
         src={encodeURI(image.src)}
         alt={image.alt}
         loading="lazy"
+        fetchPriority="low"
         width="400"
         height="400"
         onLoad={() => setImageLoaded(true)}

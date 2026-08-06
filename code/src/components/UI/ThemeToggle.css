@@ -25,11 +25,11 @@
 .theme-icon {
   width: 24px;
   height: 24px;
-  object-fit: contain;
-  filter: brightness(0);
+  color: var(--texto-oscuro);
+  transition: color var(--transition-fast);
 }
 
-/* Dark mode: make theme toggle icon visible */
+/* Dark mode: make theme toggle icon white */
 [data-theme="dark"] .theme-icon {
-  filter: brightness(0) invert(1);
+  color: var(--blanco);
 }

@@ -4,7 +4,7 @@ export function ContactCard({ icon, title, info, buttonText, href }) {
   return (
     <div className="contact-card">
       <div className="contact-icon">
-        <img src={icon} alt="" aria-hidden="true" />
+        <img src={icon} alt="" aria-hidden="true" fetchPriority="high" />
       </div>
       <h3 className="contact-title">{title}</h3>
       <p className="contact-info">{info}</p>

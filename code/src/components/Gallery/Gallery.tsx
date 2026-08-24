@@ -4,10 +4,12 @@ import { galleryImages } from '@data/gallery';
 import { GalleryItem } from './GalleryItem';
 import { Lightbox } from './Lightbox';
 
+const INITIAL_VISIBLE_COUNT = 8;
+
 export function Gallery() {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [visibleCount, setVisibleCount] = useState(8);
+  const [visibleCount, setVisibleCount] = useState(INITIAL_VISIBLE_COUNT);
 
   const openLightbox = useCallback((index: number) => {
     setCurrentIndex(index);
@@ -30,8 +32,13 @@ export function Gallery() {
     setVisibleCount(galleryImages.length);
   };
 
+  const showLess = () => {
+    setVisibleCount(INITIAL_VISIBLE_COUNT);
+  };
+
   const visibleImages = galleryImages.slice(0, visibleCount);
   const hasMore = visibleCount < galleryImages.length;
+  const isExpanded = visibleCount > INITIAL_VISIBLE_COUNT;
 
   return (
     <section id="galeria" className="section gallery" aria-labelledby="gallery-title">
@@ -56,6 +63,14 @@ export function Gallery() {
           <div className="gallery-show-more">
             <button className="btn btn-secondary" onClick={showMore}>
               Ver más ({galleryImages.length - visibleCount} fotos restantes)
+            </button>
+          </div>
+        )}
+
+        {isExpanded && (
+          <div className="gallery-show-more">
+            <button className="btn btn-secondary" onClick={showLess}>
+              Ver menos
             </button>
           </div>
         )}

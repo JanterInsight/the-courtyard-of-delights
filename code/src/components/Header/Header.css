@@ -39,7 +39,9 @@
 }
 
 .logo-icon {
-  font-size: var(--font-size-xxl);
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
 }
 
 .nav-menu {

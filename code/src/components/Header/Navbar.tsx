@@ -57,7 +57,15 @@ export function Navbar() {
   return (
     <nav className={`nav ${isScrolled ? 'scrolled' : ''}`} aria-label="Navegación principal">
       <a href="#inicio" className="logo" aria-label="El Patio de las Delicias - Inicio">
-        <span className="logo-icon" aria-hidden="true">🍦</span>
+        <img
+          className="logo-icon"
+          src="icon/Icon-Main-Full-64x64.png"
+          alt=""
+          aria-hidden="true"
+          width="32"
+          height="32"
+          fetchPriority="high"
+        />
         <span>El Patio de las Delicias</span>
       </a>
 

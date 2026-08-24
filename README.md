@@ -4,6 +4,7 @@ Modern landing page for an artisanal ice cream, confiture, and croquettes shop.
 
 ![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=black)
 ![Vite](https://img.shields.io/badge/Vite-5-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
@@ -20,10 +21,10 @@ Modern landing page for an artisanal ice cream, confiture, and croquettes shop.
 
 ## 🛠️ Technologies
 
-- **React 18** + **Vite 5**
-- **react-helmet-async** for SEO
+- **TypeScript** (strict mode) + **React 18** + **Vite 5**
 - CSS Variables for design system
 - IntersectionObserver API for scroll animations
+- ESLint (flat config) + react-hooks rules
 
 ## 🚀 Quick Start
 
@@ -34,6 +35,16 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## 📜 Scripts
+
+| Command | Description |
+|---|---|
+| `npm run dev` | Start dev server on port 3000 |
+| `npm run build` | Type-check (`tsc --noEmit`) + production build |
+| `npm run preview` | Preview the production build locally |
+| `npm run lint` | Run ESLint |
+| `npm run typecheck` | Run TypeScript compiler check |
 
 ## 📦 Build
 

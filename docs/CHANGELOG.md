@@ -8,7 +8,37 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
-- Initial project structure and configuration
+- "Ver menos" button in gallery to collapse back to the initial 8 images after expanding
+
+### Changed
+- WhatsApp contact link now includes a pre-filled message (`wa.me` with encoded text)
+
+### Fixed
+- `og:image` and `twitter:image` pointed to a non-existent `hero.jpg`; now reference `images/local/local1.jpg`
+
+## [1.2.0] - 2026-08-24
+
+### Changed
+- Full migration to TypeScript in strict mode (all components, hooks and data typed)
+- Path aliases (`@components`, `@hooks`, `@data`, `@styles`) with barrel files per component folder
+- Build now runs type-checking (`tsc --noEmit && vite build`)
+- Added ESLint flat config with TypeScript and react-hooks rules; scripts: `lint`, `typecheck`
+
+### Removed
+- Unused dependency `react-helmet-async`
+- Dead code: unused hook return values, unused CSS utility classes, unreferenced assets (icons and images)
+- Dead code removed from hooks API (`isIntersecting`, `isComplete`, `theme`)
+
+### Fixed
+- Broken `node_modules` (corrupted Vite install) — clean reinstall with committed lockfile
+- ARIA issues: invalid menubar/menuitem roles replaced by native semantics, lightbox `aria-modal`, gallery item labels
+- `tel:` link no longer opens a new tab via `target="_blank"`
+- Animated counter now cancels its animation frame on unmount
+
+## [1.1.0] - 2026-08-23
+
+### Added
+- Initial project structure and configuration (historical Unreleased content released here)
 - Spec-Driven Development documentation (spec/constitution/)
 - Feature specifications (spec/features/)
 - Agent configuration with skills management
@@ -16,18 +46,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Project documentation restructured following SDD pattern
 - Skills configuration optimized for landing page needs
-
-### Deprecated
-- 
-
-### Removed
-- Unnecessary agent skills (api-and-interface-design, context-engineering, incremental-implementation, planning-and-task-breakdown, skill-creator, using-agent-skills, playground)
-
-### Fixed
-- 
-
-### Security
-- 
+- Repository hygiene: fixed .gitignore (untracked `code/dist`), versioned specs/docs/.agents
 
 ## [1.0.0] - 2025-07-16
 
@@ -140,10 +159,11 @@ Follow [Semantic Versioning](https://semver.org/):
 6. Update the date for each release
 
 ### GitHub Links
-Replace `OWNER/REPO` with your actual GitHub username and repository name:
 
 ```markdown
-[unreleased]: https://github.com/OWNER/REPO/compare/v1.0.0...HEAD
-[1.0.0]: https://github.com/OWNER/REPO/releases/tag/v1.0.0
-[0.2.0]: https://github.com/OWNER/REPO/releases/tag/v0.2.0
-[0.1.0]: https://github.com/OWNER/REPO/releases/tag/v0.1.0
+[unreleased]: https://github.com/JanterInsight/the-courtyard-of-delights/compare/v1.2.0...HEAD
+[1.2.0]: https://github.com/JanterInsight/the-courtyard-of-delights/releases/tag/v1.2.0
+[1.1.0]: https://github.com/JanterInsight/the-courtyard-of-delights/releases/tag/v1.1.0
+[1.0.0]: https://github.com/JanterInsight/the-courtyard-of-delights/releases/tag/v1.0.0
+[0.2.0]: https://github.com/JanterInsight/the-courtyard-of-delights/releases/tag/v0.2.0
+[0.1.0]: https://github.com/JanterInsight/the-courtyard-of-delights/releases/tag/v0.1.0

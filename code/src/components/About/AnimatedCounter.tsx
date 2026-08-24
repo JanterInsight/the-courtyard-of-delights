@@ -22,7 +22,10 @@ export function AnimatedCounter({ target, prefix = '', duration = 2000 }: Animat
 
     // Respeta prefers-reduced-motion: muestra el valor final sin animar
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      setCount(target);
+      rafRef.current = requestAnimationFrame(() => {
+        setCount(target);
+        rafRef.current = null;
+      });
       return;
     }
 

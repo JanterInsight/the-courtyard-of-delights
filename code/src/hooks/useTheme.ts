@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-export type Theme = 'light' | 'dark';
+type Theme = 'light' | 'dark';
 
 const STORAGE_KEY = 'theme';
 
@@ -50,5 +50,5 @@ export function useTheme() {
 
   const isDark = theme === 'dark';
 
-  return { theme, isDark, toggleTheme };
+  return { isDark, toggleTheme };
 }

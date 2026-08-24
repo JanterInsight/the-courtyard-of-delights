@@ -8,7 +8,6 @@ import { useState, useEffect, useRef, useCallback } from 'react';
  */
 export function useTypewriter(text: string, speed = 80) {
   const [displayedText, setDisplayedText] = useState('');
-  const [isComplete, setIsComplete] = useState(false);
   const isTypingRef = useRef(false);
   const indexRef = useRef(0);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -19,7 +18,6 @@ export function useTypewriter(text: string, speed = 80) {
 
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       setDisplayedText(text);
-      setIsComplete(true);
       isTypingRef.current = false;
       return;
     }
@@ -33,7 +31,6 @@ export function useTypewriter(text: string, speed = 80) {
           clearInterval(timerRef.current);
           timerRef.current = null;
         }
-        setIsComplete(true);
         isTypingRef.current = false;
       }
     }, speed);
@@ -49,5 +46,5 @@ export function useTypewriter(text: string, speed = 80) {
     };
   }, []);
 
-  return { displayedText, isComplete, startTyping };
+  return { displayedText, startTyping };
 }

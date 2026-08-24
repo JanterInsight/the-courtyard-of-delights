@@ -216,3 +216,39 @@ img {
 .product-card {
   position: relative;
 }
+
+/* ============================================
+   SCROLL REVEAL
+   ============================================ */
+
+.reveal {
+  opacity: 0;
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.7s ease;
+  will-change: opacity, transform;
+}
+
+.reveal-up {
+  transform: translateY(36px);
+}
+
+.reveal-left {
+  transform: translateX(-48px);
+}
+
+.reveal-right {
+  transform: translateX(48px);
+}
+
+.reveal-zoom {
+  transform: scale(0.9);
+  filter: blur(8px);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+  filter: none;
+}

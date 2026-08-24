@@ -1,6 +1,7 @@
 import './Gallery.css';
 import { useState, useCallback } from 'react';
 import { galleryImages } from '@data/gallery';
+import { Reveal } from '@components/UI';
 import { GalleryItem } from './GalleryItem';
 import { Lightbox } from './Lightbox';
 
@@ -43,19 +44,22 @@ export function Gallery() {
   return (
     <section id="galeria" className="section gallery" aria-labelledby="gallery-title">
       <div className="container">
-        <div className="section-header">
-          <h2 id="gallery-title" className="section-title">Galería</h2>
-          <p className="section-subtitle">Momentos dulces en El Patio de las Delicias</p>
-        </div>
+        <Reveal direction="up">
+          <div className="section-header">
+            <h2 id="gallery-title" className="section-title">Galería</h2>
+            <p className="section-subtitle">Momentos dulces en El Patio de las Delicias</p>
+          </div>
+        </Reveal>
 
         <div className="gallery-grid">
           {visibleImages.map((image, index) => (
-            <GalleryItem
-              key={image.id}
-              image={image}
-              index={index}
-              onClick={openLightbox}
-            />
+            <Reveal key={image.id} direction="zoom" delay={(index % 4) * 90}>
+              <GalleryItem
+                image={image}
+                index={index}
+                onClick={openLightbox}
+              />
+            </Reveal>
           ))}
         </div>
 

@@ -1,5 +1,6 @@
 import './About.css';
 import { AnimatedCounter } from './AnimatedCounter';
+import { Reveal } from '@components/UI';
 
 interface Stat {
   target: number;
@@ -17,13 +18,16 @@ export function About() {
   return (
     <section id="nosotros" className="section about" aria-labelledby="about-title">
       <div className="container">
-        <div className="section-header">
-          <h2 id="about-title" className="section-title">Sobre Nosotros</h2>
-          <p className="section-subtitle">Tradición y sabor en cada bocado</p>
-        </div>
+        <Reveal direction="up">
+          <div className="section-header">
+            <h2 id="about-title" className="section-title">Sobre Nosotros</h2>
+            <p className="section-subtitle">Tradición y sabor en cada bocado</p>
+          </div>
+        </Reveal>
 
         <div className="about-content">
-          <div className="about-text">
+          <Reveal direction="left">
+            <div className="about-text">
             <p className="about-description">
               En <strong>El Patio de las Delicias</strong> elaboramos helados artesanales con una gran variedad de sabores.
               También ofrecemos dulces, confituras y otras opciones gastronómicas para compartir en familia.
@@ -36,27 +40,32 @@ export function About() {
               Ven a visitarnos y descubre por qué somos el lugar favorito de la comunidad para disfrutar
               de un delicioso helado en un ambiente cálido y acogedor.
             </p>
-          </div>
+            </div>
+          </Reveal>
 
-          <div className="about-image">
-            <img
-              src="images/local/local1.jpg"
-              alt="Interior del local El Patio de las Delicias - ambiente acogedor y familiar"
-              loading="lazy"
-              width="600"
-              height="400"
-            />
-          </div>
+          <Reveal direction="right">
+            <div className="about-image">
+              <img
+                src="images/local/local1.jpg"
+                alt="Interior del local El Patio de las Delicias - ambiente acogedor y familiar"
+                loading="lazy"
+                width="600"
+                height="400"
+              />
+            </div>
+          </Reveal>
         </div>
 
-        <div className="stats">
+        <Reveal direction="up">
+          <div className="stats">
           {stats.map((stat) => (
             <div key={stat.label} className="stat-card">
               <AnimatedCounter target={stat.target} prefix={stat.prefix} duration={2000} />
               <span className="stat-label">{stat.label}</span>
             </div>
           ))}
-        </div>
+          </div>
+        </Reveal>
       </div>
     </section>
   );

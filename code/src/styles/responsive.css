@@ -299,6 +299,13 @@
   html {
     scroll-behavior: auto;
   }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    transition: none;
+  }
 }
 
 /* High contrast mode */

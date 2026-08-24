@@ -19,6 +19,13 @@ export function AnimatedCounter({ target, prefix = '', duration = 2000 }: Animat
     if (!hasIntersected || hasAnimated.current) return;
 
     hasAnimated.current = true;
+
+    // Respeta prefers-reduced-motion: muestra el valor final sin animar
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      setCount(target);
+      return;
+    }
+
     const increment = target / (duration / 16);
     let current = 0;
 

@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - WhatsApp contact link now includes a pre-filled message (`wa.me` with encoded text)
+- Stat counter now respects `prefers-reduced-motion`: shows the final value instantly, consistent with all other animations
 
 ### Fixed
 - `og:image` and `twitter:image` pointed to a non-existent `hero.jpg`; now reference `images/local/local1.jpg`

@@ -312,9 +312,3 @@
     border: 2px solid currentColor;
   }
 }
-
-/* Dark mode (if user prefers) */
-@media (prefers-color-scheme: dark) {
-  /* Optional: implement dark theme if desired */
-  /* For now we keep the light design for brand consistency */
-}

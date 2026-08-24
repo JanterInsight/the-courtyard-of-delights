@@ -6,7 +6,7 @@ import { Gallery } from '@components/Gallery';
 import { Schedule } from '@components/Schedule';
 import { Contact } from '@components/Contact';
 import { Footer } from '@components/Footer';
-import { BackToTop } from '@components/UI';
+import { BackToTop, MotionNotice } from '@components/UI';
 
 export default function App() {
   return (
@@ -26,6 +26,7 @@ export default function App() {
       </main>
       <Footer />
       <BackToTop />
+      <MotionNotice />
     </>
   );
 }

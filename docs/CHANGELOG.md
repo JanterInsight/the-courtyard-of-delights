@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - "Ver menos" button in gallery to collapse back to the initial 8 images after expanding
+- Dismissible notice that informs users when animations are disabled by the system's reduced-motion preference
 
 ### Changed
 - WhatsApp contact link now includes a pre-filled message (`wa.me` with encoded text)

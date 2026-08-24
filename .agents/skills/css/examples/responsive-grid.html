@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de CSS Grid Responsive | AI Web Developer</title>
+  <style>
+    /* Design Tokens */
+    :root {
+      --color-primary: #3498db;
+      --color-primary-dark: #2980b9;
+      --color-secondary: #2ecc71;
+      --color-danger: #e74c3c;
+      --color-text-primary: #1a1a1a;
+      --color-text-secondary: #666666;
+      --color-bg-primary: #ffffff;
+      --color-bg-secondary: #f8f9fa;
+      --color-bg-tertiary: #e9ecef;
+      
+      --spacing-xs: 0.25rem;
+      --spacing-sm: 0.5rem;
+      --spacing-md: 1rem;
+      --spacing-lg: 2rem;
+      --spacing-xl: 3rem;
+      
+      --radius-sm: 0.25rem;
+      --radius-md: 0.5rem;
+      --radius-lg: 0.75rem;
+      
+      --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+      --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+      
+      --font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+    
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: var(--font-family-base);
+      line-height: 1.6;
+      color: var(--color-text-primary);
+      background-color: var(--color-bg-secondary);
+    }
+    
+    /* Layout Principal */
+    .page-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr auto;
+      grid-template-areas:
+        "header"
+        "main"
+        "footer";
+      min-height: 100vh;
+      gap: var(--spacing-md);
+    }
+    
+    /* Header */
+    .header {
+      grid-area: header;
+      background-color: var(--color-primary);
+      color: white;
+      padding: var(--spacing-md);
+      box-shadow: var(--shadow-md);
+    }
+    
+    .header-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+    }
+    
+    .nav ul {
+      list-style: none;
+      display: flex;
+      gap: var(--spacing-md);
+    }
+    
+    .nav a {
+      color: white;
+      text-decoration: none;
+      transition: opacity 0.3s;
+    }
+    
+    .nav a:hover {
+      opacity: 0.8;
+    }
+    
+    /* Main Content */
+    .main {
+      grid-area: main;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: var(--spacing-lg);
+      width: 100%;
+    }
+    
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+      color: white;
+      padding: var(--spacing-xl);
+      border-radius: var(--radius-lg);
+      margin-bottom: var(--spacing-xl);
+      text-align: center;
+    }
+    
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      margin-bottom: var(--spacing-md);
+    }
+    
+    .hero p {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      opacity: 0.95;
+    }
+    
+    /* Card Grid con CSS Grid */
+    .card-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--spacing-lg);
+      margin-bottom: var(--spacing-xl);
+    }
+    
+    /* Card Component */
+    .card {
+      background-color: var(--color-bg-primary);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+      transition: box-shadow 0.3s, transform 0.3s;
+    }
+    
+    .card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-4px);
+    }
+    
+    .card__image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+    
+    .card__content {
+      padding: var(--spacing-lg);
+    }
+    
+    .card__title {
+      font-size: var(--font-size-xl, 1.5rem);
+      font-weight: 600;
+      margin-bottom: var(--spacing-sm);
+      color: var(--color-text-primary);
+    }
+    
+    .card__text {
+      color: var(--color-text-secondary);
+      margin-bottom: var(--spacing-md);
+    }
+    
+    .card__footer {
+      padding: var(--spacing-md) var(--spacing-lg);
+      background-color: var(--color-bg-secondary);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    /* Button Component */
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: var(--spacing-sm) var(--spacing-md);
+      background-color: var(--color-primary);
+      color: white;
+      border: none;
+      border-radius: var(--radius-md);
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+    
+    .button:hover {
+      background-color: var(--color-primary-dark);
+      transform: translateY(-2px);
+    }
+    
+    .button:focus-visible {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
+    
+    .button--secondary {
+      background-color: var(--color-secondary);
+    }
+    
+    .button--secondary:hover {
+      background-color: #27ae60;
+    }
+    
+    /* Sidebar con Flexbox */
+    .content-layout {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-lg);
+    }
+    
+    .sidebar {
+      background-color: var(--color-bg-primary);
+      padding: var(--spacing-lg);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+    }
+    
+    .sidebar__title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: var(--spacing-md);
+    }
+    
+    .sidebar__list {
+      list-style: none;
+    }
+    
+    .sidebar__item {
+      padding: var(--spacing-sm) 0;
+      border-bottom: 1px solid var(--color-bg-tertiary);
+    }
+    
+    .sidebar__item:last-child {
+      border-bottom: none;
+    }
+    
+    .sidebar__link {
+      color: var(--color-text-primary);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    
+    .sidebar__link:hover {
+      color: var(--color-primary);
+    }
+    
+    /* Footer */
+    .footer {
+      grid-area: footer;
+      background-color: var(--color-text-primary);
+      color: white;
+      padding: var(--spacing-lg);
+      text-align: center;
+    }
+    
+    /* Tablet: 768px+ */
+    @media (min-width: 768px) {
+      .page-layout {
+        grid-template-columns: 250px 1fr;
+        grid-template-areas:
+          "header header"
+          "sidebar main"
+          "footer footer";
+      }
+      
+      .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .content-layout {
+        flex-direction: row;
+      }
+      
+      .sidebar {
+        flex: 0 0 250px;
+      }
+      
+      .main-content {
+        flex: 1;
+      }
+    }
+    
+    /* Desktop: 1024px+ */
+    @media (min-width: 1024px) {
+      .page-layout {
+        grid-template-columns: 300px 1fr 250px;
+        grid-template-areas:
+          "header header header"
+          "sidebar main aside"
+          "footer footer footer";
+      }
+      
+      .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    
+    /* Container Query Example */
+    .card-container {
+      container-type: inline-size;
+      container-name: card;
+    }
+    
+    .card--adaptive {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-md);
+    }
+    
+    .card--adaptive .card__image {
+      width: 100%;
+      height: 150px;
+    }
+    
+    .card--adaptive .card__content {
+      flex: 1;
+    }
+    
+    /* Container Query: cuando el contenedor tiene >= 400px */
+    @container card (min-width: 400px) {
+      .card--adaptive {
+        flex-direction: row;
+      }
+      
+      .card--adaptive .card__image {
+        width: 200px;
+        height: auto;
+      }
+    }
+    
+    /* Focus styles para accesibilidad */
+    a:focus-visible,
+    button:focus-visible {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
+    
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-layout">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-content">
+        <a href="/" class="logo">AI Web Developer</a>
+        <nav class="nav">
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2 class="sidebar__title">Navegación</h2>
+      <ul class="sidebar__list">
+        <li class="sidebar__item">
+          <a href="#inicio" class="sidebar__link">Inicio</a>
+        </li>
+        <li class="sidebar__item">
+          <a href="#servicios" class="sidebar__link">Servicios</a>
+        </li>
+        <li class="sidebar__item">
+          <a href="#portfolio" class="sidebar__link">Portfolio</a>
+        </li>
+        <li class="sidebar__item">
+          <a href="#blog" class="sidebar__link">Blog</a>
+        </li>
+        <li class="sidebar__item">
+          <a href="#contacto" class="sidebar__link">Contacto</a>
+        </li>
+      </ul>
+    </aside>
+    
+    <!-- Main Content -->
+    <main class="main">
+      <!-- Hero Section -->
+      <section class="hero">
+        <h1>CSS Grid y Flexbox</h1>
+        <p>Ejemplo de layout responsive con CSS moderno</p>
+      </section>
+      
+      <!-- Card Grid -->
+      <h2 style="margin-bottom: var(--spacing-lg);">Servicios</h2>
+      <div class="card-grid">
+        <article class="card">
+          <div class="card__image"></div>
+          <div class="card__content">
+            <h3 class="card__title">Diseño Web</h3>
+            <p class="card__text">
+              Creamos diseños web modernos y responsivos que se adaptan a todos los dispositivos.
+            </p>
+          </div>
+          <div class="card__footer">
+            <span>Desde $500</span>
+            <a href="#" class="button">Ver más</a>
+          </div>
+        </article>
+        
+        <article class="card">
+          <div class="card__image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+          <div class="card__content">
+            <h3 class="card__title">Desarrollo Frontend</h3>
+            <p class="card__text">
+              Aplicaciones web modernas con React, Vite y las mejores prácticas.
+            </p>
+          </div>
+          <div class="card__footer">
+            <span>Desde $800</span>
+            <a href="#" class="button">Ver más</a>
+          </div>
+        </article>
+        
+        <article class="card">
+          <div class="card__image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
+          <div class="card__content">
+            <h3 class="card__title">Backend & API</h3>
+            <p class="card__text">
+              APIs robustas y escalables con Node.js, PostgreSQL y Supabase.
+            </p>
+          </div>
+          <div class="card__footer">
+            <span>Desde $1000</span>
+            <a href="#" class="button">Ver más</a>
+          </div>
+        </article>
+      </div>
+      
+      <!-- Container Query Example -->
+      <h2 style="margin-bottom: var(--spacing-lg);">Container Queries</h2>
+      <div class="content-layout">
+        <div class="card-container">
+          <article class="card card--adaptive">
+            <div class="card__image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);"></div>
+            <div class="card__content">
+              <h3 class="card__title">Componente Adaptativo</h3>
+              <p class="card__text">
+                Este card usa Container Queries para cambiar su layout según el tamaño del contenedor, no del viewport. 
+                Redimensiona la ventana para ver el efecto.
+              </p>
+              <a href="#" class="button button--secondary">Leer más</a>
+            </div>
+          </article>
+        </div>
+        
+        <div class="card-container">
+          <article class="card card--adaptive">
+            <div class="card__image" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);"></div>
+            <div class="card__content">
+              <h3 class="card__title">Otro Ejemplo</h3>
+              <p class="card__text">
+                Container Queries permiten crear componentes verdaderamente reutilizables que se adaptan a su contexto.
+              </p>
+              <a href="#" class="button button--secondary">Leer más</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2024 AI Web Developer Skills. Todos los derechos reservados.</p>
+    </footer>
+  </div>
+</body>
+</html>

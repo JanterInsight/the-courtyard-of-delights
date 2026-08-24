@@ -98,7 +98,7 @@ dmypy.json
 # -------------------------------
 # Build & Compiled Files
 # -------------------------------
-/dist/
+**/dist/
 /build/
 /out/
 *.bin
@@ -146,19 +146,5 @@ dmypy.json
 /site/
 
 # -------------------------------
-# Agent Configuration
-# -------------------------------
-.agents/
-
-# -------------------------------
 # Project Configuration
 # -------------------------------
-.clinerules
-
-# -------------------------------
-# Misc
-# -------------------------------
-*.md
-!README.md
-!LICENSE.md
-!CONTRIBUTING.md

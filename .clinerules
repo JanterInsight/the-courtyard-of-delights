@@ -1,56 +1,655 @@
-# Project Template - Clinerules
-# This file defines the assistant rules and behaviors for this project.
+# ============================================================
+# REGLAS GENERALES UNIVERSALES PARA CLINE
+# ============================================================
+#
+# Estas reglas definen el comportamiento general del agente
+# independientemente del tipo de proyecto.
+#
+# Las reglas específicas del proyecto tienen prioridad cuando
+# estén definidas explícitamente.
+#
+# El conocimiento especializado debe proporcionarse mediante
+# Skills.
+# ============================================================
 
-## Project Identification
-- **Name**: the-courtyard-of-delights
-- **Version**: 1.0
-- **Preferred language**: English
 
-## Global Instructions
-1. Keep code clean and well-structured following best practices.
-2. Use relative paths from the project root directory.
-3. Document changes made.
-4. Do not delete existing files without permission.
-5. All changes made by the agent must be committed immediately.
-6. Always write commit messages in English.
+# ============================================================
+# 1. PRINCIPIOS FUNDAMENTALES
+# ============================================================
 
-## Auto-commit Rule
-- **ALWAYS** after modifying project files, execute:
+- Comprende la tarea antes de modificar cualquier cosa.
+- Inspecciona el proyecto existente antes de hacer suposiciones.
+- Prefiere soluciones simples, mantenibles y bien estructuradas.
+- Realiza el cambio más pequeño razonable que resuelva completamente la tarea.
+- Reutiliza el código y las convenciones existentes siempre que sea posible.
+- No introduzcas abstracciones, dependencias o cambios arquitectónicos innecesarios.
+- No modifiques partes del proyecto que no estén relacionadas con la tarea.
+- Nunca inventes archivos, APIs, funciones, dependencias, configuraciones o comportamientos del proyecto.
+- Si algo no puede verificarse, indica explícitamente la incertidumbre.
+
+
+# ============================================================
+# 2. DESCUBRIMIENTO DEL PROYECTO
+# ============================================================
+
+Antes de realizar una tarea que no sea trivial:
+
+1. Inspecciona la estructura del repositorio.
+2. Identifica los archivos relevantes.
+3. Identifica el lenguaje, framework, runtime y gestor de paquetes.
+4. Inspecciona los archivos de configuración relevantes.
+5. Inspecciona los tests existentes.
+6. Revisa la documentación existente cuando sea relevante.
+7. Busca instrucciones adicionales del proyecto.
+8. Comprueba si existen Skills relevantes.
+
+Busca archivos como:
+
+- README.md
+- AGENTS.md
+- CLAUDE.md
+- .clinerules
+- .github/
+- package.json
+- pyproject.toml
+- requirements.txt
+- pom.xml
+- build.gradle
+- Cargo.toml
+- go.mod
+- composer.json
+- Makefile
+- Dockerfile
+- docker-compose.yml
+- Configuración de CI/CD
+- Configuración de tests
+- Configuración de linting
+- Configuración de formatting
+
+No asumas que todos los proyectos utilizan estos archivos.
+
+
+# ============================================================
+# 3. ANÁLISIS DE LA TAREA
+# ============================================================
+
+Antes de realizar cambios importantes:
+
+1. Comprende el objetivo del usuario.
+2. Determina el comportamiento esperado.
+3. Identifica los archivos y componentes afectados.
+4. Identifica dependencias y posibles efectos secundarios.
+5. Comprueba si existe una implementación que pueda reutilizarse.
+6. Determina cómo debe probarse el cambio.
+7. Crea un plan breve de implementación.
+
+Para tareas simples, evita generar planes innecesariamente largos.
+
+Para tareas complejas, divide el trabajo en pasos lógicos.
+
+
+# ============================================================
+# 4. PRIORIZA EL CÓDIGO EXISTENTE
+# ============================================================
+
+Prefiere modificar y extender funcionalidades existentes antes que
+crear implementaciones paralelas.
+
+Antes de crear:
+
+- Una nueva utilidad, busca primero una equivalente.
+- Un nuevo servicio, inspecciona los servicios existentes.
+- Un nuevo componente, inspecciona los componentes existentes.
+- Un nuevo mecanismo de configuración, inspecciona la configuración existente.
+- Una nueva dependencia, comprueba si el proyecto ya dispone de una solución equivalente.
+
+No dupliques funcionalidad sin una razón clara.
+
+
+# ============================================================
+# 5. ARQUITECTURA
+# ============================================================
+
+Respeta la arquitectura existente del proyecto.
+
+No introduzcas:
+
+- Nuevos patrones arquitectónicos sin justificación.
+- Nuevos frameworks sin justificación.
+- Capas innecesarias.
+- Abstracciones innecesarias.
+- Infraestructura duplicada.
+- Dependencias innecesarias.
+
+Cuando sea realmente necesario realizar un cambio arquitectónico:
+
+1. Explica por qué.
+2. Identifica los componentes afectados.
+3. Prefiere cambios incrementales.
+4. Mantén la compatibilidad cuando sea razonablemente posible.
+
+
+# ============================================================
+# 6. CALIDAD DEL CÓDIGO
+# ============================================================
+
+El código debe ser:
+
+- Legible.
+- Mantenible.
+- Testeable.
+- Consistente con el proyecto existente.
+- Modular cuando sea apropiado.
+- Explícito cuando la claridad lo requiera.
+
+Prefiere:
+
+- Nombres descriptivos.
+- Funciones pequeñas y cohesivas.
+- Responsabilidades claras.
+- Tipado fuerte cuando el lenguaje lo permita.
+- Validación temprana de entradas inválidas.
+- Abstracciones reutilizables únicamente cuando estén justificadas.
+
+Evita:
+
+- Código excesivamente complejo.
+- Código "inteligente" que reduzca la legibilidad.
+- Anidamiento excesivo.
+- Funciones enormes con múltiples responsabilidades.
+- Código muerto.
+- Duplicación innecesaria.
+- Optimización prematura.
+- Valores mágicos cuando constantes o configuración sean más apropiados.
+
+
+# ============================================================
+# 7. CONVENCIONES DEL LENGUAJE Y FRAMEWORK
+# ============================================================
+
+Sigue las convenciones del lenguaje y framework utilizados por el proyecto.
+
+No impongas convenciones de otro ecosistema.
+
+Ejemplos:
+
+- Python → respeta las herramientas y convenciones Python del proyecto.
+- Java → respeta la versión de Java, sistema de build y convenciones existentes.
+- JavaScript/TypeScript → respeta el runtime, gestor de paquetes,
+  framework, linting y formatting configurados.
+- C/C++ → respeta el compilador, estándar, sistema de build y convenciones existentes.
+- Rust → respeta Cargo, la edición de Rust y las herramientas existentes.
+- Go → respeta Go modules y las convenciones del proyecto.
+
+Cuando exista un formatter, linter, compilador o language server configurado,
+utiliza la configuración del proyecto en lugar de imponer preferencias personales.
+
+
+# ============================================================
+# 8. DEPENDENCIAS
+# ============================================================
+
+No agregues dependencias salvo que aporten un valor significativo.
+
+Antes de agregar una dependencia:
+
+1. Comprueba si el proyecto ya proporciona una funcionalidad equivalente.
+2. Comprueba la compatibilidad con el runtime y las versiones utilizadas.
+3. Prefiere paquetes maduros y mantenidos activamente.
+4. Prefiere fuentes oficiales o ampliamente reconocidas.
+5. Considera seguridad y licencia.
+6. Explica la razón cuando la dependencia tenga un impacto importante.
+
+Nunca inventes nombres de paquetes ni versiones.
+
+
+# ============================================================
+# 9. INVESTIGACIÓN EXTERNA
+# ============================================================
+
+Cuando una tarea dependa de información externa o que pueda cambiar
+con el tiempo:
+
+- Prioriza documentación oficial.
+- Prioriza especificaciones oficiales.
+- Prioriza repositorios oficiales.
+- Prioriza referencias oficiales de APIs.
+- Verifica el comportamiento específico de cada versión.
+- No dependas de ejemplos antiguos cuando exista documentación actualizada.
+- No inventes comportamientos que no estén documentados.
+
+La investigación debe realizarse cuando sea necesaria, no simplemente
+por realizar investigación.
+
+Si la información no puede verificarse de forma fiable, indica claramente
+la limitación.
+
+
+# ============================================================
+# 10. SKILLS
+# ============================================================
+
+Utiliza una Skill existente cuando sea claramente relevante para la tarea.
+
+Antes de crear una nueva Skill:
+
+1. Comprueba si ya existe una Skill relacionada.
+2. Determina si puede reutilizarse.
+3. Evita crear Skills duplicadas.
+
+Las Skills deben contener:
+
+- Conocimiento especializado.
+- Workflows específicos.
+- Procedimientos.
+- Reglas específicas de una determinada capacidad.
+
+Las reglas generales del proyecto deben permanecer en los archivos
+de instrucciones del proyecto.
+
+No dupliques innecesariamente las instrucciones de una Skill dentro
+de estas reglas.
+
+Cuando exista una Skill especializada para crear Skills, utilízala
+cuando el usuario solicite crear o modificar una Agent Skill.
+
+
+# ============================================================
+# 11. MODIFICACIÓN DE ARCHIVOS
+# ============================================================
+
+Antes de modificar un archivo:
+
+- Lee el contenido relevante.
+- Comprende su función.
+- Comprueba cómo se utiliza en otras partes del proyecto cuando sea necesario.
+
+Al modificar archivos:
+
+- Conserva el código que no esté relacionado con la tarea.
+- Evita cambios de formato innecesarios.
+- Evita modificar saltos de línea o codificación sin necesidad.
+- No sobrescribas trabajo del usuario sin comprenderlo.
+- Mantén los cambios centrados en la tarea.
+
+Nunca elimines silenciosamente archivos o funcionalidades importantes.
+
+
+# ============================================================
+# 12. CONFIGURACIÓN
+# ============================================================
+
+Trata la configuración como parte de la arquitectura del proyecto.
+
+Antes de modificar una configuración:
+
+- Comprende la configuración actual.
+- Comprueba dónde se utiliza.
+- Conserva el comportamiento existente salvo que la tarea requiera cambiarlo.
+- Evita valores específicos del entorno escritos directamente en el código.
+
+Prefiere variables de entorno o el mecanismo de configuración existente
+para valores específicos de cada entorno.
+
+
+# ============================================================
+# 13. SECRETOS Y SEGURIDAD
+# ============================================================
+
+Nunca:
+
+- Escribas contraseñas directamente en el código.
+- Escribas API keys directamente en el código.
+- Escribas access tokens directamente en el código.
+- Incluyas claves privadas en el repositorio.
+- Expongas credenciales en logs.
+- Imprimas secretos durante debugging.
+- Desactives mecanismos de seguridad simplemente para solucionar un problema.
+- Evites autenticación o autorización sin un requisito legítimo y explícito.
+
+Utiliza el mecanismo de secretos y configuración existente en el proyecto.
+
+Si encuentras accidentalmente un secreto:
+
+- No lo reproduzcas innecesariamente.
+- No lo introduzcas en el código.
+- Advierte al usuario cuando sea apropiado.
+
+
+# ============================================================
+# 14. OPERACIONES DESTRUCTIVAS
+# ============================================================
+
+Ten especial cuidado con operaciones que puedan modificar o eliminar
+datos permanentemente.
+
+Ejemplos:
+
+- Comandos de eliminación.
+- DROP/TRUNCATE en bases de datos.
+- Migraciones destructivas.
+- Force push.
+- Modificación del historial de Git.
+- Sobrescritura de archivos.
+- Deployments a producción.
+- Modificaciones masivas de datos.
+
+Antes de realizar una operación potencialmente destructiva:
+
+1. Determina si realmente es necesaria.
+2. Prefiere una alternativa reversible o dry-run.
+3. Solicita confirmación cuando las consecuencias sean importantes.
+
+Nunca realices operaciones destructivas simplemente por comodidad.
+
+
+# ============================================================
+# 15. TESTING
+# ============================================================
+
+Considera los tests parte de la implementación.
+
+Después de realizar cambios:
+
+1. Identifica los tests relevantes.
+2. Ejecuta primero el conjunto mínimo de tests necesario.
+3. Amplía las pruebas cuando sea apropiado.
+4. Corrige los errores causados por la implementación.
+5. No elimines tests simplemente para conseguir que pasen.
+
+Cuando agregues una funcionalidad importante:
+
+- Agrega o actualiza tests cuando sea apropiado.
+- Prueba el comportamiento normal.
+- Prueba casos límite importantes.
+- Prueba condiciones de error relevantes.
+
+Utiliza el framework y los comandos de testing existentes en el proyecto.
+
+
+# ============================================================
+# 16. VALIDACIÓN
+# ============================================================
+
+La validación debe ser proporcional al cambio realizado.
+
+Dependiendo del proyecto, puede incluir:
+
+- Unit tests.
+- Integration tests.
+- End-to-end tests.
+- Type checking.
+- Static analysis.
+- Linting.
+- Formatting.
+- Compilación.
+- Build.
+- Ejecución de la aplicación.
+- Verificación manual.
+
+Nunca afirmes que una validación fue exitosa si realmente no fue ejecutada.
+
+Si una validación no puede ejecutarse, indícalo claramente.
+
+
+# ============================================================
+# 17. MANEJO DE ERRORES
+# ============================================================
+
+Maneja los errores de forma intencional.
+
+Evita:
+
+- Handlers de excepciones vacíos.
+- Errores silenciosos.
+- Ocultar errores sin justificación.
+- Mensajes de error que oculten información útil.
+
+Cuando ocurra un error:
+
+1. Identifica su origen.
+2. Determina si fue causado por el cambio actual.
+3. Corrige la causa raíz cuando sea posible.
+4. Evita ocultar el problema.
+
+
+# ============================================================
+# 18. RENDIMIENTO
+# ============================================================
+
+No optimices prematuramente.
+
+Prioriza:
+
+1. Corrección.
+2. Mantenibilidad.
+3. Arquitectura apropiada.
+4. Rendimiento.
+
+Optimiza cuando:
+
+- Exista evidencia de un problema de rendimiento.
+- El usuario solicite explícitamente optimización.
+- La arquitectura requiera claramente una solución consciente del rendimiento.
+
+Evita introducir complejidad para resolver problemas hipotéticos.
+
+
+# ============================================================
+# 19. COMPATIBILIDAD
+# ============================================================
+
+Conserva el comportamiento existente salvo que el usuario solicite
+explícitamente un cambio incompatible.
+
+Antes de introducir un breaking change:
+
+- Identifica los componentes afectados.
+- Determina si puede conservarse la compatibilidad.
+- Explica las consecuencias.
+
+Presta especial atención a:
+
+- APIs públicas.
+- Esquemas de bases de datos.
+- Formatos de archivos.
+- Configuración.
+- Interfaces CLI.
+- Firmas de funciones.
+- Integraciones externas.
+
+
+# ============================================================
+# 20. DOCUMENTACIÓN
+# ============================================================
+
+Actualiza la documentación cuando un cambio afecte:
+
+- APIs públicas.
+- Instalación.
+- Configuración.
+- Uso.
+- Arquitectura.
+- Workflows importantes.
+- Comportamiento visible para el usuario.
+
+No generes documentación que simplemente repita código evidente.
+
+Prefiere documentación concisa que contenga información realmente útil.
+
+
+# ============================================================
+# 21. GIT
+# ============================================================
+
+## Regla de Auto-commit
+- **SIEMPRE** después de modificar archivos del proyecto, ejecutar:
   ```bash
-  python .agents\skills\auto-commit\scripts/commit_agent.py
+  python .agents/skills/auto-commit/scripts/commit_agent.py
   ```
-- This automates git commits with descriptive messages.
+- Esto automatiza los commits git con mensajes descriptivos.
+- Siempre hacer commits y versionar, sino se pude versionar por alguna razón no hacer commit e informar al usuario
 
-## Available Skills
-Skills are defined in `.agents/project.yaml` in the `skill_usage_guide` section.
-Consult that guide to determine which skill to apply in each situation.
+## Versionado Semántico
+El proyecto usa [Semantic Versioning](https://semver.org/) (MAJOR.MINOR.PATCH):
 
-Main skills organized by category:
-- **Always to use**: auto-commit
-- **Web Dev**: browser-testing-with-devtools, frontend-design, frontend-ui-engineering
-- **Review/Performance**: review-team, performance-optimization, code-simplification, code-review-and-quality
-- **Testing**: debugging-and-error-recovery
-- **Others**: documentation-and-adrs, spec-driven-development, site-specification
+- **MAJOR** (X.0.0): Cambios incompatibles con versiones anteriores
+- **MINOR** (1.X.0): Nuevas funcionalidades compatibles
+- **PATCH** (1.0.X): Correcciones de bugs, typos, docs
 
-## Git Conventions
-- Commit messages always in English.
-- Commit after each significant change.
-- Do not commit sensitive files (.env, credentials, etc.).
+### Comandos de versionado
+```bash
+# Incrementar versión
+python .agents/commit_agent.py --bump patch  # 1.0.0 → 1.0.1
+python .agents/commit_agent.py --bump minor  # 1.0.0 → 1.1.0
+python .agents/commit_agent.py --bump major  # 1.0.0 → 2.0.0
 
-## Code Rules
-- Keep code clean and well-structured.
-- Use relative paths from the project root directory.
-- Document changes made.
-- Do not delete existing files without explicit permission.
+# Establecer versión específica
+python .agents/commit_agent.py --set 0.1.0
+```
 
-## Context Files
-- `README.md`: Main project documentation.
+### Flujo de versionado en plantillas
+1. **0.0.0** - Template sin adaptar (primer commit)
+2. **0.1.0** - Después de completar instrucción 2 de `read-this-first.md`
+3. **0.2.0** - Después de completar instrucción 3 de `read-this-first.md`
+4. **1.0.0** - Después de completar instrucción 4 de `read-this-first.md`
+5. **1.0.X** - A partir de 1.0.0, cambios pequeños
+6. **1.X.0** - A partir de 1.0.0, cambios medianos
+7. **X.0.0** - A partir de 1.0.0, cambios mayores
 
-## Project Structure
-- `.agents/`: Agent configuration (proyecto.yaml, skills, scripts)
-- `.gitignore`: Files ignored by git
-- `.clinerules`: This file - assistant rules
+### Cuándo usar cada tipo
+- **patch**: bug fixes, typos, actualizaciones de docs, cambios menores
+- **minor**: nuevas features, refactors, mejoras funcionales
+- **major**: breaking changes, rediseños de API, cambios incompatibles
 
-## Notes
-- For more details on skills, consult `.agents/Skills.md` and `.agents/project.yaml`.
-- The `.agents/` directory contains the local agent configuration.
+
+# ============================================================
+# 22. CAMBIOS DEL USUARIO
+# ============================================================
+
+Considera intencionales los cambios no confirmados del usuario salvo
+que exista evidencia de lo contrario.
+
+Nunca:
+
+- Descartes modificaciones del usuario.
+- Restaures el repositorio simplemente para obtener un estado limpio.
+- Sobrescribas archivos que contengan trabajo no relacionado.
+
+Si los cambios del usuario entran en conflicto con la tarea:
+
+1. Identifica el conflicto.
+2. Conserva el trabajo existente.
+3. Solicita aclaración si es necesario.
+
+
+# ============================================================
+# 23. CUÁNDO HACER PREGUNTAS
+# ============================================================
+
+Pregunta al usuario cuando:
+
+- Falte un requisito crítico.
+- Existan varias implementaciones significativamente diferentes.
+- Una decisión afecte la arquitectura.
+- Sea necesaria una operación destructiva.
+- Esté involucrada información sensible o seguridad.
+- El comportamiento esperado no pueda inferirse razonablemente.
+- Continuar implique realizar suposiciones importantes.
+
+NO preguntes cuando:
+
+- La respuesta pueda descubrirse inspeccionando el proyecto.
+- La respuesta se desprenda claramente de las convenciones existentes.
+- La decisión sea de bajo riesgo y reversible.
+- La tarea esté suficientemente especificada.
+
+
+# ============================================================
+# 24. AUTONOMÍA
+# ============================================================
+
+Sé autónomo dentro del alcance de la tarea.
+
+El agente debe:
+
+- Inspeccionar archivos relevantes.
+- Buscar dentro del repositorio.
+- Reutilizar implementaciones existentes.
+- Ejecutar las validaciones apropiadas.
+- Corregir errores sencillos derivados de sus propios cambios.
+- Verificar sus modificaciones.
+
+No solicites permiso repetidamente para operaciones rutinarias
+y reversibles.
+
+Solicita confirmación antes de acciones de alto impacto o destructivas.
+
+
+# ============================================================
+# 25. CONTROL DEL ALCANCE
+# ============================================================
+
+Mantente dentro del alcance de la solicitud del usuario.
+
+No:
+
+- Refactorices código no relacionado.
+- Renombres archivos no relacionados.
+- Actualices dependencias no relacionadas.
+- Cambies innecesariamente la arquitectura.
+- Reescribas código funcional simplemente porque prefieres otro estilo.
+
+Si encuentras un problema no relacionado:
+
+- Infórmaselo al usuario.
+- No lo corrijas automáticamente salvo que afecte directamente a la tarea.
+
+
+# ============================================================
+# 26. CRITERIOS DE FINALIZACIÓN
+# ============================================================
+
+Una tarea está terminada cuando:
+
+- El comportamiento solicitado está implementado.
+- El código respeta las convenciones del proyecto.
+- Se realizaron los tests o validaciones relevantes.
+- No quedan errores evidentes introducidos por el cambio.
+- Los cambios permanecen dentro del alcance solicitado.
+- Las limitaciones importantes fueron comunicadas.
+
+No consideres terminada una tarea simplemente porque se haya generado código.
+
+
+# ============================================================
+# 27. RESPUESTA FINAL
+# ============================================================
+
+Cuando finalices una tarea, proporciona un resumen conciso que incluya:
+
+1. Qué se modificó.
+2. Archivos importantes afectados.
+3. Validaciones realizadas.
+4. Problemas pendientes.
+5. Acciones manuales que el usuario deba realizar.
+
+No proporciones explicaciones innecesariamente largas salvo que el usuario las solicite.
+
+
+# ============================================================
+# 28. PRIORIDAD DE LAS INSTRUCCIONES
+# ============================================================
+
+Cuando existan instrucciones en conflicto, utiliza esta prioridad:
+
+1. Instrucciones del sistema y requisitos de seguridad.
+2. Solicitud explícita del usuario.
+3. Instrucciones específicas del proyecto.
+4. Skills relevantes.
+5. Convenciones existentes del proyecto.
+6. Estas reglas generales.
+7. Buenas prácticas generales.
+
+Estas reglas nunca deben utilizarse para ignorar instrucciones
+de mayor prioridad.

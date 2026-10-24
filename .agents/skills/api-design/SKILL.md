@@ -1,31 +1,31 @@
 ---
 name: api-design
-description: "Diseno de APIs RESTful y GraphQL. Use para disenar o estructurar endpoints de una API, implementar versionado, documentacion OpenAPI/Swagger, contratos de API, paginacion, filtering, sorting y rate limiting siguiendo estandares de la industria."
+description: "RESTful and GraphQL API design. Use to design or structure API endpoints, implement versioning, OpenAPI/Swagger documentation, API contracts, pagination, filtering, sorting, and rate limiting following industry standards."
 ---
 
 # API Design
 
-## Proposito
+## Purpose
 
-Disena APIs RESTful y GraphQL bien estructuradas, siguiendo estandares de la industria, con versionado y endpoints escalables y mantenibles.
+Designs well-structured RESTful and GraphQL APIs, following industry standards, with versioning and scalable, maintainable endpoints.
 
-## Cuando usar
+## When to Use
 
-- Disenar una API REST
-- Implementar GraphQL
-- Estructurar endpoints y contratos de API
-- Implementar versionado de API
-- Trabajar con documentacion de API (OpenAPI/Swagger)
-- Implementar paginacion, filtering o rate limiting
+- Design a REST API
+- Implement GraphQL
+- Structure API endpoints and contracts
+- Implement API versioning
+- Work with API documentation (OpenAPI/Swagger)
+- Implement pagination, filtering, or rate limiting
 
-## Flujo de trabajo
+## Workflow
 
-1. Leer `references/instructions.md` y aplicar sus reglas obligatorias.
-2. Consultar `references/best-practices.md` durante el diseno.
-3. Verificar que el diseno no incurre en los anti-patrones de `references/common-mistakes.md`.
-4. Consultar `references/references.md` para fuentes oficiales cuando haya dudas.
-5. Usar `examples/rest-api-design.js` como referencia practica.
+1. Read `references/instructions.md` and apply its mandatory rules.
+2. Consult `references/best-practices.md` during design.
+3. Verify that the design does not fall into the anti-patterns in `references/common-mistakes.md`.
+4. Consult `references/references.md` for official sources when in doubt.
+5. Use `examples/rest-api-design.js` as a practical reference.
 
-## Validacion
+## Validation
 
-La API disenada debe seguir principios REST, usar status codes correctos, estar versionada y documentada, ser consistente, segura y testeable.
+The designed API must follow REST principles, use correct status codes, be versioned and documented, be consistent, secure, and testable.

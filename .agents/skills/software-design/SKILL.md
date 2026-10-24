@@ -1,32 +1,32 @@
 ---
 name: software-design
-description: "Diseno de arquitecturas de software escalables y mantenibles. Use para disenar la arquitectura de nuevas aplicaciones, refactorizar codigo existente, implementar patrones de diseno, aplicar principios SOLID, inyeccion de dependencias y Clean Architecture."
+description: "Design of scalable and maintainable software architectures. Use to design architecture for new applications, refactor existing code, implement design patterns, apply SOLID principles, dependency injection and Clean Architecture."
 ---
 
 # Software Design
 
-## Proposito
+## Purpose
 
-Disena arquitecturas de software escalables y mantenibles aplicando principios SOLID, patrones de diseno y buenas practicas de ingenieria.
+Designs scalable and maintainable software architectures applying SOLID principles, design patterns and engineering best practices.
 
-## Cuando usar
+## When to Use
 
-- Disenar la arquitectura de nuevas aplicaciones
-- Refactorizar codigo existente
-- Implementar patrones de diseno
-- Separar responsabilidades
-- Mejorar mantenibilidad y extensibilidad
+- Design architecture for new applications
+- Refactor existing code
+- Implement design patterns
+- Separate responsibilities
+- Improve maintainability and extensibility
 
-## Flujo de trabajo
+## Workflow
 
-1. Identificar requisitos y entidades del sistema.
-2. Leer `references/instructions.md` y seguir su workflow de diseno (limites, capas, patrones, abstracciones).
-3. Aplicar las reglas de `references/best-practices.md` (Clean Architecture, Repository, Dependency Injection).
-4. Verificar que no se incurre en los anti-patrones de `references/common-mistakes.md` (god classes, acoplamiento excesivo).
-5. Consultar `references/references.md` para fuentes oficiales.
-6. Usar `examples/clean-architecture-example.js` como referencia practica.
-7. Verificar cumplimiento de SOLID en el diseno resultante.
+1. Identify system requirements and entities.
+2. Read `references/instructions.md` and follow its design workflow (boundaries, layers, patterns, abstractions).
+3. Apply the rules from `references/best-practices.md` (Clean Architecture, Repository, Dependency Injection).
+4. Verify that you do not fall into the anti-patterns from `references/common-mistakes.md` (god classes, excessive coupling).
+5. Consult `references/references.md` for official sources.
+6. Use `examples/clean-architecture-example.js` as a practical reference.
+7. Verify SOLID compliance in the resulting design.
 
-## Validacion
+## Validation
 
-El diseno debe mostrar bajo acoplamiento y alta cohesion, composicion sobre herencia, programacion contra interfaces y responsabilidad unica por modulo.
+The design must show low coupling and high cohesion, composition over inheritance, programming against interfaces and single responsibility per module.

@@ -1,8 +1,8 @@
-# Feature: About Us
+# Funcionalidad: Sobre Nosotros
 
 ## Descripción
 
-Implementar la sección "Sobre Nosotros" con texto descriptivo del negocio, imagen del local y contadores animados que se activan al hacer scroll.
+Implementar la sección "Sobre Nosotros" con texto descriptivo del negocio, imagen del local y contadores animados que se activan al hacer desplazamiento (scroll).
 
 ## Requisitos Funcionales
 
@@ -15,9 +15,9 @@ Implementar la sección "Sobre Nosotros" con texto descriptivo del negocio, imag
 
 ### RF-002: Imagen del Local
 - Imagen del interior del local (local1.jpg)
-- Efecto hover en la imagen
+- Efecto al pasar el cursor (hover) en la imagen
 - Atributo alt descriptivo
-- Lazy loading
+- Carga diferida (lazy loading)
 - Dimensiones: 600x400px
 
 ### RF-003: Contadores Animados
@@ -27,13 +27,13 @@ Implementar la sección "Sobre Nosotros" con texto descriptivo del negocio, imag
   - 1000+ clientes felices
 - Animación de incremento numérico
 - Duración de animación: 2000ms
-- Activación al entrar en viewport
-- Labels descriptivos debajo de cada contador
+- Activación al entrar en ventana visible (viewport)
+- Etiquetas (labels) descriptivas debajo de cada contador
 
-### RF-004: Layout
-- Diseño de dos columnas (texto + imagen) en desktop
-- Stack vertical en móvil
-- Contadores en grid de 3 columnas en desktop
+### RF-004: Disposición (Layout)
+- Diseño de dos columnas (texto + imagen) en escritorio (desktop)
+- Apilado vertical en móvil
+- Contadores en cuadrícula (grid) de 3 columnas en escritorio (desktop)
 - Contadores en columna en móvil
 
 ## Requisitos No Funcionales
@@ -45,23 +45,23 @@ Implementar la sección "Sobre Nosotros" con texto descriptivo del negocio, imag
 
 ### RNF-002: Rendimiento
 - IntersectionObserver para activar contadores solo cuando visibles
-- Lazy loading de imagen
+- Carga diferida (lazy loading) de imagen
 - requestAnimationFrame para animación suave
 
-### RNF-003: Responsive
-- Mobile-first design
-- Breakpoint: 768px para cambio a layout vertical
-- Grid adaptable para contadores
+### RNF-003: Adaptabilidad (Responsive)
+- Diseño primero para móviles (mobile-first)
+- Punto de interrupción (breakpoint): 768px para cambio a disposición (layout) vertical
+- Cuadrícula (grid) adaptable para contadores
 
 ## Criterios de Aceptación
 
 - [ ] 3 párrafos de texto visibles
-- [ ] Imagen del local cargada con lazy loading
-- [ ] Efecto hover en imagen
+- [ ] Imagen del local cargada con carga diferida (lazy loading)
+- [ ] Efecto al pasar el cursor (hover) en imagen
 - [ ] 3 contadores animados funcionales
-- [ ] Contadores se activan al hacer scroll
+- [ ] Contadores se activan al hacer desplazamiento (scroll)
 - [ ] Animación de incremento de 0 a valor final
-- [ ] Layout de dos columnas en desktop
-- [ ] Layout vertical en móvil
-- [ ] Grid de 3 columnas para contadores en desktop
+- [ ] Disposición (layout) de dos columnas en escritorio (desktop)
+- [ ] Disposición (layout) vertical en móvil
+- [ ] Cuadrícula (grid) de 3 columnas para contadores en escritorio (desktop)
 - [ ] Accesibilidad implementada

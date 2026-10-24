@@ -13,8 +13,8 @@ function getInitialTheme(): Theme {
 }
 
 /**
- * Gestiona el tema claro/oscuro con persistencia en localStorage y
- * detección automática de la preferencia del sistema.
+ * Manages light/dark theme with localStorage persistence and
+ * automatic system preference detection.
  */
 export function useTheme() {
   const [theme, setTheme] = useState<Theme>(getInitialTheme);

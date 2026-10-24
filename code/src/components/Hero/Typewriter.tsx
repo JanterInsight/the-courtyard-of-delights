@@ -8,7 +8,7 @@ interface TypewriterProps {
 }
 
 export function Typewriter({ text, speed = 80 }: TypewriterProps) {
-  // key={text}: al cambiar el texto se remonta y la animación se reinicia
+  // key={text}: when text changes, component remounts and animation restarts
   return <TypewriterText key={text} text={text} speed={speed} />;
 }
 

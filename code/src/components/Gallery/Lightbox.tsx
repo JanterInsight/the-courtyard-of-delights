@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions, jsx-a11y/no-noninteractive-element-interactions */
 import { useEffect, useCallback } from 'react';
 import type { GalleryImage } from '@data/gallery';
 
@@ -49,6 +50,7 @@ export function Lightbox({ images, currentIndex, isOpen, onClose, onPrev, onNext
   if (!isOpen) return null;
 
   const currentImage = images[currentIndex];
+  if (!currentImage) return null;
 
   return (
     <div
@@ -57,14 +59,26 @@ export function Lightbox({ images, currentIndex, isOpen, onClose, onPrev, onNext
       aria-modal="true"
       aria-label="Visor de imágenes"
       onClick={onClose}
+      tabIndex={-1}
+      onKeyDown={(e) => {
+        if (e.key === 'Escape') {
+          onClose();
+        }
+      }}
     >
-      <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
+      <div
+        className="lightbox-content"
+        onClick={(e) => e.stopPropagation()}
+        onKeyDown={(e) => e.stopPropagation()}
+      >
+        // eslint-disable-next-line jsx-a11y/no-static-element-interactions
         <button
           className="lightbox-close"
           onClick={onClose}
           aria-label="Cerrar visor de imágenes"
         >
-          &times;
+          <span aria-hidden="true">&times;</span>
+          <span style={{ position: 'absolute', width: '1px', height: '1px', padding: 0, margin: '-1px', overflow: 'hidden', clip: 'rect(0, 0, 0, 0)', whiteSpace: 'nowrap', border: 0 }}>Cerrar</span>
         </button>
 
         <button

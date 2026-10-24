@@ -1,31 +1,31 @@
 ---
 name: javascript
-description: "Desarrollo JavaScript moderno (ES2025+) para aplicaciones interactivas. Use para escribir lógica de cliente, manipular el DOM y manejar eventos, trabajar con APIs asíncronas (Fetch, async/await), módulos ES6+, procesamiento de datos, validaciones y manejo de errores."
+description: "Modern JavaScript development (ES2025+) for interactive applications. Use to write client-side logic, manipulate the DOM and handle events, work with asynchronous APIs (Fetch, async/await), ES6+ modules, data processing, validations, and error handling."
 ---
 
 # Modern JavaScript Development
 
-## Propósito
+## Purpose
 
-Proporciona conocimiento especializado para desarrollar JavaScript moderno, escribiendo código limpio, mantenible y eficiente: sintaxis ES2025+, módulos, asincronía, manipulación del DOM y patrones de diseño recomendados.
+Provides specialized knowledge for developing modern JavaScript, writing clean, maintainable, and efficient code: ES2025+ syntax, modules, asynchrony, DOM manipulation, and recommended design patterns.
 
-## Cuándo usar
+## When to Use
 
-- Escribir código JavaScript para una aplicación web
-- Implementar lógica del lado del cliente
-- Manipular el DOM o manejar eventos
-- Trabajar con APIs asíncronas (Fetch, Async/Await)
-- Procesar o transformar datos
-- Implementar validaciones o lógica de negocio
+- Write JavaScript code for a web application
+- Implement client-side logic
+- Manipulate the DOM or handle events
+- Work with asynchronous APIs (Fetch, Async/Await)
+- Process or transform data
+- Implement validations or business logic
 
-## Flujo de trabajo
+## Workflow
 
-1. Leer `references/instructions.md` y aplicar sus reglas obligatorias.
-2. Consultar `references/best-practices.md` durante la implementación.
-3. Verificar que el resultado no incurre en los anti-patrones de `references/common-mistakes.md`.
-4. Consultar `references/references.md` para fuentes oficiales cuando haya dudas.
-5. Usar `examples/modern-javascript.js` como referencia práctica.
+1. Read `references/instructions.md` and apply its mandatory rules.
+2. Consult `references/best-practices.md` during implementation.
+3. Verify that the result does not fall into the anti-patterns in `references/common-mistakes.md`.
+4. Consult `references/references.md` for official sources when in doubt.
+5. Use `examples/modern-javascript.js` as a practical reference.
 
-## Validación
+## Validation
 
-El JavaScript generado debe usar sintaxis moderna (const/let, nunca var), tener manejo de errores apropiado, ser modular y reutilizable, eficiente en rendimiento, testeable y documentado.
+The generated JavaScript must use modern syntax (const/let, never var), have proper error handling, be modular and reusable, performant, testable, and documented.

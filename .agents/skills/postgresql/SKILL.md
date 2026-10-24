@@ -1,33 +1,33 @@
 ---
 name: postgresql
-description: "Bases de datos PostgreSQL modernas. Use para disenar esquemas, escribir queries SQL avanzadas, optimizar consultas con EXPLAIN ANALYZE, implementar indices y constraints, usar JSONB, crear funciones y triggers y configurar seguridad de base de datos."
+description: "Modern PostgreSQL databases. Use to design schemas, write advanced SQL queries, optimize queries with EXPLAIN ANALYZE, implement indexes and constraints, use JSONB, create functions and triggers, and configure database security."
 ---
 
 # PostgreSQL
 
-## Proposito
+## Purpose
 
-Disena, implementa y optimiza bases de datos PostgreSQL modernas: SQL avanzado, indexing, performance y seguridad.
+Design, implement, and optimize modern PostgreSQL databases: advanced SQL, indexing, performance, and security.
 
-## Cuando usar
+## When to Use
 
-- Disenar esquemas de bases de datos PostgreSQL
-- Escribir queries SQL avanzadas
-- Optimizar rendimiento de consultas
-- Implementar indices y constraints
-- Usar JSONB para datos flexibles
-- Crear funciones y triggers
-- Configurar seguridad de base de datos (RLS, roles, permisos)
+- Design PostgreSQL database schemas
+- Write advanced SQL queries
+- Optimize query performance
+- Implement indexes and constraints
+- Use JSONB for flexible data
+- Create functions and triggers
+- Configure database security (RLS, roles, permissions)
 
-## Flujo de trabajo
+## Workflow
 
-1. Disenar el esquema (tablas, relaciones, constraints).
-2. Leer `references/instructions.md` y aplicar sus reglas obligatorias (UUID como primary keys, TIMESTAMPTZ, indices en columnas de WHERE/JOIN).
-3. Aplicar las tecnicas de `references/best-practices.md` (tipos apropiados, particionado, connection pooling).
-4. Verificar que el SQL no incurre en los anti-patrones de `references/common-mistakes.md` (SELECT *, N+1 queries).
-5. Optimizar queries con EXPLAIN ANALYZE.
-6. Consultar `references/references.md` para fuentes oficiales cuando haya dudas.
+1. Design the schema (tables, relationships, constraints).
+2. Read `references/instructions.md` and apply its mandatory rules (UUID as primary keys, TIMESTAMPTZ, indexes on WHERE/JOIN columns).
+3. Apply techniques from `references/best-practices.md` (appropriate types, partitioning, connection pooling).
+4. Verify that the SQL does not fall into the anti-patterns from `references/common-mistakes.md` (SELECT *, N+1 queries).
+5. Optimize queries with EXPLAIN ANALYZE.
+6. Consult `references/references.md` for official sources when in doubt.
 
-## Validacion
+## Validation
 
-El esquema debe usar UUID y TIMESTAMPTZ, tener indices para las queries principales, constraints de integridad, documentacion con COMMENT y queries verificadas con EXPLAIN ANALYZE.
+The schema must use UUID and TIMESTAMPTZ, have indexes for primary queries, integrity constraints, documentation with COMMENT, and queries verified with EXPLAIN ANALYZE.

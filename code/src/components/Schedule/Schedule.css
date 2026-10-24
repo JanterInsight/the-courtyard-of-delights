@@ -3,13 +3,13 @@
    ============================================ */
 
 .schedule {
-  background: linear-gradient(135deg, var(--marron-chocolate) 0%, var(--texto-oscuro) 100%);
-  color: var(--blanco);
+  background: linear-gradient(135deg, var(--chocolate-brown) 0%, var(--dark-text) 100%);
+  color: var(--cream-white);
   text-align: center;
 }
 
 .schedule .section-title {
-  color: var(--blanco);
+  color: var(--cream-white);
 }
 
 .schedule .section-subtitle {
@@ -32,7 +32,7 @@
 }
 
 .schedule-time {
-  font-family: var(--fuente-titulos);
+  font-family: var(--font-heading);
   font-size: var(--font-size-xxl);
   font-weight: 700;
   color: var(--amarillo-vainilla);

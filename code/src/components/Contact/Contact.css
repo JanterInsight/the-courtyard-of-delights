@@ -3,7 +3,7 @@
    ============================================ */
 
 .contact {
-  background-color: var(--blanco);
+  background-color: var(--cream-white);
 }
 
 .contact-content {
@@ -15,17 +15,17 @@
 }
 
 .contact-card {
-  background: linear-gradient(135deg, var(--crema-vainilla) 0%, var(--vainilla) 100%);
+  background: linear-gradient(135deg, var(--vanilla-cream) 0%, var(--vanilla) 100%);
   padding: var(--spacing-lg);
   border-radius: var(--border-radius-lg);
   text-align: center;
-  box-shadow: 0 4px 12px var(--sombra);
+  box-shadow: 0 4px 12px var(--shadow);
   transition: all var(--transition-normal);
 }
 
 .contact-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 24px var(--sombra-fuerte);
+  box-shadow: 0 8px 24px var(--shadow-strong);
 }
 
 .contact-icon {
@@ -45,13 +45,13 @@
 
 .contact-title {
   font-size: var(--font-size-lg);
-  color: var(--marron-chocolate);
+  color: var(--chocolate-brown);
   margin-bottom: var(--spacing-xs);
 }
 
 .contact-info {
   font-size: var(--font-size-md);
-  color: var(--texto-oscuro);
+  color: var(--dark-text);
   margin-bottom: var(--spacing-sm);
 }
 

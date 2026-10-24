@@ -1,30 +1,30 @@
 ---
 name: security
-description: "Seguridad web profesional contra OWASP Top 10. Use para proteger aplicaciones contra XSS, SQL injection y CSRF, configurar headers de seguridad, manejar secrets y variables de entorno de forma segura y auditar la seguridad de aplicaciones web."
+description: "Professional web security against OWASP Top 10. Use to protect applications against XSS, SQL injection and CSRF, configure security headers, handle secrets and environment variables securely, and audit web application security."
 ---
 
 # Security Web
 
-## Proposito
+## Purpose
 
-Implementa seguridad web profesional protegiendo aplicaciones contra vulnerabilidades OWASP Top 10 y asegurando datos sensibles.
+Implement professional web security by protecting applications against OWASP Top 10 vulnerabilities and securing sensitive data.
 
-## Cuando usar
+## When to Use
 
-- Proteger aplicaciones contra XSS, SQLi o CSRF
-- Configurar headers de seguridad
-- Manejar secrets y variables de entorno
-- Auditar la seguridad de una aplicacion
+- Protect applications against XSS, SQLi, or CSRF
+- Configure security headers
+- Handle secrets and environment variables
+- Audit the security of an application
 
-## Flujo de trabajo
+## Workflow
 
-1. Identificar los vectores de ataque aplicables.
-2. Leer `references/instructions.md` y aplicar sus reglas obligatorias (nunca confiar en input del usuario, prepared statements, escapar output).
-3. Configurar headers de seguridad y RLS/autorizacion siguiendo `references/best-practices.md`.
-4. Verificar que no se incurre en los anti-patrones de `references/common-mistakes.md` (innerHTML sin sanitizar, secrets en codigo).
-5. Consultar `references/references.md` para fuentes oficiales (OWASP).
-6. Auditar el resultado (por ejemplo con OWASP ZAP).
+1. Identify applicable attack vectors.
+2. Read `references/instructions.md` and apply its mandatory rules (never trust user input, prepared statements, escape output).
+3. Configure security headers and RLS/authorization following `references/best-practices.md`.
+4. Verify that it does not fall into the anti-patterns from `references/common-mistakes.md` (unsanitized innerHTML, secrets in code).
+5. Consult `references/references.md` for official sources (OWASP).
+6. Audit the result (e.g., with OWASP ZAP).
 
-## Validacion
+## Validation
 
-Toda entrada debe estar validada y sanitizada, SQL construido con prepared statements, output escapado contra XSS, CSRF protegido, HTTPS activo y sin secrets expuestos en codigo.
+All input must be validated and sanitized, SQL built with prepared statements, output escaped against XSS, CSRF protected, HTTPS enabled, and no secrets exposed in code.

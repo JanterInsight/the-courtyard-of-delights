@@ -8,10 +8,10 @@ function getPrefersReducedMotion(): boolean {
 }
 
 /**
- * Aviso discreto que informa al usuario de que las animaciones están
- * desactivadas por la preferencia "reducir movimiento" del sistema.
- * Solo aparece mientras esa preferencia esté activa y puede cerrarse
- * (no vuelve a mostrarse tras cerrarlo).
+ * Subtle notice informing the user that animations are
+ * disabled by the system's reduced-motion preference.
+ * Only shown while the preference is active and dismissible
+ * (won't reappear after closing).
  */
 export function MotionNotice() {
   const [reduced, setReduced] = useState(getPrefersReducedMotion);

@@ -1,4 +1,4 @@
-# Feature: Products
+# Funcionalidad: Productos
 
 ## Descripción
 
@@ -17,27 +17,27 @@ Implementar la sección de productos con 4 tarjetas que muestran los productos p
   - Título del producto
   - Descripción del producto
   - Imagen del producto
-- Hover effect con scale y shadow
+- Efecto al pasar el cursor (hover) con escala (scale) y sombra (shadow)
 
 ### RF-002: Imágenes de Productos
 - Imágenes de alta calidad para cada producto
-- Lazy loading
-- Skeleton loading placeholder mientras carga
+- Carga diferida (lazy loading)
+- Marcador de posición esqueleto (skeleton loading) mientras carga
 - Atributos alt descriptivos
 - Dimensiones consistentes
 
-### RF-003: Layout
-- Grid responsive de 4 columnas en desktop
-- Grid de 2 columnas en tablet
-- Grid de 1 columna en móvil
-- Gap entre tarjetas
-- Contenedor con max-width
+### RF-003: Disposición (Layout)
+- Cuadrícula (grid) adaptable (responsive) de 4 columnas en escritorio (desktop)
+- Cuadrícula (grid) de 2 columnas en tableta (tablet)
+- Cuadrícula (grid) de 1 columna en móvil
+- Espacio (gap) entre tarjetas
+- Contenedor con ancho máximo (max-width)
 
 ### RF-004: Interacciones
-- Hover effect: scale(1.05) y shadow aumentada
+- Efecto al pasar el cursor (hover): escala (scale)(1.05) y sombra (shadow) aumentada
 - Transición suave (0.3s ease)
-- Skeleton loading con animación shimmer
-- Fade-in al cargar imagen
+- Carga esqueleto (skeleton loading) con animación de brillo (shimmer)
+- Aparición gradual (fade-in) al cargar imagen
 
 ## Requisitos No Funcionales
 
@@ -47,25 +47,25 @@ Implementar la sección de productos con 4 tarjetas que muestran los productos p
 - aria-labelledby para título de sección
 
 ### RNF-002: Rendimiento
-- Lazy loading de imágenes
-- Skeleton placeholders para mejor UX
-- IntersectionObserver para lazy loading
-- CSS transitions para animaciones (GPU accelerated)
+- Carga diferida (lazy loading) de imágenes
+- Marcadores de posición esqueleto (skeleton placeholders) para mejor experiencia de usuario (UX)
+- IntersectionObserver para carga diferida (lazy loading)
+- Transiciones CSS para animaciones (aceleradas por GPU)
 
-### RNF-003: Responsive
-- Mobile-first design
-- Breakpoints: 768px (tablet), 1024px (desktop)
-- Grid adaptable
+### RNF-003: Adaptabilidad (Responsive)
+- Diseño primero para móviles (mobile-first)
+- Puntos de interrupción (breakpoints): 768px (tableta/tablet), 1024px (escritorio/desktop)
+- Cuadrícula (grid) adaptable
 
 ## Criterios de Aceptación
 
 - [ ] 4 tarjetas de productos visibles
 - [ ] Cada tarjeta tiene icono, título, descripción e imagen
-- [ ] Hover effect funcional (scale + shadow)
-- [ ] Skeleton loading visible durante carga
-- [ ] Lazy loading implementado
-- [ ] Grid de 4 columnas en desktop
-- [ ] Grid de 2 columnas en tablet
-- [ ] Grid de 1 columna en móvil
+- [ ] Efecto al pasar el cursor (hover) funcional (escala/scale + sombra/shadow)
+- [ ] Carga esqueleto (skeleton loading) visible durante carga
+- [ ] Carga diferida (lazy loading) implementada
+- [ ] Cuadrícula (grid) de 4 columnas en escritorio (desktop)
+- [ ] Cuadrícula (grid) de 2 columnas en tableta (tablet)
+- [ ] Cuadrícula (grid) de 1 columna en móvil
 - [ ] Transiciones suaves
 - [ ] Accesibilidad implementada

@@ -1,34 +1,34 @@
 ---
 name: supabase
-description: "Configuracion e implementacion de proyectos Supabase. Use para crear proyectos con Supabase, configurar base de datos PostgreSQL con RLS, implementar autenticacion, usar Storage para archivos, Realtime subscriptions y Edge Functions."
+description: "Configuration and implementation of Supabase projects. Use to create projects with Supabase, configure PostgreSQL database with RLS, implement authentication, use Storage for files, Realtime subscriptions, and Edge Functions."
 ---
 
 # Supabase
 
-## Proposito
+## Purpose
 
-Configura, implementa y optimiza proyectos con Supabase: base de datos, autenticacion, storage, realtime y edge functions.
+Configure, implement, and optimize projects with Supabase: database, authentication, storage, realtime, and edge functions.
 
-## Cuando usar
+## When to Use
 
-- Crear proyectos con Supabase
-- Configurar base de datos PostgreSQL con RLS
-- Implementar autenticacion con Supabase
-- Usar Storage para archivos
-- Implementar Realtime subscriptions
-- Crear Edge Functions
+- Create projects with Supabase
+- Configure PostgreSQL database with RLS
+- Implement authentication with Supabase
+- Use Storage for files
+- Implement Realtime subscriptions
+- Create Edge Functions
 
-## Flujo de trabajo
+## Workflow
 
-1. Crear el proyecto en Supabase.
-2. Leer `references/instructions.md` y aplicar sus reglas obligatorias (RLS en todas las tablas, service role key solo en servidor).
-3. Configurar base de datos, policies, storage buckets y autenticacion siguiendo `references/best-practices.md`.
-4. Implementar realtime y edge functions si es necesario.
-5. Conectar con el frontend.
-6. Verificar que no se incurre en los anti-patrones de `references/common-mistakes.md`.
-7. Consultar `references/references.md` para fuentes oficiales.
-8. Usar `examples/basic-setup.js` como referencia practica.
+1. Create the project in Supabase.
+2. Read `references/instructions.md` and apply its mandatory rules (RLS on all tables, service role key only on server).
+3. Configure database, policies, storage buckets, and authentication following `references/best-practices.md`.
+4. Implement realtime and edge functions if necessary.
+5. Connect with the frontend.
+6. Verify that it does not fall into the anti-patterns from `references/common-mistakes.md`.
+7. Consult `references/references.md` for official sources.
+8. Use `examples/basic-setup.js` as a practical reference.
 
-## Validacion
+## Validation
 
-RLS habilitado en todas las tablas con sus policies, storage buckets con politicas de acceso, service role key solo en backend y sesiones manejadas correctamente.
+RLS enabled on all tables with their policies, storage buckets with access policies, service role key only on the backend, and sessions handled correctly.

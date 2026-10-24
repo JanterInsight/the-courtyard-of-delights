@@ -1,31 +1,31 @@
 ---
 name: html
-description: "Estructura y marcado HTML5 semántico y accesible. Use para crear o modificar la estructura de páginas web, implementar HTML semántico para SEO y accesibilidad WCAG, crear formularios con validación nativa, optimizar markup para buscadores y usar Web APIs del navegador."
+description: "Semantic and accessible HTML5 structure and markup. Use to create or modify web page structures, implement semantic HTML for SEO and WCAG accessibility, create forms with native validation, optimize markup for search engines, and use browser Web APIs."
 ---
 
 # HTML Modern Development
 
-## Propósito
+## Purpose
 
-Proporciona conocimiento especializado para desarrollar HTML5 moderno, semántico y accesible: estructura correcta de páginas, etiquetas semánticas, accesibilidad WCAG 2.2, formularios accesibles y SEO básico.
+Provides specialized knowledge for developing modern, semantic, and accessible HTML5: correct page structure, semantic tags, WCAG 2.2 accessibility, accessible forms, and basic SEO.
 
-## Cuándo usar
+## When to Use
 
-- Crear la estructura HTML de una página o aplicación web
-- Implementar HTML semántico para mejorar SEO y accesibilidad
-- Crear formularios con validaciones nativas y accesibilidad
-- Optimizar el markup para motores de búsqueda
-- Trabajar en la estructura base de componentes React o cualquier framework
-- Implementar Web APIs modernas del navegador
+- Create the HTML structure of a page or web application
+- Implement semantic HTML to improve SEO and accessibility
+- Create forms with native validation and accessibility
+- Optimize markup for search engines
+- Work on the base structure of React components or any framework
+- Implement modern browser Web APIs
 
-## Flujo de trabajo
+## Workflow
 
-1. Leer `references/instructions.md` y aplicar sus reglas obligatorias (estructura semántica, jerarquía de encabezados, WCAG 2.2 AA).
-2. Consultar `references/best-practices.md` durante la implementación.
-3. Verificar que el resultado no incurre en los anti-patrones de `references/common-mistakes.md` (divitis, saltos de jerarquía, inputs sin label, imágenes sin alt).
-4. Consultar `references/references.md` para fuentes oficiales (MDN, W3C, WCAG).
-5. Usar los ejemplos de `examples/` como referencia de página semántica y formulario accesible.
+1. Read `references/instructions.md` and apply its mandatory rules (semantic structure, heading hierarchy, WCAG 2.2 AA).
+2. Consult `references/best-practices.md` during implementation.
+3. Verify that the result does not fall into the anti-patterns in `references/common-mistakes.md` (divitis, heading hierarchy skips, inputs without labels, images without alt).
+4. Consult `references/references.md` for official sources (MDN, W3C, WCAG).
+5. Use the examples in `examples/` as a reference for semantic pages and accessible forms.
 
-## Validación
+## Validation
 
-El HTML generado debe ser semántico y accesible (WCAG 2.2 nivel AA), pasar la validación W3C sin errores, ser responsive por defecto, incluir SEO básico y tener estructura clara y mantenible.
+The generated HTML must be semantic and accessible (WCAG 2.2 Level AA), pass W3C validation without errors, be responsive by default, include basic SEO, and have a clear and maintainable structure.

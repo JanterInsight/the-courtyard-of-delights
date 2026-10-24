@@ -2,7 +2,7 @@
 
 ## Propósito
 
-Crear una landing page moderna, responsive y accesible para **El Patio de las Delicias**, un local especializado en helados artesanales, confituras caseras y croquetas crujientes. El sitio web tiene como objetivo establecer una presencia digital profesional que refleje la calidad y tradición de los productos, facilitando el contacto con clientes actuales y potenciales.
+Crear una landing page moderna, adaptable (responsive) y accesible para **El Patio de las Delicias**, un local especializado en helados artesanales, confituras caseras y croquetas crujientes. El sitio web tiene como objetivo establecer una presencia digital profesional que refleje la calidad y tradición de los productos, facilitando el contacto con clientes actuales y potenciales.
 
 ## Objetivos del Sitio Web
 
@@ -24,55 +24,60 @@ Crear una landing page moderna, responsive y accesible para **El Patio de las De
 
 ### Diseño y Experiencia de Usuario
 - Diseño moderno con paleta de colores cálida y acogedora
-- Modo oscuro/claro con persistencia en localStorage
-- Animaciones suaves y efectos hover en tarjetas y botones
+- Modo oscuro/claro con persistencia en almacenamiento local (localStorage)
+- Animaciones suaves y efectos al pasar el cursor (hover) en tarjetas y botones
 - Tipografía atractiva con fuentes Fredoka y Poppins
-- Totalmente responsive (móvil, tablet, escritorio)
+- Totalmente adaptable (responsive) (móvil, tableta, escritorio)
 
 ### Secciones del Sitio
-- **Header**: Navegación fija con menú hamburguesa en móvil, logo y toggle de tema
-- **Hero**: Título animado con efecto typewriter, descripción y botones CTA
+- **Cabecera (Header)**: Navegación fija con menú hamburguesa en móvil, logo y alternador (toggle) de tema
+- **Sección Principal (Hero)**: Título animado con efecto de máquina de escribir (typewriter), descripción y botones de llamada a la acción (CTA, Call to Action)
 - **Sobre Nosotros**: Texto descriptivo, imagen del local y contadores animados
-- **Productos**: 4 tarjetas de productos con skeleton loading
-- **Galería**: Grid responsive con 12 imágenes, lightbox y navegación por teclado
-- **Horarios**: Diseño con glassmorphism mostrando horario de atención
+- **Productos**: 4 tarjetas de productos con marcador de posición esqueleto (skeleton loading)
+- **Galería**: Cuadrícula adaptable (grid responsive) con 12 imágenes, visor emergente (lightbox) y navegación por teclado
+- **Horarios**: Diseño con vidrio esmerilado (glassmorphism) mostrando horario de atención
 - **Contacto**: 3 tarjetas (teléfono, WhatsApp, mapa de Google)
-- **Footer**: Copyright y créditos
-- **Back to Top**: Botón animado que aparece al hacer scroll
+- **Pie de página (Footer)**: Copyright y créditos
+- **Volver Arriba (Back to Top)**: Botón animado que aparece al desplazarse (scroll)
 
 ### Funcionalidades Técnicas
-- Lazy loading de imágenes con placeholders skeleton
-- IntersectionObserver para animaciones al hacer scroll
-- SEO optimizado con meta tags, Open Graph y JSON-LD
-- Accesibilidad WCAG AA (navegación por teclado, ARIA attributes)
-- Custom hooks: useTheme, useIntersectionObserver, useScrollPosition, useTypewriter
+- Carga diferida (lazy loading) de imágenes con marcadores de posición esqueleto (skeleton placeholders)
+- IntersectionObserver para animaciones al desplazarse (scroll)
+- SEO optimizado con metaetiquetas (meta tags), Open Graph y JSON-LD
+- Accesibilidad WCAG AA (navegación por teclado, atributos ARIA (ARIA attributes))
+- Hooks personalizados (custom hooks): useTheme, useIntersectionObserver, useScrollPosition, useTypewriter
 
 ## Principios Rectores
 
 1. **Accesibilidad**: El sitio debe ser navegable y comprensible para todos los usuarios, incluyendo aquellos con discapacidades
-2. **Rendimiento**: Carga rápida y optimizada, con lazy loading y animaciones eficientes
+2. **Rendimiento**: Carga rápida y optimizada, con carga diferida (lazy loading) y animaciones eficientes
 3. **Diseño centrado en el usuario**: Interfaz intuitiva y agradable que refleje la identidad del local
 4. **Código limpio**: Estructura modular, componentes reutilizables y buenas prácticas de desarrollo
 5. **Mantenibilidad**: Documentación clara y arquitectura que facilite futuras modificaciones
-6. **Responsive-first**: Diseño que funciona perfectamente en todos los tamaños de pantalla
-7. **Especificaciones primero**: Desarrollo guiado por specs (SDD) con documentación previa a la implementación
+6. **Enfoque adaptable primero (Responsive-first)**: Diseño que funciona perfectamente en todos los tamaños de pantalla
+7. **Especificaciones primero**: Desarrollo guiado por especificaciones (Spec-Driven Development, SDD) con documentación previa a la implementación
 
 ## Stack Tecnológico
 
 ### Frontend
 - **React 18+**: Biblioteca para interfaces de usuario
-- **Vite**: Bundler y herramienta de desarrollo
-- **React Router**: Enrutamiento para SPA
-- **CSS Variables**: Sistema de diseño con variables CSS
-- **JavaScript (ES6+)**: Lenguaje de programación
+- **Vite**: Empaquetador (bundler) y herramienta de desarrollo
+- **React Router**: Enrutamiento para aplicación de página única (SPA, Single Page Application)
+- **Variables CSS (CSS Variables)**: Sistema de diseño con variables CSS
+- **TypeScript 5 (modo estricto, strict mode)**: Lenguaje de programación
+
+### Backend
+- **Supabase**: Autenticación (Authentication), base de datos PostgreSQL y almacenamiento (storage)
+- **Supabase Auth**: Gestión de usuarios (email/contraseña, Google OAuth)
+- **Supabase Database**: PostgreSQL
 
 ### Herramientas
 - **Git**: Control de versiones
 - **npm**: Gestión de dependencias
-- **Desarrollo dirigido por especificaciones (spec/)**: SDD para documentación y planificación
+- **Desarrollo guiado por especificaciones (spec/)**: SDD para documentación y planificación
 
 ## Notas
 
-- El proyecto sigue el patrón de Spec-Driven Development (SDD)
-- Las features se documentan en `spec/features/NNN-nombre/` con `spec.md`, `plan.md` y `tasks.md`
-- El deployment se realiza en GitHub Pages
+- El proyecto sigue el patrón de Desarrollo Guiado por Especificaciones (Spec-Driven Development, SDD)
+- Las funcionalidades (features) se documentan en `spec/features/NNN-nombre/` con `spec.md`, `plan.md` y `tasks.md`
+- El despliegue (deployment) se realiza en GitHub Pages

@@ -1,8 +1,8 @@
-# Feature: Schedule
+# Funcionalidad: Horario (Schedule)
 
 ## Descripción
 
-Implementar la sección de horarios de atención con diseño de glassmorphism, mostrando el horario de funcionamiento del local.
+Implementar la sección de horarios de atención con diseño de vidrio esmerilado (glassmorphism), mostrando el horario de funcionamiento del local.
 
 ## Requisitos Funcionales
 
@@ -10,11 +10,11 @@ Implementar la sección de horarios de atención con diseño de glassmorphism, m
 - Horario de atención: 3:00 PM - 11:00 PM
 - Todos los días de la semana
 - Icono de reloj
-- Diseño con gradiente oscuro
+- Diseño con degradado (gradient) oscuro
 
 ### RF-002: Diseño Visual
-- Efecto glassmorphism (fondo semitransparente con blur)
-- Gradiente oscuro de fondo
+- Efecto vidrio esmerilado (glassmorphism) (fondo semitransparente con desenfoque / blur)
+- Degradado (gradient) oscuro de fondo
 - Icono de reloj prominente
 - Horario destacado en tipografía grande
 - Diseño centrado
@@ -38,10 +38,10 @@ Implementar la sección de horarios de atención con diseño de glassmorphism, m
 - CSS puro para efectos visuales
 - Animaciones optimizadas
 
-### RNF-003: Responsive
-- Mobile-first design
-- Padding adaptativo
-- Tipografía responsive
+### RNF-003: Adaptable (Responsive)
+- Diseño móvil primero (mobile-first design)
+- Relleno (padding) adaptativo
+- Tipografía adaptable (responsive)
 
 ## Criterios de Aceptación
 
@@ -49,8 +49,8 @@ Implementar la sección de horarios de atención con diseño de glassmorphism, m
 - [ ] Horario "3:00 PM - 11:00 PM" mostrado
 - [ ] Texto "Todos los días" visible
 - [ ] Icono de reloj presente
-- [ ] Efecto glassmorphism aplicado
-- [ ] Gradiente oscuro de fondo
+- [ ] Efecto vidrio esmerilado (glassmorphism) aplicado
+- [ ] Degradado (gradient) oscuro de fondo
 - [ ] Diseño centrado
-- [ ] Responsive en móvil y desktop
+- [ ] Adaptable (responsive) en móvil y escritorio (desktop)
 - [ ] Accesibilidad implementada

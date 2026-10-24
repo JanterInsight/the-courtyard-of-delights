@@ -1,31 +1,31 @@
 ---
 name: react
-description: "Desarrollo de interfaces con React 19+. Use para crear componentes funcionales reutilizables, gestionar estado y efectos con hooks, usar Context API y state management, optimizar rendimiento, implementar formularios, testing y Server Components."
+description: "Interface development with React 19+. Use to create reusable functional components, manage state and effects with hooks, use Context API and state management, optimize performance, implement forms, testing, and Server Components."
 ---
 
 # React Development
 
-## Propósito
+## Purpose
 
-Proporciona conocimiento especializado para desarrollar aplicaciones con React moderno (React 19+): componentes reutilizables, manejo de estado, hooks, optimización de rendimiento y mejores prácticas de arquitectura React.
+Provides specialized knowledge for developing applications with modern React (React 19+): reusable components, state management, hooks, performance optimization, and React architecture best practices.
 
-## Cuándo usar
+## When to Use
 
-- Crear componentes de interfaz de usuario con React
-- Implementar estado y efectos con hooks modernos
-- Trabajar con React 19+ y sus nuevas características
-- Optimizar rendimiento en React (memoización, code splitting)
-- Implementar formularios en React
-- Trabajar con Context API o state management
-- Implementar Server Components
+- Create user interface components with React
+- Implement state and effects with modern hooks
+- Work with React 19+ and its new features
+- Optimize performance in React (memoization, code splitting)
+- Implement forms in React
+- Work with Context API or state management
+- Implement Server Components
 
-## Flujo de trabajo
+## Workflow
 
-1. Leer `references/instructions.md` y aplicar sus reglas obligatorias.
-2. Consultar `references/best-practices.md` durante la implementación.
-3. Verificar que el resultado no incurre en los anti-patrones de `references/common-mistakes.md`.
-4. Consultar `references/references.md` para fuentes oficiales cuando haya dudas.
+1. Read `references/instructions.md` and apply its mandatory rules.
+2. Consult `references/best-practices.md` during implementation.
+3. Verify that the result does not fall into the anti-patterns in `references/common-mistakes.md`.
+4. Consult `references/references.md` for official sources when in doubt.
 
-## Validación
+## Validation
 
-El código React generado debe usar functional components y hooks, ser reutilizable y composable, tener manejo de estado apropiado, estar optimizado para rendimiento, ser testeable, accesible y seguir las convenciones de React.
+The generated React code must use functional components and hooks, be reusable and composable, have proper state management, be optimized for performance, be testable, accessible, and follow React conventions.

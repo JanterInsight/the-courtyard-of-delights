@@ -1,32 +1,32 @@
 ---
 name: performance
-description: "Optimizacion de rendimiento de aplicaciones web. Use para mejorar tiempo de carga y Core Web Vitals, reducir tamano de bundles, optimizar renders de React y queries de base de datos, implementar caching, lazy loading y code splitting midiendo antes de optimizar."
+description: "Web application performance optimization. Use to improve load time and Core Web Vitals, reduce bundle size, optimize React renders and database queries, implement caching, lazy loading and code splitting by measuring before optimizing."
 ---
 
 # Performance Optimization
 
-## Proposito
+## Purpose
 
-Optimiza el rendimiento de aplicaciones web: carga, renderizado, queries de base de datos y experiencia de usuario, siempre midiendo antes de optimizar.
+Optimizes web application performance: loading, rendering, database queries and user experience, always measuring before optimizing.
 
-## Cuando usar
+## When to Use
 
-- Optimizar tiempo de carga de paginas o Core Web Vitals
-- Mejorar rendimiento de queries
-- Reducir tamano de bundles
-- Optimizar renders de React
-- Implementar caching o lazy loading
+- Optimize page load time or Core Web Vitals
+- Improve query performance
+- Reduce bundle size
+- Optimize React renders
+- Implement caching or lazy loading
 
-## Flujo de trabajo
+## Workflow
 
-1. Medir el rendimiento actual (Lighthouse, Web Vitals) antes de cambiar nada.
-2. Leer `references/instructions.md` e identificar cuellos de botella siguiendo su workflow.
-3. Aplicar las tecnicas de `references/best-practices.md` (code splitting, memoizacion, paginacion, CDN).
-4. Verificar que no se incurre en los anti-patrones de `references/common-mistakes.md` (optimizar sin medir, ignorar N+1).
-5. Consultar `references/references.md` para herramientas y fuentes oficiales.
-6. Usar `examples/performance-optimizations.js` como referencia practica.
-7. Volver a medir y verificar la mejora obtenida.
+1. Measure current performance (Lighthouse, Web Vitals) before changing anything.
+2. Read `references/instructions.md` and identify bottlenecks following its workflow.
+3. Apply the techniques from `references/best-practices.md` (code splitting, memoization, pagination, CDN).
+4. Verify that you do not fall into the anti-patterns from `references/common-mistakes.md` (optimizing without measuring, ignoring N+1).
+5. Consult `references/references.md` for tools and official sources.
+6. Use `examples/performance-optimizations.js` as a practical reference.
+7. Re-measure and verify the improvement obtained.
 
-## Validacion
+## Validation
 
-Toda optimizacion debe estar justificada por una medicion previa y verificada con una medicion posterior; los Core Web Vitals deben mantenerse o mejorar.
+All optimization must be justified by a prior measurement and verified with a subsequent measurement; Core Web Vitals must be maintained or improved.

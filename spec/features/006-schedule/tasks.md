@@ -1,15 +1,15 @@
-# Tasks: Schedule
+# Tareas: Horario (Schedule)
 
-## Task 1: Crear componente base
+## Tarea 1: Crear componente base
 - [ ] Crear `Schedule.jsx` con diseño centrado
 - [ ] Incluir icono de reloj, horario y días
 
-## Task 2: Implementar estilos CSS
-- [ ] Gradiente oscuro de fondo
-- [ ] Efecto glassmorphism (backdrop-filter: blur)
+## Tarea 2: Implementar estilos CSS
+- [ ] Degradado (gradient) oscuro de fondo
+- [ ] Efecto vidrio esmerilado (glassmorphism) (backdrop-filter: blur)
 - [ ] Tipografía grande para horario
-- [ ] Diseño responsive
+- [ ] Diseño adaptable (responsive design)
 
-## Task 3: Accesibilidad
+## Tarea 3: Accesibilidad
 - [ ] aria-labelledby en sección
 - [ ] Contraste adecuado

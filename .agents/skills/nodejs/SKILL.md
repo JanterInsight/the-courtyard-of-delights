@@ -1,31 +1,31 @@
 ---
 name: nodejs
-description: "Desarrollo backend con Node.js moderno. Use para crear aplicaciones backend y servicios API, trabajar con modulos ES6+, streams, procesos y eventos, gestionar dependencias npm, optimizar rendimiento (clustering, worker threads) e implementar testing y logging."
+description: "Backend development with modern Node.js. Use to create backend applications and API services, work with ES6+ modules, streams, processes and events, manage npm dependencies, optimize performance (clustering, worker threads), and implement testing and logging."
 ---
 
 # Node.js Development
 
-## Proposito
+## Purpose
 
-Desarrolla aplicaciones backend con Node.js moderno: codigo eficiente, modulos, ecosistema npm, patrones de diseno y mejores practicas para backends escalables.
+Develop backend applications with modern Node.js: efficient code, modules, npm ecosystem, design patterns, and best practices for scalable backends.
 
-## Cuando usar
+## When to Use
 
-- Crear aplicaciones backend con Node.js
-- Trabajar con modulos ES6+
-- Implementar servicios API
-- Manejar archivos, procesos y eventos
-- Implementar workers o jobs
-- Optimizar rendimiento o depurar con logging
+- Create backend applications with Node.js
+- Work with ES6+ modules
+- Implement API services
+- Handle files, processes, and events
+- Implement workers or jobs
+- Optimize performance or debug with logging
 
-## Flujo de trabajo
+## Workflow
 
-1. Leer `references/instructions.md` y aplicar sus reglas obligatorias.
-2. Consultar `references/best-practices.md` durante la implementacion.
-3. Verificar que la implementacion no incurre en los anti-patrones de `references/common-mistakes.md`.
-4. Consultar `references/references.md` para fuentes oficiales cuando haya dudas.
-5. Usar `examples/rest-api-server.js` como referencia practica.
+1. Read `references/instructions.md` and apply its mandatory rules.
+2. Consult `references/best-practices.md` during implementation.
+3. Verify that the implementation does not fall into the anti-patterns from `references/common-mistakes.md`.
+4. Consult `references/references.md` for official sources when in doubt.
+5. Use `examples/rest-api-server.js` as a practical reference.
 
-## Validacion
+## Validation
 
-El codigo Node.js generado debe usar ES6+ modules y async/await, tener manejo de errores apropiado, ser modular y reutilizable, incluir logging y validaciones, ser seguro y testeable.
+The generated Node.js code must use ES6+ modules and async/await, have proper error handling, be modular and reusable, include logging and validations, be secure and testable.

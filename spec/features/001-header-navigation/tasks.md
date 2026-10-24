@@ -1,47 +1,47 @@
-# Tasks: Header & Navigation
+# Tareas: Encabezado y Navegación
 
-## Task 1: Crear componentes base
+## Tarea 1: Crear componentes base
 - [ ] Crear `Header.jsx` con estructura semántica `<header>`
 - [ ] Crear `Navbar.jsx` con navegación y menú hamburguesa
 - [ ] Crear `ThemeToggle.jsx` con iconos sol/luna
 - [ ] Exportar componentes desde `Header/index.js` (si aplica)
 
-## Task 2: Implementar estilos CSS
-- [ ] Estilos base del header (position: fixed, z-index, sombra)
+## Tarea 2: Implementar estilos CSS
+- [ ] Estilos base del encabezado (header) (position: fixed, z-index, sombra)
 - [ ] Estilos del logo (emoji + texto, tipografía)
-- [ ] Navegación horizontal desktop (flexbox, gap)
-- [ ] Estilos de links de navegación (hover, active)
+- [ ] Navegación horizontal en escritorio (desktop) (flexbox, espacio/gap)
+- [ ] Estilos de enlaces de navegación (al pasar el cursor/hover, activo/active)
 - [ ] Botón hamburguesa (3 líneas, animación a X)
 - [ ] Menú móvil (position: fixed, transición, sombra)
-- [ ] Estilos del ThemeToggle (hover, transiciones)
+- [ ] Estilos del ThemeToggle (al pasar el cursor/hover, transiciones)
 
-## Task 3: Implementar funcionalidad JavaScript
-- [ ] Hook useScrollPosition para detectar scroll
-- [ ] Event listener scroll con passive: true
+## Tarea 3: Implementar funcionalidad JavaScript
+- [ ] Hook useScrollPosition para detectar desplazamiento (scroll)
+- [ ] Oyente de eventos (event listener) de desplazamiento (scroll) con passive: true
 - [ ] Estado isScrolled para sombra dinámica
 - [ ] Estado isMenuOpen para menú hamburguesa
 - [ ] Función toggleMenu() para abrir/cerrar menú
 - [ ] Función closeMenu() para cerrar menú
-- [ ] Bloqueo de scroll del body (overflow: hidden)
-- [ ] Event listener Escape para cerrar menú
-- [ ] Click fuera del menú para cerrar
+- [ ] Bloqueo de desplazamiento (scroll) del body (overflow: hidden)
+- [ ] Oyente de eventos (event listener) Escape para cerrar menú
+- [ ] Clic fuera del menú para cerrar
 - [ ] Hook useTheme para gestión de tema
-- [ ] Toggle de tema con localStorage
+- [ ] Conmutador (toggle) de tema con localStorage
 - [ ] Lectura de tema guardado al cargar
 
-## Task 4: Responsive y accesibilidad
-- [ ] Breakpoint 768px para menú hamburguesa
+## Tarea 4: Adaptabilidad y accesibilidad (Responsive y Accesibilidad)
+- [ ] Punto de interrupción (breakpoint) 768px para menú hamburguesa
 - [ ] ARIA: role="navigation", aria-label
 - [ ] ARIA: aria-expanded en botón hamburguesa
 - [ ] ARIA: aria-label en ThemeToggle
-- [ ] Skip to content link
+- [ ] Enlace de salto al contenido (skip to content)
 - [ ] Navegación por teclado (Tab, Enter)
-- [ ] Focus visible states
-- [ ] Test en móvil, tablet, desktop
+- [ ] Estados de foco visible (focus visible)
+- [ ] Prueba en móvil, tableta, escritorio (desktop)
 
-## Task 5: Integración
+## Tarea 5: Integración
 - [ ] Integrar Header en App.jsx
 - [ ] Verificar que todas las secciones funcionan
-- [ ] Probar navegación smooth scroll
+- [ ] Probar navegación con desplazamiento suave (smooth scroll)
 - [ ] Probar tema oscuro/claro
-- [ ] Verificar accesibilidad con screen reader
+- [ ] Verificar accesibilidad con lector de pantalla (screen reader)

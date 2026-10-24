@@ -6,15 +6,15 @@
   position: fixed;
   bottom: 30px;
   right: 30px;
-  background-color: var(--marron-chocolate);
-  color: var(--blanco);
+  background-color: var(--chocolate-brown);
+  color: var(--cream-white);
   width: 50px;
   height: 50px;
   border-radius: var(--border-radius-full);
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
-  box-shadow: 0 4px 12px var(--sombra-fuerte);
+  box-shadow: 0 4px 12px var(--shadow-strong);
   opacity: 0;
   visibility: hidden;
   transition: all var(--transition-normal);
@@ -30,6 +30,6 @@
 }
 
 .back-to-top:hover {
-  background-color: var(--texto-oscuro);
+  background-color: var(--dark-text);
   transform: translateY(-3px);
 }

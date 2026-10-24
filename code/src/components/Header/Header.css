@@ -7,14 +7,14 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-color: var(--blanco);
-  box-shadow: 0 2px 10px var(--sombra);
+  background-color: var(--cream-white);
+  box-shadow: 0 2px 10px var(--shadow);
   z-index: 1000;
   transition: box-shadow var(--transition-normal);
 }
 
 .header.scrolled {
-  box-shadow: 0 4px 20px var(--sombra-fuerte);
+  box-shadow: 0 4px 20px var(--shadow-strong);
 }
 
 .nav {
@@ -28,10 +28,10 @@
 }
 
 .logo {
-  font-family: var(--fuente-titulos);
+  font-family: var(--font-heading);
   font-size: var(--font-size-xl);
   font-weight: 700;
-  color: var(--marron-chocolate);
+  color: var(--chocolate-brown);
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -52,7 +52,7 @@
 }
 
 .nav-link {
-  color: var(--texto-oscuro);
+  color: var(--dark-text);
   font-weight: 500;
   padding: var(--spacing-xs) var(--spacing-sm);
   border-radius: var(--border-radius-sm);
@@ -61,12 +61,12 @@
 
 .nav-link:hover,
 .nav-link.active {
-  color: var(--marron-chocolate);
-  background-color: var(--crema-vainilla);
+  color: var(--chocolate-brown);
+  background-color: var(--vanilla-cream);
 }
 
 .nav-link-button {
-  border: 2px solid var(--marron-chocolate);
+  border: 2px solid var(--chocolate-brown);
   border-radius: 50px;
   padding: var(--spacing-xs) var(--spacing-md);
   font-weight: 600;
@@ -74,9 +74,9 @@
 
 .nav-link-button:hover,
 .nav-link-button.active {
-  background-color: var(--marron-chocolate);
-  color: var(--blanco);
-  border-color: var(--marron-chocolate);
+  background-color: var(--chocolate-brown);
+  color: var(--cream-white);
+  border-color: var(--chocolate-brown);
 }
 
 /* Hamburger button */
@@ -96,7 +96,7 @@
 .hamburger span {
   width: 100%;
   height: 3px;
-  background-color: var(--marron-chocolate);
+  background-color: var(--chocolate-brown);
   border-radius: 3px;
   transition: all var(--transition-normal);
 }

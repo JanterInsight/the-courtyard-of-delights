@@ -1,49 +1,49 @@
 # ============================================================
-# REGLAS GENERALES UNIVERSALES PARA CLINE
+# UNIVERSAL GENERAL RULES FOR CLINE
 # ============================================================
 #
-# Estas reglas definen el comportamiento general del agente
-# independientemente del tipo de proyecto.
+# These rules define the agent's general behavior
+# regardless of project type.
 #
-# Las reglas específicas del proyecto tienen prioridad cuando
-# estén definidas explícitamente.
+# Project-specific rules take precedence when
+# explicitly defined.
 #
-# El conocimiento especializado debe proporcionarse mediante
+# Specialized knowledge should be provided via
 # Skills.
 # ============================================================
 
 
 # ============================================================
-# 1. PRINCIPIOS FUNDAMENTALES
+# 1. FUNDAMENTAL PRINCIPLES
 # ============================================================
 
-- Comprende la tarea antes de modificar cualquier cosa.
-- Inspecciona el proyecto existente antes de hacer suposiciones.
-- Prefiere soluciones simples, mantenibles y bien estructuradas.
-- Realiza el cambio más pequeño razonable que resuelva completamente la tarea.
-- Reutiliza el código y las convenciones existentes siempre que sea posible.
-- No introduzcas abstracciones, dependencias o cambios arquitectónicos innecesarios.
-- No modifiques partes del proyecto que no estén relacionadas con la tarea.
-- Nunca inventes archivos, APIs, funciones, dependencias, configuraciones o comportamientos del proyecto.
-- Si algo no puede verificarse, indica explícitamente la incertidumbre.
+- Understand the task before modifying anything.
+- Inspect the existing project before making assumptions.
+- Prefer simple, maintainable, and well-structured solutions.
+- Make the smallest reasonable change that fully solves the task.
+- Reuse existing code and conventions whenever possible.
+- Do not introduce unnecessary abstractions, dependencies, or architectural changes.
+- Do not modify parts of the project unrelated to the task.
+- Never invent project files, APIs, functions, dependencies, configurations, or behaviors.
+- If something cannot be verified, explicitly state the uncertainty.
 
 
 # ============================================================
-# 2. DESCUBRIMIENTO DEL PROYECTO
+# 2. PROJECT DISCOVERY
 # ============================================================
 
-Antes de realizar una tarea que no sea trivial:
+Before performing a non-trivial task:
 
-1. Inspecciona la estructura del repositorio.
-2. Identifica los archivos relevantes.
-3. Identifica el lenguaje, framework, runtime y gestor de paquetes.
-4. Inspecciona los archivos de configuración relevantes.
-5. Inspecciona los tests existentes.
-6. Revisa la documentación existente cuando sea relevante.
-7. Busca instrucciones adicionales del proyecto.
-8. Comprueba si existen Skills relevantes.
+1. Inspect the repository structure.
+2. Identify relevant files.
+3. Identify the language, framework, runtime, and package manager.
+4. Inspect relevant configuration files.
+5. Inspect existing tests.
+6. Review existing documentation when relevant.
+7. Look for additional project instructions.
+8. Check if relevant Skills exist.
 
-Busca archivos como:
+Look for files such as:
 
 - README.md
 - AGENTS.md
@@ -61,319 +61,318 @@ Busca archivos como:
 - Makefile
 - Dockerfile
 - docker-compose.yml
-- Configuración de CI/CD
-- Configuración de tests
-- Configuración de linting
-- Configuración de formatting
+- CI/CD Configuration
+- Test Configuration
+- Linting Configuration
+- Formatting Configuration
 
-No asumas que todos los proyectos utilizan estos archivos.
-
-
-# ============================================================
-# 3. ANÁLISIS DE LA TAREA
-# ============================================================
-
-Antes de realizar cambios importantes:
-
-1. Comprende el objetivo del usuario.
-2. Determina el comportamiento esperado.
-3. Identifica los archivos y componentes afectados.
-4. Identifica dependencias y posibles efectos secundarios.
-5. Comprueba si existe una implementación que pueda reutilizarse.
-6. Determina cómo debe probarse el cambio.
-7. Crea un plan breve de implementación.
-
-Para tareas simples, evita generar planes innecesariamente largos.
-
-Para tareas complejas, divide el trabajo en pasos lógicos.
+Do not assume all projects use these files.
 
 
 # ============================================================
-# 4. PRIORIZA EL CÓDIGO EXISTENTE
+# 3. TASK ANALYSIS
 # ============================================================
 
-Prefiere modificar y extender funcionalidades existentes antes que
-crear implementaciones paralelas.
+Before making significant changes:
 
-Antes de crear:
+1. Understand the user's objective.
+2. Determine the expected behavior.
+3. Identify affected files and components.
+4. Identify dependencies and possible side effects.
+5. Check if a reusable implementation already exists.
+6. Determine how the change should be tested.
+7. Create a brief implementation plan.
 
-- Una nueva utilidad, busca primero una equivalente.
-- Un nuevo servicio, inspecciona los servicios existentes.
-- Un nuevo componente, inspecciona los componentes existentes.
-- Un nuevo mecanismo de configuración, inspecciona la configuración existente.
-- Una nueva dependencia, comprueba si el proyecto ya dispone de una solución equivalente.
+For simple tasks, avoid generating unnecessarily long plans.
 
-No dupliques funcionalidad sin una razón clara.
-
-
-# ============================================================
-# 5. ARQUITECTURA
-# ============================================================
-
-Respeta la arquitectura existente del proyecto.
-
-No introduzcas:
-
-- Nuevos patrones arquitectónicos sin justificación.
-- Nuevos frameworks sin justificación.
-- Capas innecesarias.
-- Abstracciones innecesarias.
-- Infraestructura duplicada.
-- Dependencias innecesarias.
-
-Cuando sea realmente necesario realizar un cambio arquitectónico:
-
-1. Explica por qué.
-2. Identifica los componentes afectados.
-3. Prefiere cambios incrementales.
-4. Mantén la compatibilidad cuando sea razonablemente posible.
+For complex tasks, break the work into logical steps.
 
 
 # ============================================================
-# 6. CALIDAD DEL CÓDIGO
+# 4. PRIORITIZE EXISTING CODE
 # ============================================================
 
-El código debe ser:
+Prefer modifying and extending existing functionality over
+creating parallel implementations.
 
-- Legible.
-- Mantenible.
-- Testeable.
-- Consistente con el proyecto existente.
-- Modular cuando sea apropiado.
-- Explícito cuando la claridad lo requiera.
+Before creating:
 
-Prefiere:
+- A new utility, first look for an equivalent.
+- A new service, inspect existing services.
+- A new component, inspect existing components.
+- A new configuration mechanism, inspect existing configuration.
+- A new dependency, check if the project already has an equivalent solution.
 
-- Nombres descriptivos.
-- Funciones pequeñas y cohesivas.
-- Responsabilidades claras.
-- Tipado fuerte cuando el lenguaje lo permita.
-- Validación temprana de entradas inválidas.
-- Abstracciones reutilizables únicamente cuando estén justificadas.
-
-Evita:
-
-- Código excesivamente complejo.
-- Código "inteligente" que reduzca la legibilidad.
-- Anidamiento excesivo.
-- Funciones enormes con múltiples responsabilidades.
-- Código muerto.
-- Duplicación innecesaria.
-- Optimización prematura.
-- Valores mágicos cuando constantes o configuración sean más apropiados.
+Do not duplicate functionality without a clear reason.
 
 
 # ============================================================
-# 7. CONVENCIONES DEL LENGUAJE Y FRAMEWORK
+# 5. ARCHITECTURE
 # ============================================================
 
-Sigue las convenciones del lenguaje y framework utilizados por el proyecto.
+Respect the project's existing architecture.
 
-No impongas convenciones de otro ecosistema.
+Do not introduce:
 
-Ejemplos:
+- New architectural patterns without justification.
+- New frameworks without justification.
+- Unnecessary layers.
+- Unnecessary abstractions.
+- Duplicated infrastructure.
+- Unnecessary dependencies.
 
-- Python → respeta las herramientas y convenciones Python del proyecto.
-- Java → respeta la versión de Java, sistema de build y convenciones existentes.
-- JavaScript/TypeScript → respeta el runtime, gestor de paquetes,
-  framework, linting y formatting configurados.
-- C/C++ → respeta el compilador, estándar, sistema de build y convenciones existentes.
-- Rust → respeta Cargo, la edición de Rust y las herramientas existentes.
-- Go → respeta Go modules y las convenciones del proyecto.
+When an architectural change is truly necessary:
 
-Cuando exista un formatter, linter, compilador o language server configurado,
-utiliza la configuración del proyecto en lugar de imponer preferencias personales.
-
-
-# ============================================================
-# 8. DEPENDENCIAS
-# ============================================================
-
-No agregues dependencias salvo que aporten un valor significativo.
-
-Antes de agregar una dependencia:
-
-1. Comprueba si el proyecto ya proporciona una funcionalidad equivalente.
-2. Comprueba la compatibilidad con el runtime y las versiones utilizadas.
-3. Prefiere paquetes maduros y mantenidos activamente.
-4. Prefiere fuentes oficiales o ampliamente reconocidas.
-5. Considera seguridad y licencia.
-6. Explica la razón cuando la dependencia tenga un impacto importante.
-
-Nunca inventes nombres de paquetes ni versiones.
+1. Explain why.
+2. Identify affected components.
+3. Prefer incremental changes.
+4. Maintain compatibility whenever reasonably possible.
 
 
 # ============================================================
-# 9. INVESTIGACIÓN EXTERNA
+# 6. CODE QUALITY
 # ============================================================
 
-Cuando una tarea dependa de información externa o que pueda cambiar
-con el tiempo:
+Code must be:
 
-- Prioriza documentación oficial.
-- Prioriza especificaciones oficiales.
-- Prioriza repositorios oficiales.
-- Prioriza referencias oficiales de APIs.
-- Verifica el comportamiento específico de cada versión.
-- No dependas de ejemplos antiguos cuando exista documentación actualizada.
-- No inventes comportamientos que no estén documentados.
+- Readable.
+- Maintainable.
+- Testable.
+- Consistent with the existing project.
+- Modular when appropriate.
+- Explicit when clarity requires it.
 
-La investigación debe realizarse cuando sea necesaria, no simplemente
-por realizar investigación.
+Prefer:
 
-Si la información no puede verificarse de forma fiable, indica claramente
-la limitación.
+- Descriptive names.
+- Small, cohesive functions.
+- Clear responsibilities.
+- Strong typing when the language allows it.
+- Early validation of invalid inputs.
+- Reusable abstractions only when justified.
+
+Avoid:
+
+- Excessively complex code.
+- "Clever" code that reduces readability.
+- Excessive nesting.
+- Huge functions with multiple responsibilities.
+- Dead code.
+- Unnecessary duplication.
+- Premature optimization.
+- Magic values when constants or configuration are more appropriate.
+
+
+# ============================================================
+# 7. LANGUAGE AND FRAMEWORK CONVENTIONS
+# ============================================================
+
+Follow the language and framework conventions used by the project.
+
+Do not impose conventions from another ecosystem.
+
+Examples:
+
+- Python → respect the project's Python tools and conventions.
+- Java → respect the existing Java version, build system, and conventions.
+- JavaScript/TypeScript → respect the configured runtime, package manager,
+  framework, linting, and formatting.
+- C/C++ → respect the existing compiler, standard, build system, and conventions.
+- Rust → respect Cargo, the Rust edition, and existing tools.
+- Go → respect Go modules and project conventions.
+
+When a formatter, linter, compiler, or language server is configured,
+use the project's configuration instead of imposing personal preferences.
+
+
+# ============================================================
+# 8. DEPENDENCIES
+# ============================================================
+
+Do not add dependencies unless they provide significant value.
+
+Before adding a dependency:
+
+1. Check if the project already provides equivalent functionality.
+2. Check compatibility with the runtime and versions used.
+3. Prefer mature, actively maintained packages.
+4. Prefer official or widely recognized sources.
+5. Consider security and licensing.
+6. Explain the reason when the dependency has a significant impact.
+
+Never invent package names or versions.
+
+
+# ============================================================
+# 9. EXTERNAL RESEARCH
+# ============================================================
+
+When a task depends on external or potentially changing information:
+
+- Prioritize official documentation.
+- Prioritize official specifications.
+- Prioritize official repositories.
+- Prioritize official API references.
+- Verify version-specific behavior.
+- Do not rely on outdated examples when updated documentation exists.
+- Do not invent undocumented behaviors.
+
+Research should be done when necessary, not just
+for the sake of researching.
+
+If information cannot be reliably verified, clearly state
+the limitation.
 
 
 # ============================================================
 # 10. SKILLS
 # ============================================================
 
-Utiliza una Skill existente cuando sea claramente relevante para la tarea.
+Use an existing Skill when it is clearly relevant to the task.
 
-Antes de crear una nueva Skill:
+Before creating a new Skill:
 
-1. Comprueba si ya existe una Skill relacionada.
-2. Determina si puede reutilizarse.
-3. Evita crear Skills duplicadas.
+1. Check if a related Skill already exists.
+2. Determine if it can be reused.
+3. Avoid creating duplicate Skills.
 
-Las Skills deben contener:
+Skills must contain:
 
-- Conocimiento especializado.
-- Workflows específicos.
-- Procedimientos.
-- Reglas específicas de una determinada capacidad.
+- Specialized knowledge.
+- Specific workflows.
+- Procedures.
+- Rules specific to a given capability.
 
-Las reglas generales del proyecto deben permanecer en los archivos
-de instrucciones del proyecto.
+General project rules should remain in the project's
+instruction files.
 
-No dupliques innecesariamente las instrucciones de una Skill dentro
-de estas reglas.
+Do not unnecessarily duplicate a Skill's instructions within
+these rules.
 
-Cuando exista una Skill especializada para crear Skills, utilízala
-cuando el usuario solicite crear o modificar una Agent Skill.
-
-
-# ============================================================
-# 11. MODIFICACIÓN DE ARCHIVOS
-# ============================================================
-
-Antes de modificar un archivo:
-
-- Lee el contenido relevante.
-- Comprende su función.
-- Comprueba cómo se utiliza en otras partes del proyecto cuando sea necesario.
-
-Al modificar archivos:
-
-- Conserva el código que no esté relacionado con la tarea.
-- Evita cambios de formato innecesarios.
-- Evita modificar saltos de línea o codificación sin necesidad.
-- No sobrescribas trabajo del usuario sin comprenderlo.
-- Mantén los cambios centrados en la tarea.
-
-Nunca elimines silenciosamente archivos o funcionalidades importantes.
+When a specialized Skill for creating Skills exists, use it
+when the user requests to create or modify an Agent Skill.
 
 
 # ============================================================
-# 12. CONFIGURACIÓN
+# 11. FILE MODIFICATION
 # ============================================================
 
-Trata la configuración como parte de la arquitectura del proyecto.
+Before modifying a file:
 
-Antes de modificar una configuración:
+- Read the relevant content.
+- Understand its purpose.
+- Check how it is used elsewhere in the project when necessary.
 
-- Comprende la configuración actual.
-- Comprueba dónde se utiliza.
-- Conserva el comportamiento existente salvo que la tarea requiera cambiarlo.
-- Evita valores específicos del entorno escritos directamente en el código.
+When modifying files:
 
-Prefiere variables de entorno o el mecanismo de configuración existente
-para valores específicos de cada entorno.
+- Preserve code unrelated to the task.
+- Avoid unnecessary formatting changes.
+- Avoid unnecessarily modifying line breaks or encoding.
+- Do not overwrite user work without understanding it.
+- Keep changes focused on the task.
 
-
-# ============================================================
-# 13. SECRETOS Y SEGURIDAD
-# ============================================================
-
-Nunca:
-
-- Escribas contraseñas directamente en el código.
-- Escribas API keys directamente en el código.
-- Escribas access tokens directamente en el código.
-- Incluyas claves privadas en el repositorio.
-- Expongas credenciales en logs.
-- Imprimas secretos durante debugging.
-- Desactives mecanismos de seguridad simplemente para solucionar un problema.
-- Evites autenticación o autorización sin un requisito legítimo y explícito.
-
-Utiliza el mecanismo de secretos y configuración existente en el proyecto.
-
-Si encuentras accidentalmente un secreto:
-
-- No lo reproduzcas innecesariamente.
-- No lo introduzcas en el código.
-- Advierte al usuario cuando sea apropiado.
+Never silently delete important files or functionality.
 
 
 # ============================================================
-# 14. OPERACIONES DESTRUCTIVAS
+# 12. CONFIGURATION
 # ============================================================
 
-Ten especial cuidado con operaciones que puedan modificar o eliminar
-datos permanentemente.
+Treat configuration as part of the project's architecture.
 
-Ejemplos:
+Before modifying a configuration:
 
-- Comandos de eliminación.
-- DROP/TRUNCATE en bases de datos.
-- Migraciones destructivas.
+- Understand the current configuration.
+- Check where it is used.
+- Preserve existing behavior unless the task requires changing it.
+- Avoid hard-coding environment-specific values.
+
+Prefer environment variables or the existing configuration mechanism
+for environment-specific values.
+
+
+# ============================================================
+# 13. SECRETS AND SECURITY
+# ============================================================
+
+Never:
+
+- Hard-code passwords.
+- Hard-code API keys.
+- Hard-code access tokens.
+- Include private keys in the repository.
+- Expose credentials in logs.
+- Print secrets during debugging.
+- Disable security mechanisms just to solve a problem.
+- Bypass authentication or authorization without a legitimate and explicit requirement.
+
+Use the project's existing secrets and configuration mechanism.
+
+If you accidentally encounter a secret:
+
+- Do not reproduce it unnecessarily.
+- Do not introduce it into code.
+- Warn the user when appropriate.
+
+
+# ============================================================
+# 14. DESTRUCTIVE OPERATIONS
+# ============================================================
+
+Be especially careful with operations that may permanently modify or delete
+data.
+
+Examples:
+
+- Deletion commands.
+- DROP/TRUNCATE in databases.
+- Destructive migrations.
 - Force push.
-- Modificación del historial de Git.
-- Sobrescritura de archivos.
-- Deployments a producción.
-- Modificaciones masivas de datos.
+- Modifying Git history.
+- Overwriting files.
+- Deployments to production.
+- Bulk data modifications.
 
-Antes de realizar una operación potencialmente destructiva:
+Before performing a potentially destructive operation:
 
-1. Determina si realmente es necesaria.
-2. Prefiere una alternativa reversible o dry-run.
-3. Solicita confirmación cuando las consecuencias sean importantes.
+1. Determine if it is truly necessary.
+2. Prefer a reversible or dry-run alternative.
+3. Request confirmation when consequences are significant.
 
-Nunca realices operaciones destructivas simplemente por comodidad.
+Never perform destructive operations merely for convenience.
 
 
 # ============================================================
 # 15. TESTING
 # ============================================================
 
-Considera los tests parte de la implementación.
+Consider tests part of the implementation.
 
-Después de realizar cambios:
+After making changes:
 
-1. Identifica los tests relevantes.
-2. Ejecuta primero el conjunto mínimo de tests necesario.
-3. Amplía las pruebas cuando sea apropiado.
-4. Corrige los errores causados por la implementación.
-5. No elimines tests simplemente para conseguir que pasen.
+1. Identify relevant tests.
+2. First run the minimal necessary test suite.
+3. Expand testing when appropriate.
+4. Fix failures caused by the implementation.
+5. Do not delete tests simply to make them pass.
 
-Cuando agregues una funcionalidad importante:
+When adding important functionality:
 
-- Agrega o actualiza tests cuando sea apropiado.
-- Prueba el comportamiento normal.
-- Prueba casos límite importantes.
-- Prueba condiciones de error relevantes.
+- Add or update tests when appropriate.
+- Test normal behavior.
+- Test important edge cases.
+- Test relevant error conditions.
 
-Utiliza el framework y los comandos de testing existentes en el proyecto.
+Use the project's existing testing framework and commands.
 
 
 # ============================================================
-# 16. VALIDACIÓN
+# 16. VALIDATION
 # ============================================================
 
-La validación debe ser proporcional al cambio realizado.
+Validation must be proportional to the change made.
 
-Dependiendo del proyecto, puede incluir:
+Depending on the project, it may include:
 
 - Unit tests.
 - Integration tests.
@@ -382,274 +381,274 @@ Dependiendo del proyecto, puede incluir:
 - Static analysis.
 - Linting.
 - Formatting.
-- Compilación.
+- Compilation.
 - Build.
-- Ejecución de la aplicación.
-- Verificación manual.
+- Application execution.
+- Manual verification.
 
-Nunca afirmes que una validación fue exitosa si realmente no fue ejecutada.
+Never claim that validation was successful if it was not actually executed.
 
-Si una validación no puede ejecutarse, indícalo claramente.
-
-
-# ============================================================
-# 17. MANEJO DE ERRORES
-# ============================================================
-
-Maneja los errores de forma intencional.
-
-Evita:
-
-- Handlers de excepciones vacíos.
-- Errores silenciosos.
-- Ocultar errores sin justificación.
-- Mensajes de error que oculten información útil.
-
-Cuando ocurra un error:
-
-1. Identifica su origen.
-2. Determina si fue causado por el cambio actual.
-3. Corrige la causa raíz cuando sea posible.
-4. Evita ocultar el problema.
+If validation cannot be executed, state it clearly.
 
 
 # ============================================================
-# 18. RENDIMIENTO
+# 17. ERROR HANDLING
 # ============================================================
 
-No optimices prematuramente.
+Handle errors intentionally.
 
-Prioriza:
+Avoid:
 
-1. Corrección.
-2. Mantenibilidad.
-3. Arquitectura apropiada.
-4. Rendimiento.
+- Empty exception handlers.
+- Silent errors.
+- Hiding errors without justification.
+- Error messages that hide useful information.
 
-Optimiza cuando:
+When an error occurs:
 
-- Exista evidencia de un problema de rendimiento.
-- El usuario solicite explícitamente optimización.
-- La arquitectura requiera claramente una solución consciente del rendimiento.
-
-Evita introducir complejidad para resolver problemas hipotéticos.
-
-
-# ============================================================
-# 19. COMPATIBILIDAD
-# ============================================================
-
-Conserva el comportamiento existente salvo que el usuario solicite
-explícitamente un cambio incompatible.
-
-Antes de introducir un breaking change:
-
-- Identifica los componentes afectados.
-- Determina si puede conservarse la compatibilidad.
-- Explica las consecuencias.
-
-Presta especial atención a:
-
-- APIs públicas.
-- Esquemas de bases de datos.
-- Formatos de archivos.
-- Configuración.
-- Interfaces CLI.
-- Firmas de funciones.
-- Integraciones externas.
+1. Identify its origin.
+2. Determine if it was caused by the current change.
+3. Fix the root cause when possible.
+4. Avoid hiding the problem.
 
 
 # ============================================================
-# 20. DOCUMENTACIÓN
+# 18. PERFORMANCE
 # ============================================================
 
-Actualiza la documentación cuando un cambio afecte:
+Do not optimize prematurely.
 
-- APIs públicas.
-- Instalación.
-- Configuración.
-- Uso.
-- Arquitectura.
-- Workflows importantes.
-- Comportamiento visible para el usuario.
+Prioritize:
 
-No generes documentación que simplemente repita código evidente.
+1. Correctness.
+2. Maintainability.
+3. Appropriate architecture.
+4. Performance.
 
-Prefiere documentación concisa que contenga información realmente útil.
+Optimize when:
+
+- There is evidence of a performance problem.
+- The user explicitly requests optimization.
+- The architecture clearly requires a performance-aware solution.
+
+Avoid introducing complexity to solve hypothetical problems.
+
+
+# ============================================================
+# 19. COMPATIBILITY
+# ============================================================
+
+Preserve existing behavior unless the user explicitly requests
+an incompatible change.
+
+Before introducing a breaking change:
+
+- Identify affected components.
+- Determine if compatibility can be preserved.
+- Explain the consequences.
+
+Pay special attention to:
+
+- Public APIs.
+- Database schemas.
+- File formats.
+- Configuration.
+- CLI interfaces.
+- Function signatures.
+- External integrations.
+
+
+# ============================================================
+# 20. DOCUMENTATION
+# ============================================================
+
+Update documentation when a change affects:
+
+- Public APIs.
+- Installation.
+- Configuration.
+- Usage.
+- Architecture.
+- Important workflows.
+- User-visible behavior.
+
+Do not generate documentation that simply repeats obvious code.
+
+Prefer concise documentation that contains truly useful information.
 
 
 # ============================================================
 # 21. GIT
 # ============================================================
 
-## Regla de Auto-commit
-- **SIEMPRE** después de modificar archivos del proyecto, ejecutar:
+## Auto-commit Rule
+- **ALWAYS** after modifying project files, run:
   ```bash
   python .agents/skills/auto-commit/scripts/commit_agent.py
   ```
-- Esto automatiza los commits git con mensajes descriptivos.
-- Siempre hacer commits y versionar, sino se pude versionar por alguna razón no hacer commit e informar al usuario
+- This automates git commits with descriptive messages.
+- Always commit and version; if for some reason versioning is not possible, do not commit and inform the user
 
-## Versionado Semántico
-El proyecto usa [Semantic Versioning](https://semver.org/) (MAJOR.MINOR.PATCH):
+## Semantic Versioning
+The project uses [Semantic Versioning](https://semver.org/) (MAJOR.MINOR.PATCH):
 
-- **MAJOR** (X.0.0): Cambios incompatibles con versiones anteriores
-- **MINOR** (1.X.0): Nuevas funcionalidades compatibles
-- **PATCH** (1.0.X): Correcciones de bugs, typos, docs
+- **MAJOR** (X.0.0): Incompatible changes
+- **MINOR** (1.X.0): Compatible new features
+- **PATCH** (1.0.X): Bug fixes, typos, docs
 
-### Comandos de versionado
+### Versioning Commands
 ```bash
-# Incrementar versión
+# Bump version
 python .agents/commit_agent.py --bump patch  # 1.0.0 → 1.0.1
 python .agents/commit_agent.py --bump minor  # 1.0.0 → 1.1.0
 python .agents/commit_agent.py --bump major  # 1.0.0 → 2.0.0
 
-# Establecer versión específica
+# Set specific version
 python .agents/commit_agent.py --set 0.1.0
 ```
 
-### Flujo de versionado en plantillas
-1. **0.0.0** - Template sin adaptar (primer commit)
-2. **0.1.0** - Después de completar instrucción 2 de `read-this-first.md`
-3. **0.2.0** - Después de completar instrucción 3 de `read-this-first.md`
-4. **1.0.0** - Después de completar instrucción 4 de `read-this-first.md`
-5. **1.0.X** - A partir de 1.0.0, cambios pequeños
-6. **1.X.0** - A partir de 1.0.0, cambios medianos
-7. **X.0.0** - A partir de 1.0.0, cambios mayores
+### Versioning Workflow in Templates
+1. **0.0.0** - Unadapted template (first commit)
+2. **0.1.0** - After completing instruction 2 of `read-this-first.md`
+3. **0.2.0** - After completing instruction 3 of `read-this-first.md`
+4. **1.0.0** - After completing instruction 4 of `read-this-first.md`
+5. **1.0.X** - From 1.0.0, small changes
+6. **1.X.0** - From 1.0.0, medium changes
+7. **X.0.0** - From 1.0.0, major changes
 
-### Cuándo usar cada tipo
-- **patch**: bug fixes, typos, actualizaciones de docs, cambios menores
-- **minor**: nuevas features, refactors, mejoras funcionales
-- **major**: breaking changes, rediseños de API, cambios incompatibles
-
-
-# ============================================================
-# 22. CAMBIOS DEL USUARIO
-# ============================================================
-
-Considera intencionales los cambios no confirmados del usuario salvo
-que exista evidencia de lo contrario.
-
-Nunca:
-
-- Descartes modificaciones del usuario.
-- Restaures el repositorio simplemente para obtener un estado limpio.
-- Sobrescribas archivos que contengan trabajo no relacionado.
-
-Si los cambios del usuario entran en conflicto con la tarea:
-
-1. Identifica el conflicto.
-2. Conserva el trabajo existente.
-3. Solicita aclaración si es necesario.
+### When to use each type
+- **patch**: bug fixes, typos, doc updates, minor changes
+- **minor**: new features, refactors, functional improvements
+- **major**: breaking changes, API redesigns, incompatible changes
 
 
 # ============================================================
-# 23. CUÁNDO HACER PREGUNTAS
+# 22. USER CHANGES
 # ============================================================
 
-Pregunta al usuario cuando:
+Consider user uncommitted changes intentional unless
+there is evidence to the contrary.
 
-- Falte un requisito crítico.
-- Existan varias implementaciones significativamente diferentes.
-- Una decisión afecte la arquitectura.
-- Sea necesaria una operación destructiva.
-- Esté involucrada información sensible o seguridad.
-- El comportamiento esperado no pueda inferirse razonablemente.
-- Continuar implique realizar suposiciones importantes.
+Never:
 
-NO preguntes cuando:
+- Discard user modifications.
+- Restore the repository just to get a clean state.
+- Overwrite files containing unrelated work.
 
-- La respuesta pueda descubrirse inspeccionando el proyecto.
-- La respuesta se desprenda claramente de las convenciones existentes.
-- La decisión sea de bajo riesgo y reversible.
-- La tarea esté suficientemente especificada.
+If user changes conflict with the task:
+
+1. Identify the conflict.
+2. Preserve existing work.
+3. Request clarification if necessary.
 
 
 # ============================================================
-# 24. AUTONOMÍA
+# 23. WHEN TO ASK QUESTIONS
 # ============================================================
 
-Sé autónomo dentro del alcance de la tarea.
+Ask the user when:
 
-El agente debe:
+- A critical requirement is missing.
+- There are several significantly different implementations.
+- A decision affects architecture.
+- A destructive operation is required.
+- Sensitive information or security is involved.
+- Expected behavior cannot be reasonably inferred.
+- Continuing would involve making important assumptions.
 
-- Inspeccionar archivos relevantes.
-- Buscar dentro del repositorio.
-- Reutilizar implementaciones existentes.
-- Ejecutar las validaciones apropiadas.
-- Corregir errores sencillos derivados de sus propios cambios.
-- Verificar sus modificaciones.
+Do NOT ask when:
 
-No solicites permiso repetidamente para operaciones rutinarias
-y reversibles.
-
-Solicita confirmación antes de acciones de alto impacto o destructivas.
-
-
-# ============================================================
-# 25. CONTROL DEL ALCANCE
-# ============================================================
-
-Mantente dentro del alcance de la solicitud del usuario.
-
-No:
-
-- Refactorices código no relacionado.
-- Renombres archivos no relacionados.
-- Actualices dependencias no relacionadas.
-- Cambies innecesariamente la arquitectura.
-- Reescribas código funcional simplemente porque prefieres otro estilo.
-
-Si encuentras un problema no relacionado:
-
-- Infórmaselo al usuario.
-- No lo corrijas automáticamente salvo que afecte directamente a la tarea.
+- The answer can be discovered by inspecting the project.
+- The answer clearly follows from existing conventions.
+- The decision is low-risk and reversible.
+- The task is sufficiently specified.
 
 
 # ============================================================
-# 26. CRITERIOS DE FINALIZACIÓN
+# 24. AUTONOMY
 # ============================================================
 
-Una tarea está terminada cuando:
+Be autonomous within the scope of the task.
 
-- El comportamiento solicitado está implementado.
-- El código respeta las convenciones del proyecto.
-- Se realizaron los tests o validaciones relevantes.
-- No quedan errores evidentes introducidos por el cambio.
-- Los cambios permanecen dentro del alcance solicitado.
-- Las limitaciones importantes fueron comunicadas.
+The agent must:
 
-No consideres terminada una tarea simplemente porque se haya generado código.
+- Inspect relevant files.
+- Search within the repository.
+- Reuse existing implementations.
+- Run appropriate validations.
+- Fix simple errors resulting from its own changes.
+- Verify its modifications.
 
+Do not repeatedly request permission for routine
+and reversible operations.
 
-# ============================================================
-# 27. RESPUESTA FINAL
-# ============================================================
-
-Cuando finalices una tarea, proporciona un resumen conciso que incluya:
-
-1. Qué se modificó.
-2. Archivos importantes afectados.
-3. Validaciones realizadas.
-4. Problemas pendientes.
-5. Acciones manuales que el usuario deba realizar.
-
-No proporciones explicaciones innecesariamente largas salvo que el usuario las solicite.
+Request confirmation before high-impact or destructive actions.
 
 
 # ============================================================
-# 28. PRIORIDAD DE LAS INSTRUCCIONES
+# 25. SCOPE CONTROL
 # ============================================================
 
-Cuando existan instrucciones en conflicto, utiliza esta prioridad:
+Stay within the scope of the user's request.
 
-1. Instrucciones del sistema y requisitos de seguridad.
-2. Solicitud explícita del usuario.
-3. Instrucciones específicas del proyecto.
-4. Skills relevantes.
-5. Convenciones existentes del proyecto.
-6. Estas reglas generales.
-7. Buenas prácticas generales.
+Do not:
 
-Estas reglas nunca deben utilizarse para ignorar instrucciones
-de mayor prioridad.
+- Refactor unrelated code.
+- Rename unrelated files.
+- Update unrelated dependencies.
+- Unnecessarily change architecture.
+- Rewrite working code simply because you prefer a different style.
+
+If you encounter an unrelated problem:
+
+- Inform the user.
+- Do not fix it automatically unless it directly affects the task.
+
+
+# ============================================================
+# 26. COMPLETION CRITERIA
+# ============================================================
+
+A task is complete when:
+
+- The requested behavior is implemented.
+- The code respects project conventions.
+- Relevant tests or validations were performed.
+- No obvious errors introduced by the change remain.
+- Changes remain within the requested scope.
+- Important limitations were communicated.
+
+Do not consider a task complete simply because code was generated.
+
+
+# ============================================================
+# 27. FINAL RESPONSE
+# ============================================================
+
+When finishing a task, provide a concise summary including:
+
+1. What was modified.
+2. Important affected files.
+3. Validations performed.
+4. Outstanding issues.
+5. Manual actions the user must take.
+
+Do not provide unnecessarily long explanations unless the user requests them.
+
+
+# ============================================================
+# 28. INSTRUCTION PRIORITY
+# ============================================================
+
+When instructions conflict, use this priority:
+
+1. System instructions and security requirements.
+2. Explicit user request.
+3. Project-specific instructions.
+4. Relevant Skills.
+5. Existing project conventions.
+6. These general rules.
+7. General best practices.
+
+These rules must never be used to ignore higher-priority
+instructions.

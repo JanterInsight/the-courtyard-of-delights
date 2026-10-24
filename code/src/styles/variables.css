@@ -4,29 +4,29 @@
 
 :root {
   /* Color palette - Light mode */
-  --marron-chocolate: #8B4513;
-  --dorado-miel: #D4A017;
-  --blanco: #FFFDF8;
-  --crema-vainilla: #FFF4E8;
-  --texto-oscuro: #2D2D2D;
-  --gris-calido: #6B6B6B;
-  --gris-claro: #F5F5F5;
-  --gris-medio: #9E9E9E;
-  --sombra: rgba(0, 0, 0, 0.1);
-  --sombra-fuerte: rgba(0, 0, 0, 0.2);
+  --chocolate-brown: #8B4513;
+  --honey-gold: #D4A017;
+  --cream-white: #FFFDF8;
+  --vanilla-cream: #FFF4E8;
+  --dark-text: #2D2D2D;
+  --warm-gray: #6B6B6B;
+  --light-gray: #F5F5F5;
+  --medium-gray: #9E9E9E;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --shadow-strong: rgba(0, 0, 0, 0.2);
 
   /* Support colors */
-  --fresa: #E63946;
+  --strawberry: #E63946;
   --mango: #F4A261;
-  --verde-menta: #6BCB77;
-  --verde-menta-hover: #8FD6B8;
-  --arandano: #5E60CE;
+  --mint-green: #6BCB77;
+  --mint-green-hover: #8FD6B8;
+  --blueberry: #5E60CE;
   --chocolate: #6F4E37;
-  --vainilla: #FFF1D6;
+  --vanilla: #FFF1D6;
 
   /* Typography */
-  --fuente-titulos: 'Fredoka', 'Baloo 2', cursive, sans-serif;
-  --fuente-texto: 'Poppins', sans-serif;
+  --font-heading: 'Fredoka', 'Baloo 2', cursive, sans-serif;
+  --font-body: 'Poppins', sans-serif;
 
   /* Font sizes */
   --font-size-xs: 0.875rem;
@@ -65,15 +65,15 @@
    DARK MODE
    ============================================ */
 [data-theme="dark"] {
-  --marron-chocolate: #FFD166;
-  --dorado-miel: #F4A261;
-  --blanco: #121212;
-  --crema-vainilla: #1E1E1E;
-  --vainilla: #2A2A2A;
-  --texto-oscuro: #F8F8F8;
-  --gris-calido: #CFCFCF;
-  --gris-claro: #222222;
-  --gris-medio: #808080;
-  --sombra: rgba(0, 0, 0, 0.4);
-  --sombra-fuerte: rgba(0, 0, 0, 0.6);
+  --chocolate-brown: #FFD166;
+  --honey-gold: #F4A261;
+  --cream-white: #121212;
+  --vanilla-cream: #1E1E1E;
+  --vanilla: #2A2A2A;
+  --dark-text: #F8F8F8;
+  --warm-gray: #CFCFCF;
+  --light-gray: #222222;
+  --medium-gray: #808080;
+  --shadow: rgba(0, 0, 0, 0.4);
+  --shadow-strong: rgba(0, 0, 0, 0.6);
 }

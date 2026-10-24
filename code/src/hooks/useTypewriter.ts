@@ -1,10 +1,10 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 
 /**
- * Efecto máquina de escribir sobre un texto dado.
- * Respeta prefers-reduced-motion mostrando el texto completo.
- * El texto se considera estable: si cambia, el consumidor debe
- * remontar (key) para reiniciar la animación.
+ * Typewriter effect for a given text.
+ * Respects prefers-reduced-motion by showing the full text.
+ * Text is considered stable: if it changes, the consumer must
+ * remount (key) to restart the animation.
  */
 export function useTypewriter(text: string, speed = 80) {
   const [displayedText, setDisplayedText] = useState('');
@@ -36,7 +36,7 @@ export function useTypewriter(text: string, speed = 80) {
     }, speed);
   }, [text, speed]);
 
-  // Limpia el intervalo al desmontar
+  // Clear interval on unmount
   useEffect(() => {
     return () => {
       if (timerRef.current !== null) {

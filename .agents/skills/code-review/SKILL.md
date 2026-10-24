@@ -1,31 +1,31 @@
 ---
 name: code-review
-description: "Revisiones de codigo profesionales. Use para revisar codigo antes de merge, auditar codigo existente, evaluar calidad de implementaciones, identificar problemas de seguridad, rendimiento, deuda tecnica y verificar cumplimiento de estandares."
+description: "Professional code reviews. Use to review code before merge, audit existing code, evaluate implementation quality, identify security, performance, technical debt issues and verify compliance with standards."
 ---
 
 # Code Review
 
-## Proposito
+## Purpose
 
-Realiza revisiones de codigo profesionales identificando problemas de calidad, seguridad, rendimiento y mantenibilidad antes de que lleguen a produccion.
+Conducts professional code reviews identifying quality, security, performance and maintainability issues before they reach production.
 
-## Cuando usar
+## When to Use
 
-- Revisar codigo antes de merge
-- Auditar codigo existente
-- Evaluar calidad de implementaciones
-- Identificar deuda tecnica
-- Verificar cumplimiento de estandares del proyecto
+- Review code before merge
+- Audit existing code
+- Evaluate implementation quality
+- Identify technical debt
+- Verify compliance with project standards
 
-## Flujo de trabajo
+## Workflow
 
-1. Entender el contexto y proposito del codigo a revisar.
-2. Leer `references/instructions.md` y seguir su workflow de revision (logica de negocio, seguridad, rendimiento, manejo de errores, tests, arquitectura).
-3. Aplicar las reglas de `references/best-practices.md` (priorizar por severidad, dar ejemplos de correccion).
-4. Verificar que no se pasan por alto los errores comunes de `references/common-mistakes.md`.
-5. Consultar `references/references.md` para guias oficiales de revision.
-6. Usar `examples/review-checklist.md` como checklist base de la revision.
+1. Understand the context and purpose of the code to be reviewed.
+2. Read `references/instructions.md` and follow its review workflow (business logic, security, performance, error handling, tests, architecture).
+3. Apply the rules from `references/best-practices.md` (prioritize by severity, provide correction examples).
+4. Verify that common errors from `references/common-mistakes.md` are not overlooked.
+5. Consult `references/references.md` for official review guides.
+6. Use `examples/review-checklist.md` as a base checklist for the review.
 
-## Validacion
+## Validation
 
-La revision debe cubrir funcionalidad (no solo estilo), seguridad primero, rendimiento, manejo de errores, tests y mantenibilidad, y terminar con feedback constructivo priorizado por severidad.
+The review must cover functionality (not just style), security first, performance, error handling, tests and maintainability, and end with constructive feedback prioritized by severity.

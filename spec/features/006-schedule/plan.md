@@ -1,8 +1,8 @@
-# Plan de Implementación: Schedule
+# Plan de Implementación: Horario (Schedule)
 
 ## Enfoque
 
-Implementar sección de horarios con diseño glassmorphism, mostrando horario de atención del local.
+Implementar sección de horarios con diseño de vidrio esmerilado (glassmorphism), mostrando horario de atención del local.
 
 ## Estructura de Componentes
 
@@ -16,10 +16,10 @@ Implementar sección de horarios con diseño glassmorphism, mostrando horario de
 - Incluir icono de reloj, horario y días
 
 ### Paso 2: Implementar estilos CSS
-- Gradiente oscuro de fondo
-- Efecto glassmorphism (backdrop-filter: blur)
+- Degradado (gradient) oscuro de fondo
+- Efecto vidrio esmerilado (glassmorphism) (backdrop-filter: blur)
 - Tipografía grande para horario
-- Diseño responsive
+- Diseño adaptable (responsive design)
 
 ### Paso 3: Accesibilidad
 - aria-labelledby en sección

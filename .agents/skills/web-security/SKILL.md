@@ -1,37 +1,37 @@
 ---
 name: web-security
-description: "Seguridad integral en aplicaciones web. Use para proteger contra vulnerabilidades OWASP Top 10 (SQLi, XSS, CSRF), implementar autenticacion y autorizacion (JWT, OAuth, RBAC), headers de seguridad (Helmet, CSP, HSTS), encriptacion y validacion de entradas."
+description: "Comprehensive security for web applications. Use to protect against OWASP Top 10 vulnerabilities (SQLi, XSS, CSRF), implement authentication and authorization (JWT, OAuth, RBAC), security headers (Helmet, CSP, HSTS), encryption and input validation."
 ---
 
 # Web Security
 
-## Proposito
+## Purpose
 
-Implementa seguridad en aplicaciones web: proteccion contra vulnerabilidades comunes, autenticacion y autorizacion, y mejores practicas de seguridad.
+Implements security in web applications: protection against common vulnerabilities, authentication and authorization, and security best practices.
 
-## Cuando usar
+## When to Use
 
-- Implementar seguridad en una aplicacion web
-- Proteger contra vulnerabilidades OWASP Top 10
-- Implementar autenticacion y autorizacion (JWT, OAuth, RBAC)
-- Manejar sesiones, tokens y encriptacion
-- Configurar CORS y headers de seguridad
-- Validar entrada de datos
-- Trabajar con compliance (GDPR, HIPAA)
+- Implement security in a web application
+- Protect against OWASP Top 10 vulnerabilities
+- Implement authentication and authorization (JWT, OAuth, RBAC)
+- Handle sessions, tokens and encryption
+- Configure CORS and security headers
+- Validate data input
+- Work with compliance (GDPR, HIPAA)
 
-## Flujo de trabajo
+## Workflow
 
-1. Leer `references/instructions.md` y aplicar sus reglas obligatorias.
-2. Identificar vectores de ataque aplicables (OWASP Top 10).
-3. Aplicar las contramedidas de `references/best-practices.md` (headers, hashing, least privilege).
-4. Verificar que no se incurre en los anti-patrones de `references/common-mistakes.md`.
-5. Consultar `references/references.md` para fuentes oficiales (OWASP, MDN).
-6. Usar `examples/security-best-practices.js` como referencia practica.
+1. Read `references/instructions.md` and apply its mandatory rules.
+2. Identify applicable attack vectors (OWASP Top 10).
+3. Apply the countermeasures from `references/best-practices.md` (headers, hashing, least privilege).
+4. Verify that you do not fall into the anti-patterns in `references/common-mistakes.md`.
+5. Consult `references/references.md` for official sources (OWASP, MDN).
+6. Use `examples/security-best-practices.js` as a practical reference.
 
-## Validacion
+## Validation
 
-El resultado debe proteger contra OWASP Top 10, usar autenticacion robusta y autorizacion apropiada (RBAC), tener headers de seguridad, validar toda entrada, usar encriptacion apropiada e incluir logging de seguridad.
+The result must protect against OWASP Top 10, use robust authentication and appropriate authorization (RBAC), have security headers, validate all input, use appropriate encryption and include security logging.
 
-## Nota
+## Note
 
-Esta skill se solapa parcialmente con `security`. Usar esta skill como referencia general de seguridad web y `security` para hardening especifico contra OWASP y auditoria.
+This skill partially overlaps with `security`. Use this skill as a general web security reference and `security` for specific OWASP hardening and auditing.

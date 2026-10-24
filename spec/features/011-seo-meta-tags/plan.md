@@ -1,38 +1,38 @@
-# Plan de Implementación: SEO & Meta Tags
+# Plan de Implementación: SEO y Etiquetas Meta (SEO & Meta Tags)
 
 ## Enfoque
 
-Implementar todas las optimizaciones SEO: meta tags, Open Graph, Twitter Cards, JSON-LD y HTML semántico.
+Implementar todas las optimizaciones SEO: etiquetas meta (meta tags), Open Graph, Tarjetas de Twitter (Twitter Cards), JSON-LD y HTML semántico.
 
 ## Estructura
 
 ### Archivos a Modificar
-1. **index.html** - Meta tags básicos y Open Graph
-2. **App.jsx** - react-helmet-async para meta tags dinámicos
-3. **Componentes** - HTML semántico y atributos alt
+1. **index.html** - Etiquetas meta básicas (meta tags) y Open Graph
+2. **App.jsx** - react-helmet-async para etiquetas meta dinámicas (dynamic meta tags)
+3. **Componentes** - HTML semántico y atributos alt (alt attributes)
 
 ## Pasos de Implementación
 
-### Paso 1: Meta tags en index.html
-- Meta description, keywords, author
-- Open Graph tags
-- Twitter Cards
-- Canonical URL
-- Preconnect a Google Fonts
+### Paso 1: Etiquetas meta (meta tags) en index.html
+- Descripción meta (meta description), palabras clave (keywords), autor (author)
+- Etiquetas Open Graph (Open Graph tags)
+- Tarjetas de Twitter (Twitter Cards)
+- URL canónica (canonical URL)
+- Preconexión (preconnect) a Google Fonts
 
 ### Paso 2: Implementar react-helmet-async
 - Instalar dependencia
-- Agregar HelmetProvider en main.jsx
-- Meta tags dinámicos en App.jsx
-- JSON-LD schema LocalBusiness
+- Agregar Proveedor Helmet (HelmetProvider) en main.jsx
+- Etiquetas meta dinámicas (dynamic meta tags) en App.jsx
+- Esquema JSON-LD (JSON-LD schema) LocalBusiness
 
 ### Paso 3: HTML semántico
 - Verificar uso de etiquetas semánticas
-- Jerarquía de headings correcta
-- Atributos alt en todas las imágenes
-- Lang="es" en html
+- Jerarquía de encabezados (headings) correcta
+- Atributos alt (alt attributes) en todas las imágenes
+- Atributo idioma Lang="es" en html
 
 ### Paso 4: Validación
-- Validar meta tags
+- Validar etiquetas meta (meta tags)
 - Verificar Open Graph
-- Test de JSON-LD
+- Prueba (test) de JSON-LD

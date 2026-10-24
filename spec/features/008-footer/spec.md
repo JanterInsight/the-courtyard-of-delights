@@ -1,13 +1,13 @@
-# Feature: Footer
+# Funcionalidad: Pie de Página (Footer)
 
 ## Descripción
 
-Implementar el footer del sitio con información de copyright y créditos, manteniendo el diseño coherente con la identidad de marca.
+Implementar el pie de página (footer) del sitio con información de derechos de autor (copyright) y créditos, manteniendo el diseño coherente con la identidad de marca.
 
 ## Requisitos Funcionales
 
 ### RF-001: Contenido
-- Copyright: "© 2026 - El Patio de las Delicias - Helados Artesanales"
+- Derechos de autor (copyright): "© 2026 - El Patio de las Delicias - Helados Artesanales"
 - Texto: "Hecho con ❤️ para nuestra comunidad"
 - Diseño centrado
 - Colores de marca
@@ -17,7 +17,7 @@ Implementar el footer del sitio con información de copyright y créditos, mante
 - Tipografía legible
 - Espaciado adecuado
 - Alineación centrada
-- Responsive
+- Adaptable (responsive)
 
 ## Requisitos No Funcionales
 
@@ -30,16 +30,16 @@ Implementar el footer del sitio con información de copyright y créditos, mante
 - Sin dependencias externas
 - CSS puro
 
-### RNF-003: Responsive
-- Mobile-first design
-- Padding adaptativo
+### RNF-003: Adaptable (Responsive)
+- Diseño móvil primero (mobile-first design)
+- Relleno (padding) adaptativo
 
 ## Criterios de Aceptación
 
-- [ ] Footer visible al final de la página
-- [ ] Copyright mostrado correctamente
+- [ ] Pie de página (footer) visible al final de la página
+- [ ] Derechos de autor (copyright) mostrados correctamente
 - [ ] Corazón emoji visible
 - [ ] Diseño centrado
 - [ ] Colores de marca aplicados
-- [ ] Responsive en móvil y desktop
+- [ ] Adaptable (responsive) en móvil y escritorio (desktop)
 - [ ] Accesibilidad implementada

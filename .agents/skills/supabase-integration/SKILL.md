@@ -1,36 +1,36 @@
 ---
 name: supabase-integration
-description: "Integracion de Supabase en aplicaciones frontend y backend. Use para integrar el cliente de Supabase en un proyecto, trabajar con su API de base de datos PostgreSQL, autenticacion, storage, real-time subscriptions, RLS y edge functions desde el codigo de la aplicacion."
+description: "Supabase integration in frontend and backend applications. Use to integrate the Supabase client into a project, work with its PostgreSQL database API, authentication, storage, real-time subscriptions, RLS, and edge functions from the application code."
 ---
 
 # Supabase Integration
 
-## Proposito
+## Purpose
 
-Integra Supabase en aplicaciones backend y frontend: cliente oficial, base de datos PostgreSQL, autenticacion, storage, realtime y edge functions de manera efectiva y segura.
+Integrate Supabase into backend and frontend applications: official client, PostgreSQL database, authentication, storage, realtime, and edge functions effectively and securely.
 
-## Cuando usar
+## When to Use
 
-- Integrar Supabase en un proyecto existente
-- Trabajar con la API cliente de Supabase (queries, inserts, joins, paginacion)
-- Implementar autenticacion (sign up/in, OAuth, magic links, password reset)
-- Almacenar archivos con Storage (buckets, URLs firmadas)
-- Trabajar con real-time subscriptions
-- Implementar RLS desde el codigo o usar edge functions
+- Integrate Supabase into an existing project
+- Work with the Supabase client API (queries, inserts, joins, pagination)
+- Implement authentication (sign up/in, OAuth, magic links, password reset)
+- Store files with Storage (buckets, signed URLs)
+- Work with real-time subscriptions
+- Implement RLS from code or use edge functions
 
-## Flujo de trabajo
+## Workflow
 
-1. Leer `references/instructions.md` y aplicar sus reglas obligatorias.
-2. Inicializar el cliente oficial con tipos TypeScript.
-3. Implementar queries, auth, storage y realtime siguiendo `references/best-practices.md`.
-4. Verificar que la integracion no incurre en los anti-patrones de `references/common-mistakes.md`.
-5. Consultar `references/references.md` para fuentes oficiales cuando haya dudas.
-6. Usar `examples/supabase-react-integration.js` como referencia practica.
+1. Read `references/instructions.md` and apply its mandatory rules.
+2. Initialize the official client with TypeScript types.
+3. Implement queries, auth, storage, and realtime following `references/best-practices.md`.
+4. Verify that the integration does not fall into the anti-patterns from `references/common-mistakes.md`.
+5. Consult `references/references.md` for official sources when in doubt.
+6. Use `examples/supabase-react-integration.js` as a practical reference.
 
-## Validacion
+## Validation
 
-La integracion debe usar el cliente oficial, tener manejo de errores, implementar RLS, incluir validaciones y tipos TypeScript, y estar optimizada.
+The integration must use the official client, have error handling, implement RLS, include validations and TypeScript types, and be optimized.
 
-## Nota
+## Note
 
-Esta skill se solapa parcialmente con `supabase` (configuracion del proyecto). Usar `supabase` para configurar el proyecto y esta skill para integrarlo en el codigo de la aplicacion.
+This skill partially overlaps with `supabase` (project configuration). Use `supabase` to configure the project and this skill to integrate it into the application code.

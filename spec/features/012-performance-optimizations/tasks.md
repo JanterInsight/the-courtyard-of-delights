@@ -1,22 +1,22 @@
-# Tasks: Performance Optimizations
+# Tareas: Optimizaciones de Rendimiento (Performance Optimizations)
 
-## Task 1: Lazy loading
-- [ ] IntersectionObserver para imágenes
-- [ ] Skeleton placeholders
-- [ ] Fade-in al cargar
+## Tarea 1: Carga diferida (lazy loading)
+- [ ] Observador de intersección (IntersectionObserver) para imágenes
+- [ ] Marcadores de posición esqueleto (skeleton placeholders)
+- [ ] Aparición gradual (fade-in) al cargar
 
-## Task 2: Animaciones optimizadas
-- [ ] IntersectionObserver para activar animaciones
-- [ ] CSS transitions (GPU accelerated)
-- [ ] Respeto por prefers-reduced-motion
+## Tarea 2: Animaciones optimizadas
+- [ ] Observador de intersección (IntersectionObserver) para activar animaciones
+- [ ] Transiciones CSS (CSS transitions) (acelerado por GPU / GPU accelerated)
+- [ ] Respeto por preferencia de movimiento reducido (prefers-reduced-motion)
 
-## Task 3: CSS optimizations
-- [ ] CSS variables para evitar repetición
-- [ ] Preconnect a Google Fonts
-- [ ] Font-display: swap
-- [ ] Imágenes con width/height
+## Tarea 3: Optimizaciones CSS (CSS optimizations)
+- [ ] Variables CSS (CSS variables) para evitar repetición
+- [ ] Preconexión (preconnect) a Google Fonts
+- [ ] Visualización de fuente (font-display): swap
+- [ ] Imágenes con anchura/altura (width/height)
 
-## Task 4: Métricas
-- [ ] Monitorear Core Web Vitals
+## Tarea 4: Métricas
+- [ ] Monitorear métricas principales de la web (Core Web Vitals)
 - [ ] Optimizar imágenes
-- [ ] Minimizar layout shift
+- [ ] Minimizar desplazamiento de diseño (layout shift)

@@ -1,23 +1,23 @@
-# Tasks: About Us
+# Tareas: Sobre Nosotros
 
-## Task 1: Crear componentes base
-- [ ] Crear `About.jsx` con layout de dos columnas
+## Tarea 1: Crear componentes base
+- [ ] Crear `About.jsx` con disposición (layout) de dos columnas
 - [ ] Crear `AnimatedCounter.jsx` con animación numérica
-- [ ] Definir array de stats en About.jsx
+- [ ] Definir arreglo (array) de estadísticas (stats) en About.jsx
 
-## Task 2: Implementar estilos CSS
-- [ ] Layout grid (texto + imagen)
+## Tarea 2: Implementar estilos CSS
+- [ ] Disposición (layout) en cuadrícula (grid) (texto + imagen)
 - [ ] Estilos de tarjetas de estadísticas
-- [ ] Efecto hover en imagen
-- [ ] Responsive: stack vertical en móvil
+- [ ] Efecto al pasar el cursor (hover) en imagen
+- [ ] Adaptable (responsive): apilado vertical en móvil
 
-## Task 3: Implementar funcionalidad JavaScript
+## Tarea 3: Implementar funcionalidad JavaScript
 - [ ] Animación de contador con requestAnimationFrame
-- [ ] IntersectionObserver para activar al hacer scroll
+- [ ] IntersectionObserver para activar al hacer desplazamiento (scroll)
 - [ ] Duración de animación: 2000ms
-- [ ] Flag hasAnimated para evitar re-animación
+- [ ] Bandera hasAnimated para evitar re-animación
 
-## Task 4: Accesibilidad y responsive
+## Tarea 4: Accesibilidad y adaptabilidad (Responsive)
 - [ ] Atributo alt descriptivo en imagen
 - [ ] aria-labelledby en sección
-- [ ] Grid responsive de contadores
+- [ ] Cuadrícula (grid) adaptable (responsive) de contadores

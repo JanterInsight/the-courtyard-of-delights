@@ -1,27 +1,27 @@
-# Feature: Dark/Light Mode
+# Funcionalidad: Modo Oscuro/Claro (Dark/Light Mode)
 
 ## Descripción
 
-Implementar el sistema de temas oscuro y claro con toggle en el header, persistencia en localStorage y variables CSS para ambos temas.
+Implementar el sistema de temas oscuro y claro con conmutador (toggle) en el encabezado (header), persistencia en almacenamiento local (localStorage) y variables CSS para ambos temas.
 
 ## Requisitos Funcionales
 
-### RF-001: Toggle de Tema
-- Botón en el header con icono de sol/luna
+### RF-001: Conmutador de Tema (Toggle)
+- Botón en el encabezado (header) con icono de sol/luna
 - Cambio inmediato entre temas
-- Persistencia en localStorage
+- Persistencia en almacenamiento local (localStorage)
 - Lectura de preferencia guardada al cargar
 
-### RF-002: Variables CSS
+### RF-002: Variables CSS (CSS Variables)
 - Variables CSS para tema claro
 - Variables CSS para tema oscuro
-- Override con [data-theme="dark"]
+- Sobrescritura (override) con [data-theme="dark"]
 - Transición suave entre temas
 
 ### RF-003: Paleta de Colores
 **Tema Claro:**
 - Títulos: #8B4513 (Chocolate)
-- Bordes/hover: #D4A017 (Dorado miel)
+- Bordes/efecto al pasar el cursor (hover): #D4A017 (Dorado miel)
 - Fondo: #FFFDF8 (Blanco crema)
 - Tarjetas: #FFF4E8 (Crema vainilla)
 - Texto principal: #2D2D2D (Gris casi negro)
@@ -29,7 +29,7 @@ Implementar el sistema de temas oscuro y claro con toggle en el header, persiste
 
 **Tema Oscuro:**
 - Títulos: #FFD166 (Dorado vainilla)
-- Bordes/hover: #F4A261 (Caramelo)
+- Bordes/efecto al pasar el cursor (hover): #F4A261 (Caramelo)
 - Fondo: #121212 (Negro carbón)
 - Tarjetas: #1E1E1E (Gris oscuro)
 - Texto principal: #F8F8F8 (Blanco suave)
@@ -40,24 +40,24 @@ Implementar el sistema de temas oscuro y claro con toggle en el header, persiste
 ### RNF-001: Accesibilidad
 - Contraste WCAG AA en ambos temas
 - Transición suave (0.3s)
-- Respeto por prefers-color-scheme
+- Respeto por preferencia de esquema de color (prefers-color-scheme)
 
 ### RNF-002: Rendimiento
 - Sin dependencias externas
-- CSS transitions para cambios
-- localStorage para persistencia
+- Transiciones CSS (CSS transitions) para cambios
+- Almacenamiento local (localStorage) para persistencia
 
-### RNF-003: Responsive
-- Mobile-first design
+### RNF-003: Adaptabilidad (Responsive)
+- Diseño móvil primero (mobile-first)
 - Funciona en todos los dispositivos
 
 ## Criterios de Aceptación
 
-- [ ] Toggle de tema visible en header
+- [ ] Conmutador (toggle) de tema visible en encabezado (header)
 - [ ] Cambio entre temas funcional
-- [ ] Persistencia en localStorage
+- [ ] Persistencia en almacenamiento local (localStorage)
 - [ ] Variables CSS aplicadas correctamente
 - [ ] Paleta de colores correcta en ambos temas
 - [ ] Transición suave entre temas
 - [ ] Contraste WCAG AA garantizado
-- [ ] Responsive en móvil y desktop
+- [ ] Adaptable (responsive) en móvil y escritorio (desktop)

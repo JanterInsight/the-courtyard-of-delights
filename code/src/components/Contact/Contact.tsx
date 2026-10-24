@@ -6,7 +6,7 @@ import { ContactCard } from './ContactCard';
 
 function getIconPath(baseName: string, isDark: boolean): string {
   const themeSuffix = isDark ? 'dark_theme' : 'light_theme';
-  return `icon/${baseName}-32x32-${themeSuffix}.png`;
+  return `${import.meta.env.BASE_URL}icons/${baseName}-32x32-${themeSuffix}.png`;
 }
 
 export function Contact() {

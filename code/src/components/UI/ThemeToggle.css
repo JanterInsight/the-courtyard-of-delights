@@ -18,20 +18,20 @@
 }
 
 .theme-toggle:hover {
-  background-color: var(--crema-vainilla);
+  background-color: var(--vanilla-cream);
   transform: scale(1.1);
 }
 
 .theme-icon {
   width: 24px;
   height: 24px;
-  color: var(--texto-oscuro);
+  color: var(--dark-text);
   filter: brightness(0);
   transition: all var(--transition-fast);
 }
 
 /* Dark mode: make theme toggle icon white */
 [data-theme="dark"] .theme-icon {
-  color: var(--blanco);
+  color: var(--cream-white);
   filter: brightness(0) invert(1);
 }

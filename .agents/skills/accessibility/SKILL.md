@@ -1,30 +1,30 @@
 ---
 name: accessibility
-description: "Accesibilidad web WCAG 2.2. Use para implementar accesibilidad en HTML, CSS y JavaScript, atributos ARIA, navegacion por teclado, focus management, contraste de colores, compatibilidad con screen readers y pruebas automatizadas con axe o Lighthouse."
+description: "Web accessibility WCAG 2.2. Use to implement accessibility in HTML, CSS, and JavaScript, ARIA attributes, keyboard navigation, focus management, color contrast, screen reader compatibility, and automated testing with axe or Lighthouse."
 ---
 
 # Web Accessibility
 
-## Proposito
+## Purpose
 
-Proporciona conocimiento especializado para desarrollar aplicaciones web accesibles segun WCAG 2.2: accesibilidad en HTML, CSS, JavaScript y frameworks modernos, siguiendo estandares internacionales y mejores practicas.
+Provides specialized knowledge for developing accessible web applications according to WCAG 2.2: accessibility in HTML, CSS, JavaScript, and modern frameworks, following international standards and best practices.
 
-## Cuando usar
+## When to Use
 
-- Implementar accesibilidad web o cumplir con WCAG 2.2
-- Mejorar la accesibilidad de una aplicacion existente
-- Trabajar con atributos ARIA
-- Implementar navegacion por teclado o focus management
-- Optimizar para screen readers o contraste de colores
+- Implement web accessibility or comply with WCAG 2.2
+- Improve the accessibility of an existing application
+- Work with ARIA attributes
+- Implement keyboard navigation or focus management
+- Optimize for screen readers or color contrast
 
-## Flujo de trabajo
+## Workflow
 
-1. Leer `references/instructions.md` y aplicar sus reglas obligatorias.
-2. Consultar `references/best-practices.md` durante la implementacion.
-3. Verificar que el resultado no incurre en los anti-patrones de `references/common-mistakes.md`.
-4. Consultar `references/references.md` para fuentes oficiales (WCAG, WebAIM).
-5. Usar `examples/accessible-form.html` como referencia practica.
+1. Read `references/instructions.md` and apply its mandatory rules.
+2. Consult `references/best-practices.md` during implementation.
+3. Verify that the result does not fall into the anti-patterns in `references/common-mistakes.md`.
+4. Consult `references/references.md` for official sources (WCAG, WebAIM).
+5. Use `examples/accessible-form.html` as a practical reference.
 
-## Validacion
+## Validation
 
-El resultado debe cumplir WCAG 2.2 nivel AA: navegable por teclado, focus indicators visibles, contraste minimo 4.5:1, elementos semanticos, alt text en imagenes, compatible con screen readers y respetando prefers-reduced-motion.
+The result must comply with WCAG 2.2 Level AA: keyboard navigable, visible focus indicators, minimum contrast ratio 4.5:1, semantic elements, alt text on images, compatible with screen readers, and respecting prefers-reduced-motion.

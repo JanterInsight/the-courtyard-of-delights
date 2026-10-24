@@ -1,27 +1,27 @@
-# Tasks: SEO & Meta Tags
+# Tareas: SEO y Etiquetas Meta (SEO & Meta Tags)
 
-## Task 1: Meta tags en index.html
-- [ ] Meta description (150-160 caracteres)
-- [ ] Meta keywords
-- [ ] Meta author
-- [ ] Open Graph tags
-- [ ] Twitter Cards
-- [ ] Canonical URL
-- [ ] Preconnect a Google Fonts
+## Tarea 1: Etiquetas meta (meta tags) en index.html
+- [ ] Descripción meta (meta description) (150-160 caracteres)
+- [ ] Palabras clave meta (meta keywords)
+- [ ] Autor meta (meta author)
+- [ ] Etiquetas Open Graph (Open Graph tags)
+- [ ] Tarjetas de Twitter (Twitter Cards)
+- [ ] URL canónica (canonical URL)
+- [ ] Preconexión (preconnect) a Google Fonts
 
-## Task 2: Implementar react-helmet-async
+## Tarea 2: Implementar react-helmet-async
 - [ ] Instalar dependencia
-- [ ] Agregar HelmetProvider en main.jsx
-- [ ] Meta tags dinámicos en App.jsx
-- [ ] JSON-LD schema LocalBusiness
+- [ ] Agregar Proveedor Helmet (HelmetProvider) en main.jsx
+- [ ] Etiquetas meta dinámicas (dynamic meta tags) en App.jsx
+- [ ] Esquema JSON-LD (JSON-LD schema) LocalBusiness
 
-## Task 3: HTML semántico
+## Tarea 3: HTML semántico
 - [ ] Verificar etiquetas semánticas
-- [ ] Jerarquía de headings correcta
-- [ ] Atributos alt en todas las imágenes
-- [ ] Lang="es" en html
+- [ ] Jerarquía de encabezados (headings) correcta
+- [ ] Atributos alt (alt attributes) en todas las imágenes
+- [ ] Atributo idioma Lang="es" en html
 
-## Task 4: Validación
-- [ ] Validar meta tags
+## Tarea 4: Validación
+- [ ] Validar etiquetas meta (meta tags)
 - [ ] Verificar Open Graph
-- [ ] Test de JSON-LD
+- [ ] Prueba (test) de JSON-LD

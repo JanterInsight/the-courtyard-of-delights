@@ -1,4 +1,4 @@
-# Feature: Performance Optimizations
+# Funcionalidad: Optimizaciones de Rendimiento (Performance Optimizations)
 
 ## Descripción
 
@@ -6,55 +6,55 @@ Implementar todas las optimizaciones de rendimiento necesarias para garantizar u
 
 ## Requisitos Funcionales
 
-### RF-001: Lazy Loading
-- Lazy loading de todas las imágenes
-- IntersectionObserver para detección de viewport
-- Skeleton placeholders durante carga
-- Fade-in al completar carga
+### RF-001: Carga Diferida (Lazy Loading)
+- Carga diferida (lazy loading) de todas las imágenes
+- Observador de intersección (IntersectionObserver) para detección de ventana visible (viewport)
+- Marcadores de posición esqueleto (skeleton placeholders) durante carga
+- Aparición gradual (fade-in) al completar carga
 
 ### RF-002: Animaciones Optimizadas
-- IntersectionObserver para activar animaciones solo cuando visibles
-- CSS transitions para animaciones (GPU accelerated)
-- Respeto por prefers-reduced-motion
-- Cleanup de observers
+- Observador de intersección (IntersectionObserver) para activar animaciones solo cuando visibles
+- Transiciones CSS (CSS transitions) para animaciones (acelerado por GPU / GPU accelerated)
+- Respeto por preferencia de movimiento reducido (prefers-reduced-motion)
+- Limpieza (cleanup) de observadores (observers)
 
-### RF-003: CSS Optimizations
-- CSS variables para evitar repetición
-- Preconnect a Google Fonts
-- Imágenes con width/height para evitar layout shift
-- Font-display: swap para fuentes
+### RF-003: Optimizaciones CSS (CSS Optimizations)
+- Variables CSS (CSS variables) para evitar repetición
+- Preconexión (preconnect) a Google Fonts
+- Imágenes con anchura/altura (width/height) para evitar desplazamiento de diseño (layout shift)
+- Visualización de fuente (font-display): swap para fuentes
 
-### RF-004: Code Splitting
+### RF-004: División de Código (Code Splitting)
 - Componentes modulares
-- Lazy loading de componentes si es necesario
-- Tree shaking de dependencias
+- Carga diferida (lazy loading) de componentes si es necesario
+- Eliminación de código no utilizado (tree shaking) de dependencias
 
 ## Requisitos No Funcionales
 
 ### RNF-001: Métricas
-- First Contentful Paint < 1.5s
-- Largest Contentful Paint < 2.5s
-- Cumulative Layout Shift < 0.1
-- First Input Delay < 100ms
+- Primer pintado con contenido (First Contentful Paint) < 1.5s
+- Pintado más grande con contenido (Largest Contentful Paint) < 2.5s
+- Desplazamiento acumulado de diseño (Cumulative Layout Shift) < 0.1
+- Retraso de primera entrada (First Input Delay) < 100ms
 
 ### RNF-002: Rendimiento
 - Sin dependencias externas innecesarias
-- Event listeners con passive: true
-- Cleanup de efectos en useEffect
+- Oyentes de eventos (event listeners) con passive: true
+- Limpieza (cleanup) de efectos en useEffect
 - Optimización de imágenes (WebP, AVIF)
 
-### RNF-003: Responsive
-- Mobile-first optimizado
-- Imágenes adaptativas por dispositivo
+### RNF-003: Adaptabilidad (Responsive)
+- Optimizado con diseño móvil primero (mobile-first)
+- Imágenes adaptativas (responsive) por dispositivo
 
 ## Criterios de Aceptación
 
-- [ ] Lazy loading implementado en todas las imágenes
-- [ ] Skeleton placeholders visibles
-- [ ] IntersectionObserver para animaciones
-- [ ] CSS variables utilizadas
-- [ ] Preconnect a Google Fonts
-- [ ] Layout shift mínimo (CLS < 0.1)
-- [ ] Respeto por prefers-reduced-motion
-- [ ] Métricas Core Web Vitals cumplidas
-- [ ] Performance score > 90 en Lighthouse
+- [ ] Carga diferida (lazy loading) implementado en todas las imágenes
+- [ ] Marcadores de posición esqueleto (skeleton placeholders) visibles
+- [ ] Observador de intersección (IntersectionObserver) para animaciones
+- [ ] Variables CSS (CSS variables) utilizadas
+- [ ] Preconexión (preconnect) a Google Fonts
+- [ ] Desplazamiento de diseño (layout shift) mínimo (CLS < 0.1)
+- [ ] Respeto por preferencia de movimiento reducido (prefers-reduced-motion)
+- [ ] Métricas principales de la web (Core Web Vitals) cumplidas
+- [ ] Puntuación de rendimiento (performance score) > 90 en Lighthouse

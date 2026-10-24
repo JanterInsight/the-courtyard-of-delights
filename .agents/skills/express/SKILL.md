@@ -1,32 +1,32 @@
 ---
 name: express
-description: "Desarrollo de servidores y APIs REST con Express.js moderno. Use para crear servidores HTTP, implementar middleware y rutas, validar datos, manejar errores de forma centralizada, configurar CORS, rate limiting, sesiones y cookies."
+description: "Development of servers and REST APIs with modern Express.js. Use to create HTTP servers, implement middleware and routes, validate data, handle errors centrally, configure CORS, rate limiting, sessions, and cookies."
 ---
 
 # Express.js Development
 
-## Proposito
+## Purpose
 
-Desarrolla APIs y servidores web con Express.js moderno: servidores escalables, middleware, rutas y mejores practicas para backends robustos.
+Develop APIs and web servers with modern Express.js: scalable servers, middleware, routes, and best practices for robust backends.
 
-## Cuando usar
+## When to Use
 
-- Crear un servidor HTTP con Express
-- Implementar APIs REST
-- Manejar middleware o rutas
-- Implementar autenticacion en Express
-- Validar datos de entrada
-- Configurar CORS, rate limiting, sesiones y cookies
-- Implementar manejo de errores centralizado
+- Create an HTTP server with Express
+- Implement REST APIs
+- Handle middleware or routes
+- Implement authentication in Express
+- Validate input data
+- Configure CORS, rate limiting, sessions, and cookies
+- Implement centralized error handling
 
-## Flujo de trabajo
+## Workflow
 
-1. Leer `references/instructions.md` y aplicar sus reglas obligatorias.
-2. Consultar `references/best-practices.md` durante la implementacion (orden de middleware, error handling middleware).
-3. Verificar que la implementacion no incurre en los anti-patrones de `references/common-mistakes.md`.
-4. Consultar `references/references.md` para fuentes oficiales cuando haya dudas.
-5. Usar `examples/express-api.js` como referencia practica.
+1. Read `references/instructions.md` and apply its mandatory rules.
+2. Consult `references/best-practices.md` during implementation (middleware order, error handling middleware).
+3. Verify that the implementation does not fall into the anti-patterns from `references/common-mistakes.md`.
+4. Consult `references/references.md` for official sources when in doubt.
+5. Use `examples/express-api.js` as a practical reference.
 
-## Validacion
+## Validation
 
-El codigo Express generado debe usar async/await, tener manejo de errores centralizado, validar entrada de datos, ser seguro (Helmet, sanitizacion), estar organizado, testeable y seguir principios REST.
+The generated Express code must use async/await, have centralized error handling, validate input data, be secure (Helmet, sanitization), be organized, testable, and follow REST principles.

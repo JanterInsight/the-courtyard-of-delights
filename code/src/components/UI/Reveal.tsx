@@ -6,14 +6,14 @@ type RevealDirection = 'up' | 'left' | 'right' | 'zoom';
 interface RevealProps {
   children: ReactNode;
   direction?: RevealDirection;
-  /** Retardo en ms para crear efecto escalonado en grillas */
+  /** Delay in ms for staggered grid effect */
   delay?: number;
 }
 
 /**
- * Envuelve contenido y lo anima al entrar en el viewport mediante
- * IntersectionObserver. La animación es puramente visual (opacidad,
- * transform y filter): no afecta la geometría ni los observers internos.
+ * Wraps content and animates it on viewport entry via
+ * IntersectionObserver. The animation is purely visual (opacity,
+ * transform and filter): it does not affect geometry or inner observers.
  */
 export function Reveal({ children, direction = 'up', delay = 0 }: RevealProps) {
   const { targetRef, hasIntersected } = useIntersectionObserver<HTMLDivElement>({

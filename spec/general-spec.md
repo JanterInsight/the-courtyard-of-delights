@@ -1,7 +1,7 @@
 ## Frontend
 ### Paleta colores (Blanco):
 - Títulos: #8B4513 (Chocolate)
-- Bordes, detalles y hover: #D4A017 (Dorado miel)
+- Bordes, detalles y efecto al pasar el cursor (hover): #D4A017 (Dorado miel)
 - Fondo Principal: #FFFDF8 (Blanco crema)
 - Tarjetas y secciones secundarias: #FFF4E8 (Crema vainilla)
 - Textos principales: #2D2D2D (Gris casi negro)
@@ -10,7 +10,7 @@
 
 ### Paleta colores (Negro):
 - Títulos: #FFD166 (Dorado vainilla)
-- Bordes, detalles y hover: #F4A261 (Caramelo)
+- Bordes, detalles y efecto al pasar el cursor (hover): #F4A261 (Caramelo)
 - Fondo Principal: #121212 (Negro carbón)
 - Tarjetas y secciones secundarias: #1E1E1E (Gris oscuro)
 - Textos principales: #F8F8F8 (Blanco suave)
@@ -29,7 +29,7 @@
 - Fuente Respaldo: Poppins
 
 ### Plataforma:
-- Diseño Responsive adaptado a móviles, tablets y escritorio
+- Diseño adaptable (responsive) para móviles, tabletas y escritorio
 
 ### Idioma
 - Español
@@ -39,3 +39,4 @@
 - Mozilla Firefox
 - Microsoft Edge
 - Safari
+- OperaGX

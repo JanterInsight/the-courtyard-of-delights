@@ -1,8 +1,8 @@
-# Plan de Implementación: Products
+# Plan de Implementación: Productos
 
 ## Enfoque
 
-Implementar la sección de productos con grid de 4 tarjetas, cada una con imagen, título, descripción y hover effects.
+Implementar la sección de productos con cuadrícula (grid) de 4 tarjetas, cada una con imagen, título, descripción y efectos al pasar el cursor (hover effects).
 
 ## Estructura de Componentes
 
@@ -11,27 +11,27 @@ Implementar la sección de productos con grid de 4 tarjetas, cada una con imagen
 2. **ProductCard** (`ProductCard.jsx`) - Tarjeta individual de producto
 
 ### Datos
-- Array de productos en `data/products.js`
+- Arreglo (array) de productos en `data/products.js`
 
 ## Pasos de Implementación
 
 ### Paso 1: Crear componentes base
-- Crear `Products.jsx` con grid layout
+- Crear `Products.jsx` con disposición en cuadrícula (grid layout)
 - Crear `ProductCard.jsx` con estructura de tarjeta
 - Definir datos de productos
 
 ### Paso 2: Implementar estilos CSS
-- Grid responsive (4 cols desktop, 2 tablet, 1 móvil)
-- Estilos de tarjeta (shadow, border-radius)
-- Hover effect (scale, shadow)
-- Skeleton loading placeholder
+- Cuadrícula (grid) adaptable (responsive) (4 columnas/cols en escritorio/desktop, 2 en tableta/tablet, 1 en móvil)
+- Estilos de tarjeta (sombra/shadow, radio de borde/border-radius)
+- Efecto al pasar el cursor (hover) (escala/scale, sombra/shadow)
+- Marcador de posición esqueleto (skeleton loading placeholder)
 
 ### Paso 3: Implementar funcionalidad JavaScript
-- Lazy loading de imágenes
-- Skeleton state management
-- Fade-in al cargar imagen
+- Carga diferida (lazy loading) de imágenes
+- Gestión de estado esqueleto (skeleton state management)
+- Aparición gradual (fade-in) al cargar imagen
 
-### Paso 4: Accesibilidad y responsive
+### Paso 4: Accesibilidad y adaptabilidad (Responsive)
 - Atributos alt descriptivos
 - aria-labelledby en sección
-- Grid responsive
+- Cuadrícula (grid) adaptable (responsive)

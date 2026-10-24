@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 /**
- * Devuelve la posición vertical del scroll de la ventana.
+ * Returns the window's vertical scroll position.
  */
 export function useScrollPosition(): number {
   const [scrollY, setScrollY] = useState(0);

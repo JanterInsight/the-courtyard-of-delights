@@ -5,7 +5,7 @@
 .hero {
   margin-top: var(--header-height);
   min-height: 90vh;
-  background: linear-gradient(135deg, var(--crema-vainilla) 0%, #f4c2c28c 100%);
+  background: linear-gradient(135deg, var(--vanilla-cream) 0%, #f4c2c28c 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,21 +22,21 @@
 
 .hero-title {
   font-size: var(--font-size-hero);
-  color: var(--marron-chocolate);
+  color: var(--chocolate-brown);
   margin-bottom: var(--spacing-md);
   animation: fadeInUp 1s ease;
 }
 
 .hero-subtitle {
   font-size: var(--font-size-xl);
-  color: var(--texto-oscuro);
+  color: var(--dark-text);
   margin-bottom: var(--spacing-lg);
   animation: fadeInUp 1s ease 0.2s backwards;
 }
 
 .hero-description {
   font-size: var(--font-size-md);
-  color: var(--texto-oscuro);
+  color: var(--dark-text);
   margin-bottom: var(--spacing-xl);
   animation: fadeInUp 1s ease 0.4s backwards;
 }
@@ -54,7 +54,7 @@
   display: inline-block;
   width: 2px;
   height: 1em;
-  background-color: var(--marron-chocolate);
+  background-color: var(--chocolate-brown);
   margin-left: 2px;
   animation: blink 1s infinite;
   vertical-align: text-bottom;

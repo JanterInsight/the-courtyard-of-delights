@@ -20,7 +20,7 @@ export function AnimatedCounter({ target, prefix = '', duration = 2000 }: Animat
 
     hasAnimated.current = true;
 
-    // Respeta prefers-reduced-motion: muestra el valor final sin animar
+    // Respects prefers-reduced-motion: show final value without animation
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       rafRef.current = requestAnimationFrame(() => {
         setCount(target);

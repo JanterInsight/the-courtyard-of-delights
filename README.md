@@ -26,6 +26,28 @@ Modern landing page for an artisanal ice cream, confiture, and croquettes shop.
 - IntersectionObserver API for scroll animations
 - ESLint (flat config) + react-hooks rules
 
+## 📁 Project Structure
+
+```
+.
+├── .agents/        <- agent skills & configuration
+├── .clinerules
+├── .editorconfig
+├── .git/           <- git history
+├── .github/        <- workflows (deploy.yml)
+├── .gitignore
+├── .VERSION
+├── LICENSE
+├── docs/           <- CHANGELOG.md
+├── code/           <- Vite + React + TS app (see code/README.md)
+│   └── README.md
+├── spec/           <- Spec-Driven Development (see spec/README.md)
+│   └── README.md
+└── README.md       <- this file
+```
+
+> For more info on each folder, see the respective README: [code/README.md](code/README.md) and [spec/README.md](spec/README.md).
+
 ## 🚀 Quick Start
 
 ```bash

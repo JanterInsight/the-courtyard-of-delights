@@ -1,94 +1,94 @@
 # Roadmap
-Orden de las features
+Orden de las funcionalidades (features)
 
 ## Implementado
 
-### 1. Header & Navigation
-- Navegación fija con scroll effect
-- Menú hamburguesa responsive para móvil
-- Cierre con tecla Escape o click fuera
-- Toggle de tema oscuro/claro
+### 1. Cabecera y Navegación (Header & Navigation)
+- Navegación fija con efecto al desplazarse (scroll effect)
+- Menú hamburguesa adaptable (responsive) para móvil
+- Cierre con tecla Escape o clic fuera
+- Alternador (toggle) de tema oscuro/claro
 - Logo con emoji de helado
 
-### 2. Hero Section
+### 2. Sección Principal (Hero Section)
 - Título y subtítulo animados
-- Efecto typewriter en subtítulo con cursor parpadeante
+- Efecto de máquina de escribir (typewriter) en subtítulo con cursor parpadeante
 - Descripción del negocio
-- Botones CTA (Call to Action)
-- Animación fade-in al cargar
+- Botones de llamada a la acción (CTA, Call to Action)
+- Animación de aparición gradual (fade-in) al cargar
 
-### 3. About Us
+### 3. Sobre Nosotros (About Us)
 - Texto descriptivo del negocio
-- Imagen del local con efecto hover
+- Imagen del local con efecto al pasar el cursor (hover)
 - 3 contadores animados (años de experiencia, sabores, clientes)
-- Activación al hacer scroll con IntersectionObserver
+- Activación al desplazarse (scroll) con IntersectionObserver
 
-### 4. Products
+### 4. Productos (Products)
 - 4 tarjetas de productos (helados, confituras, croquetas, combinación)
-- Efecto hover con scale y shadow
-- Skeleton loading placeholder
-- Lazy loading de imágenes
+- Efecto al pasar el cursor (hover) con escalado (scale) y sombra (shadow)
+- Marcador de posición esqueleto (skeleton loading placeholder)
+- Carga diferida (lazy loading) de imágenes
 
-### 5. Gallery
-- Grid responsive de 12 imágenes
-- Overlay con icono de zoom en hover
-- Lightbox con navegación anterior/siguiente
+### 5. Galería (Gallery)
+- Cuadrícula adaptable (responsive grid) de 12 imágenes
+- Superposición (overlay) con icono de zoom al pasar el cursor (hover)
+- Visor emergente (lightbox) con navegación anterior/siguiente
 - Contador de imágenes (ej: "3 / 12")
-- Zoom animation en lightbox
-- Cierre con ESC, botón X o click fuera
+- Animación de zoom (zoom animation) en visor emergente (lightbox)
+- Cierre con ESC, botón X o clic fuera
 - Navegación por teclado (← →)
-- Lazy loading con skeleton
+- Carga diferida (lazy loading) con esqueleto (skeleton)
 
-### 6. Schedule
+### 6. Horarios (Schedule)
 - Diseño con gradiente oscuro
 - Icono de reloj
 - Horario destacado: 3:00 PM - 11:00 PM
-- Efecto glassmorphism
+- Efecto de vidrio esmerilado (glassmorphism)
 
-### 7. Contact
+### 7. Contacto (Contact)
 - 3 tarjetas de contacto (teléfono, WhatsApp, mapa)
 - Botones funcionales con iconos
-- Link a Google Maps
+- Enlace (link) a Google Maps
 - Botón de WhatsApp con mensaje predefinido
 
-### 8. Footer
+### 8. Pie de Página (Footer)
 - Copyright 2026
 - Diseño con colores de marca
 
-### 9. Back to Top Button
-- Aparece después de 300px de scroll
+### 9. Botón Volver Arriba (Back to Top Button)
+- Aparece después de 300px de desplazamiento (scroll)
 - Animación suave
-- Scroll al hacer click
+- Desplazamiento (scroll) al hacer clic
 
-### 10. Dark/Light Mode
-- Toggle de tema oscuro/claro
-- Persistencia en localStorage
+### 10. Modo Oscuro/Claro (Dark/Light Mode)
+- Alternador (toggle) de tema oscuro/claro
+- Persistencia en almacenamiento local (localStorage)
 - Variables CSS para ambos temas
 
-### 11. SEO & Meta Tags
-- Meta tags completos (description, keywords, author)
-- Open Graph tags (Facebook)
-- Twitter Cards
-- Structured data JSON-LD (LocalBusiness)
+### 11. SEO y Metaetiquetas (SEO & Meta Tags)
+- Metaetiquetas (meta tags) completas (description, keywords, author)
+- Etiquetas Open Graph (Open Graph tags, Facebook)
+- Tarjetas de Twitter (Twitter Cards)
+- Datos estructurados (structured data) JSON-LD (LocalBusiness)
 - URLs amigables
-- Canonical URL
+- URL canónica (Canonical URL)
 - Atributos alt en imágenes
 - HTML semántico
 
-### 12. Performance Optimizations
-- Lazy loading de imágenes con skeleton placeholders
-- IntersectionObserver para animaciones al hacer scroll
-- CSS variables para evitar repetición
-- Preconnect a Google Fonts
-- Imágenes con width/height para evitar layout shift
-- Componentes modulares para mejor code splitting
+### 12. Optimizaciones de Rendimiento (Performance Optimizations)
+- Carga diferida (lazy loading) de imágenes con marcadores de posición esqueleto (skeleton placeholders)
+- IntersectionObserver para animaciones al desplazarse (scroll)
+- Variables CSS (CSS variables) para evitar repetición
+- Preconexión (preconnect) a Google Fonts
+- Imágenes con width/height para evitar desplazamiento de diseño (layout shift)
+- Componentes modulares para mejor división de código (code splitting)
 
-### 13. Accessibility (WCAG AA)
-- Skip to content link
+### 13. Accesibilidad (Accessibility, WCAG AA)
+- Enlace de salto al contenido (skip to content link)
 - Atributos alt descriptivos en todas las imágenes
 - Navegación por teclado (Tab, Enter, Escape, flechas)
-- ARIA attributes en elementos interactivos
-- Focus visible states
+- Atributos ARIA (ARIA attributes) en elementos interactivos
+- Estados visibles de foco (focus visible states)
 - Respeto por `prefers-reduced-motion`
 - Respeto por `prefers-contrast: high`
 - Contraste WCAG AA garantizado
@@ -96,44 +96,43 @@ Orden de las features
 
 ## No implementado todavía
 
-### 14. Functional Contact Form
+### 14. Formulario de Contacto Funcional (Functional Contact Form)
 - Formulario de contacto funcional con validación
 - Campos: nombre, email, mensaje
-- Feedback visual de envío exitoso/error
+- Retroalimentación (feedback) visual de envío exitoso/error
 - Integración con servicio de email o backend
 
-### 15. Gallery Filters
+### 15. Filtros de Galería (Gallery Filters)
 - Filtros por categoría (helados, confituras, croquetas, local)
 - Animación al filtrar imágenes
 - Contador de imágenes por categoría
 
-### 16. Google Analytics Integration
+### 16. Integración con Google Analytics (Google Analytics Integration)
 - Integración con Google Analytics 4
-- Tracking de eventos personalizados
-- Dashboard de métricas de usuario
+- Seguimiento (tracking) de eventos personalizados
+- Panel (dashboard) de métricas de usuario
 
-### 17. Review System
+### 17. Sistema de Reseñas (Review System)
 - Sistema de reseñas y calificaciones
 - Integración con Google Reviews o sistema propio
-- Display de reseñas en el sitio
+- Visualización (display) de reseñas en el sitio
 
-### 18. Interactive Map
-- Mapa interactivo de Google Maps embebido
+### 18. Mapa Interactivo (Interactive Map)
+- Mapa interactivo de Google Maps incrustado (embedded)
 - Marcador de ubicación del local
 - Información de contacto en el mapa
 
-### 19. Multilingual Support (i18n)
+### 19. Soporte Multiidioma (Multilingual Support, i18n)
 - Soporte multiidioma (español/inglés)
 - Traducción de todos los textos del sitio
-- Selector de idioma en el header
+- Selector de idioma en la cabecera (header)
 
 ## Instrucciones
 
-> Cada Feature Nueva se crea como 'spec/features/NNN-nombre' con 'spec.md', 'plan.md' y 'tasks.md' antes de tocar código. Si existe alguna feature que solo contenga un .md general, debes dividirlo en los tres .md anteriores, separados por funcionalidad y después eliminar ese .md general.
+> Cada Funcionalidad (Feature) Nueva se crea como 'spec/features/NNN-nombre' con 'spec.md', 'plan.md' y 'tasks.md' antes de tocar código. Si existe alguna funcionalidad que solo contenga un .md general, debes dividirlo en los tres .md anteriores, separados por funcionalidad y después eliminar ese .md general.
 
 ## Notas Adicionales
 
-- El desarrollo sigue el flujo de **Spec-Driven Development**
-- Cada feature debe tener su `spec.md`, `plan.md` y `tasks.md` antes de implementarse
+- El desarrollo sigue el flujo de **Desarrollo Guiado por Especificaciones (Spec-Driven Development)**
+- Cada funcionalidad (feature) debe tener su `spec.md`, `plan.md` y `tasks.md` antes de implementarse
 - El proyecto usa **React + Vite** para el frontend
-- Las features implementadas corresponden a la versión 1.0.0 del proyecto

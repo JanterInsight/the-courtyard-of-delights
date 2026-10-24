@@ -1,4 +1,4 @@
-# Feature: SEO & Meta Tags
+# Funcionalidad: SEO y Etiquetas Meta (SEO & Meta Tags)
 
 ## Descripción
 
@@ -6,12 +6,12 @@ Implementar todas las optimizaciones SEO necesarias para mejorar el posicionamie
 
 ## Requisitos Funcionales
 
-### RF-001: Meta Tags Básicos
-- Meta description (150-160 caracteres)
-- Meta keywords
-- Meta author
-- Meta robots
-- Canonical URL
+### RF-001: Etiquetas Meta Básicas (Meta Tags)
+- Descripción meta (meta description) (150-160 caracteres)
+- Palabras clave meta (meta keywords)
+- Autor meta (meta author)
+- Robots meta (meta robots)
+- URL canónica (canonical URL)
 
 ### RF-002: Open Graph (Facebook)
 - og:title
@@ -21,14 +21,14 @@ Implementar todas las optimizaciones SEO necesarias para mejorar el posicionamie
 - og:type
 - og:site_name
 
-### RF-003: Twitter Cards
+### RF-003: Tarjetas de Twitter (Twitter Cards)
 - twitter:card
 - twitter:title
 - twitter:description
 - twitter:image
 
-### RF-004: Structured Data
-- JSON-LD schema.org/LocalBusiness
+### RF-004: Datos Estructurados (Structured Data)
+- Esquema JSON-LD (JSON-LD schema.org/LocalBusiness)
 - Nombre del negocio
 - Dirección
 - Teléfono
@@ -37,33 +37,33 @@ Implementar todas las optimizaciones SEO necesarias para mejorar el posicionamie
 
 ### RF-005: HTML Semántico
 - Uso de etiquetas semánticas (header, nav, main, section, footer, article)
-- Jerarquía de headings correcta (h1 → h2 → h3)
-- Atributos alt en todas las imágenes
-- Lang="es" en html
+- Jerarquía de encabezados (headings) correcta (h1 → h2 → h3)
+- Atributos alt (alt attributes) en todas las imágenes
+- Atributo idioma Lang="es" en html
 
 ## Requisitos No Funcionales
 
 ### RNF-001: Rendimiento
-- Meta tags en head
-- JSON-LD al final del body
+- Etiquetas meta (meta tags) en cabecera (head)
+- JSON-LD al final del cuerpo (body)
 - Sin impacto en rendimiento
 
 ### RNF-002: Accesibilidad
-- Meta description descriptiva
-- Alt attributes informativos
+- Descripción meta (meta description) descriptiva
+- Atributos alt (alt attributes) informativos
 
-### RNF-003: Responsive
-- Open Graph image responsive (1200x630px)
+### RNF-003: Adaptabilidad (Responsive)
+- Imagen Open Graph adaptable (responsive) (1200x630px)
 
 ## Criterios de Aceptación
 
-- [ ] Meta description presente
-- [ ] Meta keywords presente
-- [ ] Open Graph tags completos
-- [ ] Twitter Cards implementados
-- [ ] JSON-LD schema implementado
+- [ ] Descripción meta (meta description) presente
+- [ ] Palabras clave meta (meta keywords) presente
+- [ ] Etiquetas Open Graph (Open Graph tags) completos
+- [ ] Tarjetas de Twitter (Twitter Cards) implementados
+- [ ] Esquema JSON-LD (JSON-LD schema) implementado
 - [ ] HTML semántico correcto
-- [ ] Jerarquía de headings correcta
-- [ ] Atributos alt en todas las imágenes
-- [ ] Canonical URL definida
+- [ ] Jerarquía de encabezados (headings) correcta
+- [ ] Atributos alt (alt attributes) en todas las imágenes
+- [ ] URL canónica (canonical URL) definida
 - [ ] Validación de SEO exitosa

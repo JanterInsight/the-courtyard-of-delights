@@ -1,32 +1,32 @@
 ---
 name: project-structure
-description: "Organizacion de proyectos web profesionales y escalables. Use para crear nuevos proyectos, refactorizar estructura existente, organizar codigo por features o dominios, separar responsabilidades, configurar aliases de imports y establecer convenciones de carpetas."
+description: "Organization of professional and scalable web projects. Use to create new projects, refactor existing structure, organize code by features or domains, separate responsibilities, configure import aliases and establish folder conventions."
 ---
 
 # Project Structure
 
-## Proposito
+## Purpose
 
-Organiza proyectos web con estructura escalable, separacion de responsabilidades y mantenibilidad, priorizando organizacion feature-based.
+Organizes web projects with scalable structure, separation of concerns and maintainability, prioritizing feature-based organization.
 
-## Cuando usar
+## When to Use
 
-- Crear nuevos proyectos
-- Refactorizar la estructura existente
-- Organizar codigo por dominios o features
-- Configurar aliases de imports
-- Establecer convenciones de carpetas y nombres
+- Create new projects
+- Refactor existing structure
+- Organize code by domains or features
+- Configure import aliases
+- Establish folder and naming conventions
 
-## Flujo de trabajo
+## Workflow
 
-1. Identificar los dominios o features de la aplicacion.
-2. Leer `references/instructions.md` y seguir su workflow de organizacion.
-3. Aplicar las reglas de `references/best-practices.md` (feature-based structure, barrel files, path aliases).
-4. Verificar que no se incurre en los anti-patrones de `references/common-mistakes.md` (estructura solo por tipos, dependencias circulares).
-5. Consultar `references/references.md` para referencias de estructuras probadas.
-6. Usar `examples/folder-structure.md` como referencia practica.
-7. Documentar la estructura resultante.
+1. Identify the application domains or features.
+2. Read `references/instructions.md` and follow its organization workflow.
+3. Apply the rules from `references/best-practices.md` (feature-based structure, barrel files, path aliases).
+4. Verify that you do not fall into the anti-patterns from `references/common-mistakes.md` (structure by types only, circular dependencies).
+5. Consult `references/references.md` for references of proven structures.
+6. Use `examples/folder-structure.md` as a practical reference.
+7. Document the resulting structure.
 
-## Validacion
+## Validation
 
-La estructura debe evitar dependencias circulares, separar logica de negocio de presentacion, mantener imports ordenados y estar documentada.
+The structure must avoid circular dependencies, separate business logic from presentation, keep imports ordered and be documented.

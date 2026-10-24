@@ -1,30 +1,30 @@
 ---
 name: typescript
-description: "Desarrollo con TypeScript tipado. Use para escribir codigo TypeScript, configurar tsconfig.json y strict mode, definir tipos, interfaces y generics, aplicar type guards o integrar TypeScript con React, Node.js, Express y Vite."
+description: "Typed development with TypeScript. Use to write TypeScript code, configure tsconfig.json and strict mode, define types, interfaces and generics, apply type guards, or integrate TypeScript with React, Node.js, Express and Vite."
 ---
 
 # TypeScript Development
 
-## Proposito
+## Purpose
 
-Proporciona conocimiento especializado para desarrollar aplicaciones web con TypeScript: codigo tipado, configuracion del compilador, tipos avanzados y mejores practicas para aplicaciones escalables y mantenibles.
+Provides specialized knowledge for developing web applications with TypeScript: typed code, compiler configuration, advanced types, and best practices for scalable and maintainable applications.
 
-## Cuando usar
+## When to Use
 
-- Escribir codigo TypeScript en cualquier capa de la aplicacion
-- Configurar tsconfig.json o strict mode
-- Implementar tipos, interfaces y generics
-- Trabajar con type guards, utility types o conditional types
-- Integrar TypeScript con React, Node.js, Express o Vite
+- Write TypeScript code in any layer of the application
+- Configure tsconfig.json or strict mode
+- Implement types, interfaces, and generics
+- Work with type guards, utility types, or conditional types
+- Integrate TypeScript with React, Node.js, Express, or Vite
 
-## Flujo de trabajo
+## Workflow
 
-1. Leer `references/instructions.md` y aplicar sus reglas obligatorias.
-2. Consultar `references/best-practices.md` durante la implementacion.
-3. Verificar que el resultado no incurre en los anti-patrones de `references/common-mistakes.md`.
-4. Consultar `references/references.md` para fuentes oficiales cuando haya dudas.
-5. Usar `examples/type-safe-api.ts` como referencia practica.
+1. Read `references/instructions.md` and apply its mandatory rules.
+2. Consult `references/best-practices.md` during implementation.
+3. Verify that the result does not fall into the anti-patterns in `references/common-mistakes.md`.
+4. Consult `references/references.md` for official sources when in doubt.
+5. Use `examples/type-safe-api.ts` as a practical reference.
 
-## Validacion
+## Validation
 
-El TypeScript generado debe usar tipos apropiados, compilar sin errores con strict mode activo, usar interfaces y generics cuando corresponda, incluir type guards necesarios y ser mantenible.
+The generated TypeScript must use appropriate types, compile without errors with strict mode enabled, use interfaces and generics where applicable, include necessary type guards, and be maintainable.

@@ -46,7 +46,7 @@ export function About() {
           <Reveal direction="right">
             <div className="about-image">
               <img
-                src="images/local/local1.jpg"
+                src={`${import.meta.env.BASE_URL}images/local/local1.jpg`}
                 alt="Interior del local El Patio de las Delicias - ambiente acogedor y familiar"
                 loading="lazy"
                 width="600"

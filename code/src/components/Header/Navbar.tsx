@@ -59,7 +59,7 @@ export function Navbar() {
       <a href="#inicio" className="logo" aria-label="El Patio de las Delicias - Inicio">
         <img
           className="logo-icon"
-          src="icon/Icon-Main-Full-64x64.png"
+          src={`${import.meta.env.BASE_URL}icons/Icon-Main-Full-64x64.png`}
           alt=""
           aria-hidden="true"
           width="32"

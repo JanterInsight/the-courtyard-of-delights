@@ -3,8 +3,8 @@
    ============================================ */
 
 .footer {
-  background-color: var(--marron-chocolate);
-  color: var(--blanco);
+  background-color: var(--chocolate-brown);
+  color: var(--cream-white);
   text-align: center;
   padding: var(--spacing-lg) 0;
 }
@@ -15,7 +15,7 @@
 }
 
 .footer-heart {
-  color: var(--dorado-miel);
+  color: var(--honey-gold);
 }
 
 .footer-link {
@@ -25,6 +25,6 @@
 }
 
 .footer-link:hover {
-  color: var(--blanco);
+  color: var(--cream-white);
   text-decoration: none;
 }

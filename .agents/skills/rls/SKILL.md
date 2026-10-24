@@ -1,31 +1,31 @@
 ---
 name: rls
-description: "Row Level Security (RLS) en PostgreSQL/Supabase. Use para proteger datos a nivel de fila segun el usuario autenticado, implementar policies de seguridad por operacion en Supabase, restringir acceso por rol o usuario y asegurar datos sensibles a nivel de base de datos."
+description: "Row Level Security (RLS) in PostgreSQL/Supabase. Use to protect data at the row level based on the authenticated user, implement security policies per operation in Supabase, restrict access by role or user, and secure sensitive data at the database level."
 ---
 
 # Row Level Security (RLS)
 
-## Proposito
+## Purpose
 
-Implementa Row Level Security en PostgreSQL/Supabase para proteger datos a nivel de fila segun el usuario autenticado.
+Implement Row Level Security in PostgreSQL/Supabase to protect data at the row level based on the authenticated user.
 
-## Cuando usar
+## When to Use
 
-- Aplicaciones multi-usuario con datos privados
-- Implementar policies de seguridad en Supabase
-- Restringir acceso a filas segun rol o usuario
-- Proteger datos sensibles a nivel de base de datos
+- Multi-user applications with private data
+- Implement security policies in Supabase
+- Restrict row access by role or user
+- Protect sensitive data at the database level
 
-## Flujo de trabajo
+## Workflow
 
-1. Leer `references/instructions.md` y aplicar sus reglas obligatorias (habilitar RLS en todas las tablas, policies por operacion, auth.uid()).
-2. Crear las policies de seguridad siguiendo `references/best-practices.md`.
-3. Habilitar RLS en las tablas afectadas.
-4. Probar las policies con diferentes roles y usuarios autenticados.
-5. Verificar que no se incurre en los anti-patrones de `references/common-mistakes.md` (policies demasiado permisivas).
-6. Consultar `references/references.md` para fuentes oficiales.
-7. Usar `examples/rls-policies.sql` como referencia practica.
+1. Read `references/instructions.md` and apply its mandatory rules (enable RLS on all tables, policies per operation, auth.uid()).
+2. Create security policies following `references/best-practices.md`.
+3. Enable RLS on the affected tables.
+4. Test policies with different roles and authenticated users.
+5. Verify that it does not fall into the anti-patterns from `references/common-mistakes.md` (overly permissive policies).
+6. Consult `references/references.md` for official sources.
+7. Use `examples/rls-policies.sql` as a practical reference.
 
-## Validacion
+## Validation
 
-RLS debe estar habilitado en todas las tablas, con policies granulares por operacion (SELECT, INSERT, UPDATE, DELETE), usando auth.uid() y probadas con distintos roles; nunca deshabilitar RLS en produccion.
+RLS must be enabled on all tables, with granular policies per operation (SELECT, INSERT, UPDATE, DELETE), using auth.uid() and tested with different roles; never disable RLS in production.

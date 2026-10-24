@@ -6,8 +6,8 @@ export interface UseIntersectionObserverOptions {
 }
 
 /**
- * Observa cuándo un elemento entra en el viewport.
- * `hasIntersected` permanece en true tras la primera intersección.
+ * Observes when an element enters the viewport.
+ * `hasIntersected` stays true after the first intersection.
  */
 export function useIntersectionObserver<T extends HTMLElement = HTMLElement>(
   options: UseIntersectionObserverOptions = {}
@@ -20,8 +20,9 @@ export function useIntersectionObserver<T extends HTMLElement = HTMLElement>(
     const element = targetRef.current;
     if (!element) return;
 
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      if (entry?.isIntersecting) {
         setHasIntersected(true);
       }
     }, { threshold, rootMargin });

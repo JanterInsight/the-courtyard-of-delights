@@ -1,28 +1,28 @@
 ---
 name: web-architecture
-description: "Arquitectura de aplicaciones web. Use para elegir el estilo de arquitectura de una aplicacion web (monolito, microservicios, serverless, SPA/SSR), tomar decisiones de alto nivel y evitar errores comunes de arquitectura."
+description: "Web application architecture. Use to choose the architecture style for a web application (monolith, microservices, serverless, SPA/SSR), make high-level decisions and avoid common architecture mistakes."
 ---
 
 # Web Architecture
 
-## Proposito
+## Purpose
 
-Proporciona conocimiento para decidir y disenar la arquitectura general de aplicaciones web: eleccion de estilos arquitectonicos, capas, comunicacion entre componentes y trade-offs.
+Provides knowledge to decide and design the overall architecture of web applications: choice of architectural styles, layers, communication between components and trade-offs.
 
-## Cuando usar
+## When to Use
 
-- Iniciar una aplicacion web nueva sin arquitectura definida
-- Evaluar o cambiar el estilo de arquitectura (monolito, microservicios, serverless)
-- Tomar decisiones de alto nivel sobre capas y comunicacion
-- Documentar decisiones de arquitectura
+- Start a new web application without a defined architecture
+- Evaluate or change the architecture style (monolith, microservices, serverless)
+- Make high-level decisions about layers and communication
+- Document architecture decisions
 
-## Flujo de trabajo
+## Workflow
 
-1. Leer `references/instructions.md` y aplicar sus criterios de eleccion.
-2. Aplicar las guias de `references/best-practices.md` segun el estilo elegido.
-3. Verificar que la decision no incurre en los errores de `references/common-mistakes.md`.
-4. Consultar `references/references.md` para fuentes oficiales cuando haya dudas.
+1. Read `references/instructions.md` and apply its selection criteria.
+2. Apply the guidelines from `references/best-practices.md` according to the chosen style.
+3. Verify that the decision does not incur errors from `references/common-mistakes.md`.
+4. Consult `references/references.md` for official sources when in doubt.
 
-## Validacion
+## Validation
 
-La decision arquitectonica debe estar justificada frente a alternativas, documentada, y coherente con los requisitos de escalabilidad, equipo y mantenimiento del proyecto.
+The architectural decision must be justified against alternatives, documented, and consistent with the scalability, team and maintenance requirements of the project.

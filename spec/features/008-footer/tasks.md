@@ -1,14 +1,14 @@
-# Tasks: Footer
+# Tareas: Pie de Página (Footer)
 
-## Task 1: Crear componente base
-- [ ] Crear `Footer.jsx` con copyright y créditos
+## Tarea 1: Crear componente base
+- [ ] Crear `Footer.jsx` con derechos de autor (copyright) y créditos
 
-## Task 2: Implementar estilos CSS
+## Tarea 2: Implementar estilos CSS
 - [ ] Fondo con color de marca
 - [ ] Texto centrado
 - [ ] Tipografía legible
-- [ ] Responsive
+- [ ] Adaptable (responsive)
 
-## Task 3: Accesibilidad
+## Tarea 3: Accesibilidad
 - [ ] role="contentinfo"
 - [ ] Contraste adecuado

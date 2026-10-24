@@ -1,21 +1,21 @@
-# Tasks: Dark/Light Mode
+# Tareas: Modo Oscuro/Claro (Dark/Light Mode)
 
-## Task 1: Crear componentes y hooks
+## Tarea 1: Crear componentes y hooks
 - [ ] Crear `ThemeToggle.jsx` con iconos sol/luna
-- [ ] Crear hook `useTheme` con estado y localStorage
+- [ ] Crear hook `useTheme` con estado y almacenamiento local (localStorage)
 
-## Task 2: Implementar estilos CSS
+## Tarea 2: Implementar estilos CSS
 - [ ] Variables CSS para tema claro
 - [ ] Variables CSS para tema oscuro
-- [ ] Override con [data-theme="dark"]
+- [ ] Sobrescritura (override) con [data-theme="dark"]
 - [ ] Transiciones suaves
 
-## Task 3: Implementar funcionalidad JavaScript
-- [ ] Toggle de tema
-- [ ] Persistencia en localStorage
+## Tarea 3: Implementar funcionalidad JavaScript
+- [ ] Conmutador (toggle) de tema
+- [ ] Persistencia en almacenamiento local (localStorage)
 - [ ] Lectura al cargar
 - [ ] Aplicar tema al DOM
 
-## Task 4: Accesibilidad
-- [ ] aria-label en toggle
-- [ ] Respeto por prefers-color-scheme
+## Tarea 4: Accesibilidad
+- [ ] Etiqueta aria (aria-label) en conmutador (toggle)
+- [ ] Respeto por preferencia de esquema de color (prefers-color-scheme)

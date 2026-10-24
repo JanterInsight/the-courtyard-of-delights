@@ -1,95 +1,95 @@
 ---
 name: auto-commit
-description: Automatiza commits git después de aplicar cambios en el proyecto. Usar siempre que el agente modifique archivos del proyecto.
+description: "Automates git commits after applying changes to the project. Always use when the agent modifies project files."
 ---
 
-Esta skill configura el agente para hacer commits automáticos después de cualquier cambio en el proyecto, con soporte de versionado semántico.
+This skill configures the agent to make automatic commits after any change to the project, with semantic versioning support.
 
-## Archivos relacionados
+## Related Files
 
-- `.agents\skills\versioned\auto-commit\scripts/commit_agent.py` - Script principal de commit automático con versionado
-- `.agents\skills\versioned\auto-commit\scripts/auto_commit.ps1` - Wrapper para Windows (PowerShell)
-- `.agents\skills\versioned\auto-commit\scripts/auto_commit.sh` - Wrapper para Unix/Linux (Bash)
-- `.VERSION` - Archivo de versión semántica del proyecto (se crea automáticamente)
+- `.agents\skills\versioned\auto-commit\scripts/commit_agent.py` - Main auto-commit script with versioning
+- `.agents\skills\versioned\auto-commit\scripts/auto_commit.ps1` - Wrapper for Windows (PowerShell)
+- `.agents\skills\versioned\auto-commit\scripts/auto_commit.sh` - Wrapper for Unix/Linux (Bash)
+- `.VERSION` - Semantic version file for the project (created automatically)
 
-## Uso
+## Usage
 
-**Antes de hacer commit, verifica si el proyecto está inicializado:**
+**Before committing, verify if the project is initialized:**
 
 ```bash
-# Verificar si es un repositorio git
+# Verify if it is a git repository
 git rev-parse --is-inside-work-tree 2>/dev/null || git init
 ```
 
-Si no está inicializado, ejecuta `git init` primero. Luego, después de aplicar cualquier cambio (código, imágenes, documentación), el agente debe ejecutar:
+If not initialized, run `git init` first. Then, after applying any change (code, images, documentation), the agent must execute:
 
 ```bash
-# Commit con mensaje personalizado:
+# Commit with custom message:
 python .agents/commit_agent.py "feat: add new project section"
 
-# Commit con incremento de versión:
+# Commit with version bump:
 python .agents/commit_agent.py --bump patch
 python .agents/commit_agent.py --bump minor
 python .agents/commit_agent.py --bump major
 
-# Commit con versión específica:
+# Commit with specific version:
 python .agents/commit_agent.py --set 0.1.0
 
-# En Windows (PowerShell):
+# On Windows (PowerShell):
 .\.agents\skills\versioned\auto-commit\scripts\auto_commit.ps1
 
-# En Unix/Linux:
+# On Unix/Linux:
 bash .agents/skills/versioned/auto-commit/scripts/auto_commit.sh
 ```
 
-## Versionado Semántico
+## Semantic Versioning
 
-El sistema usa [Semantic Versioning](https://semver.org/) (MAJOR.MINOR.PATCH):
+The system uses [Semantic Versioning](https://semver.org/) (MAJOR.MINOR.PATCH):
 
-- **MAJOR** (X.0.0): Cambios incompatibles con versiones anteriores
-- **MINOR** (1.X.0): Nuevas funcionalidades compatibles con versiones anteriores
-- **PATCH** (1.0.X): Correcciones de bugs compatibles
+- **MAJOR** (X.0.0): Breaking changes
+- **MINOR** (1.X.0): New backwards-compatible features
+- **PATCH** (1.0.X): Backwards-compatible bug fixes
 
-### Comandos de versionado
+### Versioning Commands
 
 ```bash
-# Incrementar patch (1.0.0 → 1.0.1) - bug fixes, typos, docs
+# Bump patch (1.0.0 → 1.0.1) - bug fixes, typos, docs
 python .agents/commit_agent.py --bump patch "fix: correct typo in README"
 
-# Incrementar minor (1.0.0 → 1.1.0) - nuevas features, refactors
+# Bump minor (1.0.0 → 1.1.0) - new features, refactors
 python .agents/commit_agent.py --bump minor "feat: add user authentication"
 
-# Incrementar major (1.0.0 → 2.0.0) - breaking changes
+# Bump major (1.0.0 → 2.0.0) - breaking changes
 python .agents/commit_agent.py --bump major "feat!: redesign API endpoints"
 
-# Establecer versión específica
+# Set specific version
 python .agents/commit_agent.py --set 0.1.0 "Initial project setup"
 ```
 
-### Flujo de versionado en plantillas
+### Versioning Flow for Templates
 
-Para proyectos basados en plantillas, seguir este flujo:
+For template-based projects, follow this flow:
 
-1. **0.0.0** - Template sin adaptar (primer commit)
-2. **0.1.0** - Después de completar la segunda instrucción de `read-this-first.md`
-3. **0.2.0** - Después de completar la tercera instrucción de `read-this-first.md`
-4. **1.0.0** - Después de completar la cuarta instrucción de `read-this-first.md`
-5. **1.0.X** - A partir de 1.0.0, cambios pequeños
-6. **1.X.0** - A partir de 1.0.0, cambios medianos
-7. **X.0.0** - A partir de 1.0.0, cambios mayores
+1. **0.0.0** - Unadapted template (first commit)
+2. **0.1.0** - After completing the second instruction in `read-this-first.md`
+3. **0.2.0** - After completing the third instruction in `read-this-first.md`
+4. **1.0.0** - After completing the fourth instruction in `read-this-first.md`
+5. **1.0.X** - From 1.0.0 onward, small changes
+6. **1.X.0** - From 1.0.0 onward, medium changes
+7. **X.0.0** - From 1.0.0 onward, major changes
 
-## Mensaje de commit
+## Commit Message
 
-- Los mensajes deben ser descriptivos y en **inglés**
-- Si existe `.agents/CHANGE_MSG.txt`, se leerá automáticamente como mensaje
-- Formato recomendado: `"feat: add new project section"` o `"fix: correct responsive layout"`
-- Cuando se usa versionado, el formato es: `"v1.0.1: feat: add new feature"`
-- Si no se proporciona mensaje ni existe `CHANGE_MSG.txt`, se usa `"Agent: automated commit"` con una advertencia
+- Messages must be descriptive and in **English**
+- If `.agents/CHANGE_MSG.txt` exists, it will be read automatically as the message
+- Recommended format: `"feat: add new project section"` or `"fix: correct responsive layout"`
+- When using versioning, the format is: `"v1.0.1: feat: add new feature"`
+- If no message is provided and `CHANGE_MSG.txt` does not exist, `"Agent: automated commit"` is used with a warning
 
-## Cuándo usar
+## When to Use
 
-- **SIEMPRE** después de modificar archivos del proyecto
-- Al finalizar implementación de nuevas funcionalidades
-- Al corregir errores o bugs
-- Al actualizar contenido, imágenes o documentación
-- Cuando se complete un milestone del proyecto (usar --bump minor o --bump major)
+- **ALWAYS** after modifying project files
+- When finishing implementation of new features
+- When fixing errors or bugs
+- When updating content, images or documentation
+- When a project milestone is completed (use --bump minor or --bump major)

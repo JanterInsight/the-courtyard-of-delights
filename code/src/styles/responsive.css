@@ -25,12 +25,12 @@
     width: 70%;
     max-width: 300px;
     height: 100vh;
-    background-color: var(--blanco);
+    background-color: var(--cream-white);
     flex-direction: column;
     justify-content: flex-start;
     padding-top: 100px;
     gap: var(--spacing-md);
-    box-shadow: -4px 0 20px var(--sombra-fuerte);
+    box-shadow: -4px 0 20px var(--shadow-strong);
     transition: right var(--transition-normal);
   }
 
@@ -311,8 +311,8 @@
 /* High contrast mode */
 @media (prefers-contrast: high) {
   :root {
-    --texto-oscuro: #000000;
-    --marron-chocolate: #000000;
+    --dark-text: #000000;
+    --chocolate-brown: #000000;
   }
 
   .btn {

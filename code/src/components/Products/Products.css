@@ -3,7 +3,7 @@
    ============================================ */
 
 .products {
-  background-color: var(--crema-vainilla);
+  background-color: var(--vanilla-cream);
 }
 
 .products-grid {
@@ -13,16 +13,16 @@
 }
 
 .product-card {
-  background-color: var(--blanco);
+  background-color: var(--cream-white);
   border-radius: var(--border-radius-lg);
   overflow: hidden;
-  box-shadow: 0 4px 12px var(--sombra);
+  box-shadow: 0 4px 12px var(--shadow);
   transition: all var(--transition-normal);
 }
 
 .product-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 8px 24px var(--sombra-fuerte);
+  box-shadow: 0 8px 24px var(--shadow-strong);
 }
 
 .product-image {
@@ -42,12 +42,12 @@
 
 .product-title {
   font-size: var(--font-size-lg);
-  color: var(--marron-chocolate);
+  color: var(--chocolate-brown);
   margin-bottom: var(--spacing-xs);
 }
 
 .product-description {
   font-size: var(--font-size-sm);
-  color: var(--texto-oscuro);
+  color: var(--dark-text);
   margin-bottom: var(--spacing-sm);
 }

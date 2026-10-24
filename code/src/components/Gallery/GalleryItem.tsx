@@ -4,10 +4,11 @@ import type { GalleryImage } from '@data/gallery';
 interface GalleryItemProps {
   image: GalleryImage;
   index: number;
+  // eslint-disable-next-line no-unused-vars
   onClick: (index: number) => void;
 }
 
-export function GalleryItem({ image, index, onClick }: GalleryItemProps) {
+export function GalleryItem({ image, index: _index, onClick }: GalleryItemProps) {
   const [imageLoaded, setImageLoaded] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
 
@@ -25,16 +26,16 @@ export function GalleryItem({ image, index, onClick }: GalleryItemProps) {
   return (
     <div
       className="gallery-item"
-      onClick={() => onClick(index)}
+      onClick={() => onClick(_index)}
       onKeyDown={(e) => {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
-          onClick(index);
+          onClick(_index);
         }
       }}
       tabIndex={0}
       role="button"
-      aria-label={`Ver imagen ${index + 1} de la galería`}
+      aria-label={`Ver imagen ${_index + 1} de la galería`}
     >
       <div className="skeleton skeleton-image" style={{ display: imageLoaded ? 'none' : 'block' }} />
       <img

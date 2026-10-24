@@ -1,31 +1,31 @@
 ---
 name: database-design
-description: "Diseno de bases de datos relacionales y NoSQL. Use para disenar bases de datos, crear esquemas de tablas, normalizar datos, definir relaciones y constraints, implementar indices, optimizar queries y planificar migraciones y backups."
+description: "Relational and NoSQL database design. Use to design databases, create table schemas, normalize data, define relationships and constraints, implement indexes, optimize queries, and plan migrations and backups."
 ---
 
 # Database Design
 
-## Proposito
+## Purpose
 
-Disena bases de datos relacionales y NoSQL eficientes: esquemas, normalizacion, indices y mejores practicas para bases de datos escalables y mantenibles.
+Design efficient relational and NoSQL databases: schemas, normalization, indexes, and best practices for scalable and maintainable databases.
 
-## Cuando usar
+## When to Use
 
-- Disenar una base de datos o crear esquemas de tablas
-- Normalizar datos y definir relaciones entre tablas
-- Implementar indices y constraints
-- Optimizar queries
-- Migrar datos o planificar backups
+- Design a database or create table schemas
+- Normalize data and define relationships between tables
+- Implement indexes and constraints
+- Optimize queries
+- Migrate data or plan backups
 
-## Flujo de trabajo
+## Workflow
 
-1. Modelar las entidades y relaciones del dominio.
-2. Leer `references/instructions.md` y aplicar sus reglas obligatorias (normalizacion, claves, constraints).
-3. Aplicar las tecnicas de `references/best-practices.md` (indices compuestos, optimizacion de queries).
-4. Verificar que el diseno no incurre en los anti-patrones de `references/common-mistakes.md`.
-5. Consultar `references/references.md` para fuentes oficiales cuando haya dudas.
-6. Usar `examples/schema-design.sql` como referencia practica.
+1. Model the domain entities and relationships.
+2. Read `references/instructions.md` and apply its mandatory rules (normalization, keys, constraints).
+3. Apply techniques from `references/best-practices.md` (composite indexes, query optimization).
+4. Verify that the design does not fall into the anti-patterns from `references/common-mistakes.md`.
+5. Consult `references/references.md` for official sources when in doubt.
+6. Use `examples/schema-design.sql` as a practical reference.
 
-## Validacion
+## Validation
 
-El diseno debe estar normalizado, tener indices apropiados y constraints de integridad, ser escalable, estar documentado, contemplar backups y estar optimizado para las queries principales.
+The design must be normalized, have appropriate indexes and integrity constraints, be scalable, documented, include backups, and be optimized for primary queries.

@@ -1,8 +1,8 @@
-# Plan de Implementación: About Us
+# Plan de Implementación: Sobre Nosotros
 
 ## Enfoque
 
-Implementar la sección "Sobre Nosotros" con texto descriptivo, imagen del local y contadores animados que se activan al hacer scroll.
+Implementar la sección "Sobre Nosotros" con texto descriptivo, imagen del local y contadores animados que se activan al hacer desplazamiento (scroll).
 
 ## Estructura de Componentes
 
@@ -11,28 +11,28 @@ Implementar la sección "Sobre Nosotros" con texto descriptivo, imagen del local
 2. **AnimatedCounter** (`AnimatedCounter.jsx`) - Componente de contador animado
 
 ### Hooks a Utilizar
-- `useIntersectionObserver` - Activar contadores al entrar en viewport
+- `useIntersectionObserver` - Activar contadores al entrar en ventana visible (viewport)
 
 ## Pasos de Implementación
 
 ### Paso 1: Crear componentes base
-- Crear `About.jsx` con layout de dos columnas
+- Crear `About.jsx` con disposición (layout) de dos columnas
 - Crear `AnimatedCounter.jsx` con animación numérica
-- Definir datos de stats (5+, 10+, 1000+)
+- Definir datos de estadísticas (stats) (5+, 10+, 1000+)
 
 ### Paso 2: Implementar estilos CSS
-- Layout grid (texto + imagen)
+- Disposición (layout) en cuadrícula (grid) (texto + imagen)
 - Estilos de tarjetas de estadísticas
-- Efecto hover en imagen
-- Responsive: stack vertical en móvil
+- Efecto al pasar el cursor (hover) en imagen
+- Adaptable (responsive): apilado vertical en móvil
 
 ### Paso 3: Implementar funcionalidad JavaScript
 - Animación de contador con requestAnimationFrame
-- IntersectionObserver para activar al hacer scroll
+- IntersectionObserver para activar al hacer desplazamiento (scroll)
 - Duración de animación: 2000ms
-- Flag para evitar re-animación
+- Bandera (flag) para evitar re-animación
 
-### Paso 4: Accesibilidad y responsive
+### Paso 4: Accesibilidad y adaptabilidad (Responsive)
 - Atributo alt descriptivo en imagen
 - aria-labelledby en sección
-- Grid responsive de contadores
+- Cuadrícula (grid) adaptable (responsive) de contadores

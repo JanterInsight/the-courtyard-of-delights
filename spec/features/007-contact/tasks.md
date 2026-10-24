@@ -1,20 +1,20 @@
-# Tasks: Contact
+# Tareas: Contacto (Contact)
 
-## Task 1: Crear componentes base
-- [ ] Crear `Contact.jsx` con grid layout
-- [ ] Crear `ContactCard.jsx` con icono, título, info y link
+## Tarea 1: Crear componentes base
+- [ ] Crear `Contact.jsx` con maquetado en cuadrícula (grid layout)
+- [ ] Crear `ContactCard.jsx` con icono, título, info y enlace (link)
 - [ ] Definir datos de contacto en data/contact.js
 
-## Task 2: Implementar estilos CSS
-- [ ] Grid responsive (3 cols desktop, 1 móvil)
-- [ ] Estilos de tarjetas (gradiente, shadow)
-- [ ] Hover effects
+## Tarea 2: Implementar estilos CSS
+- [ ] Cuadrícula adaptable (responsive grid) (3 cols escritorio / desktop, 1 móvil)
+- [ ] Estilos de tarjetas (degradado / gradient, sombra / shadow)
+- [ ] Efectos al pasar el cursor (hover effects)
 - [ ] Iconos grandes
 
-## Task 3: Implementar funcionalidad JavaScript
-- [ ] Links funcionales (tel:, wa.me, maps)
-- [ ] Hover effects con transiciones
+## Tarea 3: Implementar funcionalidad JavaScript
+- [ ] Enlaces (links) funcionales (tel:, wa.me, maps)
+- [ ] Efectos al pasar el cursor (hover effects) con transiciones
 
-## Task 4: Accesibilidad
-- [ ] aria-label en links
+## Tarea 4: Accesibilidad
+- [ ] aria-label en enlaces (links)
 - [ ] Atributos alt en iconos

@@ -1,8 +1,8 @@
-# Plan de Implementación: Back to Top Button
+# Plan de Implementación: Botón Volver Arriba (Back to Top Button)
 
 ## Enfoque
 
-Implementar botón animado que aparece al hacer scroll, permitiendo volver al inicio de la página.
+Implementar botón animado que aparece al hacer desplazamiento (scroll), permitiendo volver al inicio de la página.
 
 ## Estructura de Componentes
 
@@ -17,16 +17,16 @@ Implementar botón animado que aparece al hacer scroll, permitiendo volver al in
 
 ### Paso 2: Implementar estilos CSS
 - Botón circular (border-radius: 50%)
-- Posición fixed bottom-right
-- Sombra y color de marca
+- Posición fija (fixed) inferior-derecha (bottom-right)
+- Sombra (shadow) y color de marca
 - Animación de aparición/desaparición
-- Hover effect
+- Efecto al pasar el cursor (hover effect)
 
 ### Paso 3: Implementar funcionalidad JavaScript
-- Event listener de scroll (passive: true)
+- Escuchador de evento (event listener) de desplazamiento (scroll) (passive: true)
 - Mostrar después de 300px
-- Scroll suave al hacer click
-- Cleanup de event listener
+- Desplazamiento suave (smooth scroll) al hacer click
+- Limpieza (cleanup) del escuchador de evento (event listener)
 
 ### Paso 4: Accesibilidad
 - aria-label descriptivo

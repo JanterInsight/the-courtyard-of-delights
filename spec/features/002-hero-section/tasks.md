@@ -1,28 +1,28 @@
-# Tasks: Hero Section
+# Tareas: Sección Principal (Hero)
 
-## Task 1: Crear componentes base
+## Tarea 1: Crear componentes base
 - [ ] Crear `Hero.jsx` con sección semántica
-- [ ] Crear `Typewriter.jsx` con efecto de escritura
-- [ ] Crear hook `useTypewriter` con lógica de typing
+- [ ] Crear `Typewriter.jsx` con efecto de escritura (typewriter)
+- [ ] Crear hook `useTypewriter` con lógica de escritura (typing)
 - [ ] Integrar Typewriter en Hero
 
-## Task 2: Implementar estilos CSS
-- [ ] Estilos del hero (min-height, gradiente, centrado)
+## Tarea 2: Implementar estilos CSS
+- [ ] Estilos de la sección principal (hero) (min-height, degradado, centrado)
 - [ ] Tipografía del título (font-size, color, animación)
-- [ ] Tipografía del subtítulo typewriter
-- [ ] Estilos de botones CTA (primario y secundario)
-- [ ] Animaciones fade-in con delays
+- [ ] Tipografía del subtítulo con efecto de escritura (typewriter)
+- [ ] Estilos de botones de llamada a la acción (CTA) (primario y secundario)
+- [ ] Animaciones de aparición gradual (fade-in) con retardos (delays)
 
-## Task 3: Implementar funcionalidad JavaScript
+## Tarea 3: Implementar funcionalidad JavaScript
 - [ ] Hook useTypewriter con velocidad 80ms
 - [ ] Efecto de escritura progresiva carácter por carácter
-- [ ] Cursor parpadeante con CSS animation
-- [ ] IntersectionObserver para activar typewriter
+- [ ] Cursor parpadeante con animación CSS (CSS animation)
+- [ ] IntersectionObserver para activar efecto de escritura (typewriter)
 - [ ] Respeto por prefers-reduced-motion
-- [ ] Cleanup de intervalos
+- [ ] Limpieza (cleanup) de intervalos
 
-## Task 4: Accesibilidad y responsive
+## Tarea 4: Accesibilidad y adaptabilidad (Responsive)
 - [ ] aria-labelledby en section apuntando a hero-title
 - [ ] aria-label en Typewriter con texto completo
-- [ ] Mobile-first responsive
-- [ ] Test de animaciones en diferentes dispositivos
+- [ ] Adaptable (responsive) primero para móviles (mobile-first)
+- [ ] Prueba de animaciones en diferentes dispositivos

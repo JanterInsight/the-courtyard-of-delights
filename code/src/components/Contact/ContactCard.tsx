@@ -1,5 +1,7 @@
+import type { ReactNode } from 'react';
+
 interface ContactCardProps {
-  icon: string;
+  icon: ReactNode;
   title: string;
   info: string;
   buttonText: string;
@@ -10,7 +12,7 @@ export function ContactCard({ icon, title, info, buttonText, href }: ContactCard
   return (
     <div className="contact-card">
       <div className="contact-icon">
-        <img src={icon} alt="" aria-hidden="true" fetchPriority="high" />
+        {icon}
       </div>
       <h3 className="contact-title">{title}</h3>
       <p className="contact-info">{info}</p>

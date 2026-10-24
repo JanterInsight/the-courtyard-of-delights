@@ -1,5 +1,5 @@
 # ============================================================
-# REGLAS GENERALES UNIVERSALES PARA OPEN CODE
+# REGLAS GENERALES UNIVERSALES PARA CUALQUIER AGENTE
 # ============================================================
 #
 # Estas reglas definen el comportamiento general del agente

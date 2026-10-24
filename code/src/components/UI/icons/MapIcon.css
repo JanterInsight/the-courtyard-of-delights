@@ -1,0 +1,12 @@
+/* ============================================
+   MAP ICON
+   ============================================ */
+
+.icon-tabler-location-pin {
+  color: var(--dark-text);
+  transition: color var(--transition-fast);
+}
+
+[data-theme="dark"] .icon-tabler-location-pin {
+  color: var(--cream-white);
+}

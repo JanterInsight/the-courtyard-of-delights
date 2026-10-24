@@ -1,17 +1,12 @@
 import './Contact.css';
-import { useTheme } from '@hooks/useTheme';
 import { contactInfo } from '@data/contact';
 import { Reveal } from '@components/UI';
 import { ContactCard } from './ContactCard';
-
-function getIconPath(baseName: string, isDark: boolean): string {
-  const themeSuffix = isDark ? 'dark_theme' : 'light_theme';
-  return `${import.meta.env.BASE_URL}icons/${baseName}-32x32-${themeSuffix}.png`;
-}
+import { PhoneIcon } from '@components/UI/icons';
+import { WhatsAppIcon } from '@components/UI/icons';
+import { MapIcon } from '@components/UI/icons';
 
 export function Contact() {
-  const { isDark } = useTheme();
-
   return (
     <section id="contacto" className="section contact" aria-labelledby="contact-title">
       <div className="container">
@@ -25,7 +20,7 @@ export function Contact() {
         <div className="contact-content">
           <Reveal direction="up" delay={0}>
             <ContactCard
-              icon={getIconPath('telephone-icon', isDark)}
+              icon={<PhoneIcon size={32} />}
               title="Llámanos"
               info={contactInfo.phone}
               buttonText="Llamar Ahora"
@@ -35,7 +30,7 @@ export function Contact() {
 
           <Reveal direction="up" delay={150}>
             <ContactCard
-              icon={getIconPath('whatsapp-icon', isDark)}
+              icon={<WhatsAppIcon size={32} />}
               title="WhatsApp"
               info={contactInfo.phone}
               buttonText="Escribir por WhatsApp"
@@ -45,7 +40,7 @@ export function Contact() {
 
           <Reveal direction="up" delay={300}>
             <ContactCard
-              icon={getIconPath('Map-icon', isDark)}
+              icon={<MapIcon size={32} />}
               title="Visítanos"
               info={contactInfo.address}
               buttonText="Ver en Mapa"

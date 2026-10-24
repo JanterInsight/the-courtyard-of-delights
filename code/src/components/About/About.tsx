@@ -45,13 +45,27 @@ export function About() {
 
           <Reveal direction="right">
             <div className="about-image">
-              <img
-                src={`${import.meta.env.BASE_URL}images/local/local1.jpg`}
-                alt="Interior del local El Patio de las Delicias - ambiente acogedor y familiar"
-                loading="lazy"
-                width="600"
-                height="400"
-              />
+              <picture>
+                <source
+                  srcSet={`
+                    ${import.meta.env.BASE_URL}images/400px/only_ice_cream_01.webp 400w,
+                    ${import.meta.env.BASE_URL}images/576px/only_ice_cream_01.webp 576w,
+                    ${import.meta.env.BASE_URL}images/768px/only_ice_cream_01.webp 768w,
+                    ${import.meta.env.BASE_URL}images/1024px/only_ice_cream_01.webp 1024w,
+                    ${import.meta.env.BASE_URL}images/1440px/only_ice_cream_01.webp 1440w
+                  `.trim()}
+                  sizes="(max-width: 480px) 400px, (max-width: 768px) 576px, (max-width: 1024px) 768px, (max-width: 1440px) 1024px, 1440px"
+                  type="image/webp"
+                />
+                <img
+                  src={`${import.meta.env.BASE_URL}images/768px/only_ice_cream_01.webp`}
+                  alt="Interior del local El Patio de las Delicias - ambiente acogedor y familiar"
+                  loading="lazy"
+                  width="600"
+                  height="400"
+                  decoding="async"
+                />
+              </picture>
             </div>
           </Reveal>
         </div>

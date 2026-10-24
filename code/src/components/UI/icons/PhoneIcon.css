@@ -1,0 +1,12 @@
+/* ============================================
+   PHONE ICON
+   ============================================ */
+
+.icon-tabler-phone {
+  color: var(--dark-text);
+  transition: color var(--transition-fast);
+}
+
+[data-theme="dark"] .icon-tabler-phone {
+  color: var(--cream-white);
+}

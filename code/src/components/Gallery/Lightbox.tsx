@@ -89,11 +89,21 @@ export function Lightbox({ images, currentIndex, isOpen, onClose, onPrev, onNext
           &#10094;
         </button>
 
-        <img
-          className="lightbox-image"
-          src={encodeURI(currentImage.src)}
-          alt={currentImage.alt}
-        />
+        <picture>
+          <source
+            srcSet={`
+              ${currentImage.src.replace('/768px/', '/1440px/')} 1440w
+            `.trim()}
+            sizes="1440px"
+            type="image/webp"
+          />
+          <img
+            className="lightbox-image"
+            src={encodeURI(currentImage.src.replace('/768px/', '/1440px/'))}
+            alt={currentImage.alt}
+            decoding="async"
+          />
+        </picture>
 
         <button
           className="lightbox-nav lightbox-next"

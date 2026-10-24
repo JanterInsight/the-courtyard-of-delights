@@ -1,0 +1,12 @@
+/* ============================================
+   WHATSAPP ICON
+   ============================================ */
+
+.icon-tabler-brand-whatsapp {
+  color: var(--dark-text);
+  transition: color var(--transition-fast);
+}
+
+[data-theme="dark"] .icon-tabler-brand-whatsapp {
+  color: var(--cream-white);
+}

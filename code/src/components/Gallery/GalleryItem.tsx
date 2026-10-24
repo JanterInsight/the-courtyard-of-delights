@@ -38,18 +38,32 @@ export function GalleryItem({ image, index: _index, onClick }: GalleryItemProps)
       aria-label={`Ver imagen ${_index + 1} de la galería`}
     >
       <div className="skeleton skeleton-image" style={{ display: imageLoaded ? 'none' : 'block' }} />
-      <img
-        ref={imgRef}
-        src={encodeURI(image.src)}
-        alt={image.alt}
-        loading="lazy"
-        fetchPriority="low"
-        width="400"
-        height="400"
-        onLoad={() => setImageLoaded(true)}
-        onError={handleError}
-        style={{ opacity: imageLoaded ? 1 : 0 }}
-      />
+      <picture>
+        <source
+          srcSet={`
+            ${image.src.replace('/768px/', '/400px/')} 400w,
+            ${image.src.replace('/768px/', '/576px/')} 576w,
+            ${image.src} 768w,
+            ${image.src.replace('/768px/', '/1024px/')} 1024w,
+            ${image.src.replace('/768px/', '/1440px/')} 1440w
+          `.trim()}
+          sizes="(max-width: 480px) 400px, (max-width: 768px) 576px, (max-width: 1024px) 768px, (max-width: 1440px) 1024px, 1440px"
+          type="image/webp"
+        />
+        <img
+          ref={imgRef}
+          src={encodeURI(image.src)}
+          alt={image.alt}
+          loading="lazy"
+          fetchPriority="low"
+          width="400"
+          height="400"
+          onLoad={() => setImageLoaded(true)}
+          onError={handleError}
+          style={{ opacity: imageLoaded ? 1 : 0 }}
+          decoding="async"
+        />
+      </picture>
       <div className="gallery-overlay">
         <span className="gallery-overlay-icon" aria-hidden="true">🔍</span>
       </div>

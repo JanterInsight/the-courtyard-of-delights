@@ -44,10 +44,8 @@ export function GalleryItem({ image, index: _index, onClick }: GalleryItemProps)
             ${image.src.replace('/768px/', '/400px/')} 400w,
             ${image.src.replace('/768px/', '/576px/')} 576w,
             ${image.src} 768w,
-            ${image.src.replace('/768px/', '/1024px/')} 1024w,
-            ${image.src.replace('/768px/', '/1440px/')} 1440w
           `.trim()}
-          sizes="(max-width: 480px) 400px, (max-width: 768px) 576px, (max-width: 1024px) 768px, (max-width: 1440px) 1024px, 1440px"
+          sizes="(max-width: 768px) 400px, 768px"
           type="image/webp"
         />
         <img
@@ -70,3 +68,5 @@ export function GalleryItem({ image, index: _index, onClick }: GalleryItemProps)
     </div>
   );
 }
+
+

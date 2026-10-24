@@ -7,6 +7,3 @@
   transition: color var(--transition-fast);
 }
 
-[data-theme="dark"] .icon-tabler-phone {
-  color: var(--cream-white);
-}

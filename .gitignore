@@ -30,3 +30,6 @@ coverage/
 .env
 .env.*
 !.env.example
+
+# Auto-commit temporary message
+.agents/CHANGE_MSG.txt

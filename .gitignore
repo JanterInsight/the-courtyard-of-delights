@@ -31,5 +31,8 @@ coverage/
 .env.*
 !.env.example
 
+# Root-level lock file (project uses code/package-lock.json)
+package-lock.json
+
 # Auto-commit temporary message
 .agents/CHANGE_MSG.txt

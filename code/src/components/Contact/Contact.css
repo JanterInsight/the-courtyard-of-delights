@@ -49,6 +49,11 @@
 .contact-icon svg {
   width: 32px;
   height: 32px;
+  color: var(--dark-text);
+}
+
+[data-theme="dark"] .contact-icon svg {
+  color: var(--cream-white);
 }
 
 .contact-title {

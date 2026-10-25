@@ -1,3 +1,4 @@
+﻿
 /* eslint-disable jsx-a11y/no-static-element-interactions, jsx-a11y/no-noninteractive-element-interactions */
 import { useEffect, useCallback } from 'react';
 import type { GalleryImage } from '@data/gallery';
@@ -52,12 +53,16 @@ export function Lightbox({ images, currentIndex, isOpen, onClose, onPrev, onNext
   const currentImage = images[currentIndex];
   if (!currentImage) return null;
 
+  // Usar la URL original de la imagen (todas estan en /768px/)
+  const imageSrc = currentImage.src;
+  const imageAlt = currentImage.alt;
+
   return (
     <div
       className="lightbox active"
       role="dialog"
       aria-modal="true"
-      aria-label="Visor de imágenes"
+      aria-label="Visor de imagenes"
       onClick={onClose}
       tabIndex={-1}
       onKeyDown={(e) => {
@@ -66,16 +71,11 @@ export function Lightbox({ images, currentIndex, isOpen, onClose, onPrev, onNext
         }
       }}
     >
-      <div
-        className="lightbox-content"
-        onClick={(e) => e.stopPropagation()}
-        onKeyDown={(e) => e.stopPropagation()}
-      >
-        // eslint-disable-next-line jsx-a11y/no-static-element-interactions
+      <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
         <button
           className="lightbox-close"
           onClick={onClose}
-          aria-label="Cerrar visor de imágenes"
+          aria-label="Cerrar visor de imagenes"
         >
           <span aria-hidden="true">&times;</span>
           <span style={{ position: 'absolute', width: '1px', height: '1px', padding: 0, margin: '-1px', overflow: 'hidden', clip: 'rect(0, 0, 0, 0)', whiteSpace: 'nowrap', border: 0 }}>Cerrar</span>
@@ -91,16 +91,14 @@ export function Lightbox({ images, currentIndex, isOpen, onClose, onPrev, onNext
 
         <picture>
           <source
-            srcSet={`
-              ${currentImage.src.replace('/768px/', '/1440px/')} 1440w
-            `.trim()}
+            srcSet={`${imageSrc} 1440w`}
             sizes="1440px"
             type="image/webp"
           />
           <img
             className="lightbox-image"
-            src={encodeURI(currentImage.src.replace('/768px/', '/1440px/'))}
-            alt={currentImage.alt}
+            src={imageSrc}
+            alt={imageAlt}
             decoding="async"
           />
         </picture>
@@ -120,3 +118,4 @@ export function Lightbox({ images, currentIndex, isOpen, onClose, onPrev, onNext
     </div>
   );
 }
+

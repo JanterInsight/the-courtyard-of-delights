@@ -13,7 +13,7 @@ const base = import.meta.env.BASE_URL;
 export const products: Product[] = [
   {
     id: 1,
-    title: '🍦 Helados Artesanales',
+    title: 'Helados Artesanales',
     description:
       'Más de 10 sabores de helados artesanales elaborados con ingredientes naturales y frescos. Desde los clásicos hasta creaciones únicas.',
     image: `${base}images/400px/only_ice_cream_01.webp`,
@@ -29,7 +29,7 @@ export const products: Product[] = [
   },
   {
     id: 2,
-    title: '🍯 Confituras',
+    title: 'Confituras',
     description:
       'Deliciosas confituras y mermeladas caseras elaboradas con frutas frescas de la temporada. Perfectas para acompañar tus desayunos y meriendas.',
     image: `${base}images/400px/only_confiture_1.webp`,
@@ -45,7 +45,7 @@ export const products: Product[] = [
   },
   {
     id: 3,
-    title: '🥟 Croquetas',
+    title: 'Croquetas',
     description:
       'Croquetas crujientes y deliciosas, perfectas para compartir. Elaboradas con ingredientes seleccionados y recetas tradicionales.',
     image: `${base}images/400px/croquette_1.webp`,
@@ -61,7 +61,7 @@ export const products: Product[] = [
   },
   {
     id: 4,
-    title: '🍨 Helados + Confituras',
+    title: 'Helados + Confituras',
     description:
       'La combinación perfecta: nuestros helados artesanales acompañados de deliciosas confituras caseras. Una experiencia única de sabor.',
     image: `${base}images/400px/icecream_confiture_1.webp`,

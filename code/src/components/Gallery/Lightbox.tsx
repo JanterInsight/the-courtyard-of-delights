@@ -1,4 +1,4 @@
-﻿
+
 /* eslint-disable jsx-a11y/no-static-element-interactions, jsx-a11y/no-noninteractive-element-interactions */
 import { useEffect, useCallback } from 'react';
 import type { GalleryImage } from '@data/gallery';
@@ -71,7 +71,7 @@ export function Lightbox({ images, currentIndex, isOpen, onClose, onPrev, onNext
         }
       }}
     >
-      <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
+      <div className="lightbox-content" onClick={(e) => e.stopPropagation()} onKeyDown={(e) => e.stopPropagation()}>
         <button
           className="lightbox-close"
           onClick={onClose}

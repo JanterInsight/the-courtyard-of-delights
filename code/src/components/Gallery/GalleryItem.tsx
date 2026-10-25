@@ -20,8 +20,7 @@ export function GalleryItem({ image, index: _index, onClick }: GalleryItemProps)
   }, []);
 
   const handleError = () => {
-    // Don't hide the skeleton on error - shows the alt text instead
-    // This way users see the image alt text if the image fails to load
+    setImageLoaded(true);
   };
 
   return (

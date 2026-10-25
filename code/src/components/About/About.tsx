@@ -47,7 +47,7 @@ export function About() {
             <div className="about-image">
               <picture>
                 <img
-                  src={`\${import.meta.env.BASE_URL}images/local/local.webp`}
+                  src={`${import.meta.env.BASE_URL}images/local/local.webp`}
                   alt="Interior del local El Patio de las Delicias - ambiente acogedor y familiar"
                   loading="lazy"
                   width="600"
@@ -73,4 +73,5 @@ export function About() {
     </section>
   );
 }
+
 

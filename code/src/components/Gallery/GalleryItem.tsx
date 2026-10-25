@@ -20,7 +20,8 @@ export function GalleryItem({ image, index: _index, onClick }: GalleryItemProps)
   }, []);
 
   const handleError = () => {
-    setImageLoaded(true);
+    // Don't hide the skeleton on error - shows the alt text instead
+    // This way users see the image alt text if the image fails to load
   };
 
   return (
@@ -35,7 +36,7 @@ export function GalleryItem({ image, index: _index, onClick }: GalleryItemProps)
       }}
       tabIndex={0}
       role="button"
-      aria-label={`Ver imagen ${_index + 1} de la galería`}
+      aria-label={`Ver imagen ${_index + 1} de la galeria`}
     >
       <div className="skeleton skeleton-image" style={{ display: imageLoaded ? 'none' : 'block' }} />
       <picture>
@@ -52,8 +53,6 @@ export function GalleryItem({ image, index: _index, onClick }: GalleryItemProps)
           ref={imgRef}
           src={encodeURI(image.src)}
           alt={image.alt}
-          loading="lazy"
-          fetchPriority="low"
           width="400"
           height="400"
           onLoad={() => setImageLoaded(true)}
@@ -68,5 +67,3 @@ export function GalleryItem({ image, index: _index, onClick }: GalleryItemProps)
     </div>
   );
 }
-
-

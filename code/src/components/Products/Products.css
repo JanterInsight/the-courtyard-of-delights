@@ -18,11 +18,22 @@
   overflow: hidden;
   box-shadow: 0 4px 12px var(--shadow);
   transition: all var(--transition-normal);
+  will-change: transform;
 }
 
 .product-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 8px 24px var(--shadow-strong);
+}
+
+.product-card:focus-visible {
+  outline: 2px solid var(--mint-green);
+  outline-offset: 4px;
+  transform: scale(1.01);
+}
+
+.product-card:focus-visible .product-flavor {
+  background-color: var(--honey-gold);
 }
 
 .product-image {

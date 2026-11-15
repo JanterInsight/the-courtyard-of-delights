@@ -289,6 +289,13 @@
   }
 
   .btn {
+
+
     border: 2px solid currentColor;
   }
+}
+.hero-content {
+  max-width: 68ch;
+  padding: var(--spacing-xl) var(--spacing-md);
+  margin: 0 auto;
 }

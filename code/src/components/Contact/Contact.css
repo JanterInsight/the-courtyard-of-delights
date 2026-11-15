@@ -21,11 +21,36 @@
   text-align: center;
   box-shadow: 0 4px 12px var(--shadow);
   transition: all var(--transition-normal);
+  will-change: transform;
 }
 
 .contact-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 24px var(--shadow-strong);
+}
+
+.contact-card:focus-visible {
+  outline: 2px solid var(--mint-green);
+  outline-offset: 4px;
+  transform: scale(1.02);
+}
+
+.contact-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto var(--spacing-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition-fast);
+}
+
+.contact-icon:hover {
+  transform: scale(1.1);
+}
+
+.contact-icon:focus-visible {
+  transform: scale(1.1);
 }
 
 .contact-icon {

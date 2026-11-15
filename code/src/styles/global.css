@@ -44,6 +44,40 @@ body {
 :focus-visible {
   outline: 3px solid var(--honey-gold);
   outline-offset: 2px;
+  background: var(--cream-white);
+  border-radius: var(--border-radius-md);
+}
+
+/* Focus ring for interactive elements */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--mint-green);
+  outline-offset: 2px;
+}
+
+/* Hove states for nav links with subtle color transition */
+.nav-link {
+  position: relative;
+  color: var(--chocolate-brown);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--mint-green);
+  transition: width var(--transition-fast);
+}
+
+.nav-link:hover::after,
+.nav-link:focus-visible::after {
+  width: 100%;
 }
 
 /* Typography */
@@ -51,6 +85,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-weight: 600;
   line-height: 1.2;
+  margin-top: var(--spacing-md);
   margin-bottom: var(--spacing-sm);
 }
 
@@ -142,7 +177,8 @@ img {
 
 .section-header {
   text-align: center;
-  margin-bottom: var(--spacing-xl);
+  margin-top: var(--spacing-xxl);
+  margin-bottom: var(--spacing-lg);
 }
 
 /* Buttons */

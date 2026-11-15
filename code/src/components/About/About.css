@@ -55,10 +55,31 @@
   text-align: center;
   box-shadow: 0 4px 12px var(--shadow-strong);
   transition: transform var(--transition-normal);
+  will-change: transform;
+  cursor: default;
 }
 
 .stat-card:hover {
   transform: translateY(-5px);
+}
+
+.stat-card:focus-visible {
+  outline: 2px solid var(--honey-gold);
+  outline-offset: 4px;
+  transform: scale(1.02);
+}
+
+.stat-number {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-xxl);
+  font-weight: 700;
+  color: var(--honey-gold);
+  display: block;
+  transition: transform var(--transition-fast);
+}
+
+.stat-number:focus-visible {
+  transform: scale(1.1);
 }
 
 .stat-number {

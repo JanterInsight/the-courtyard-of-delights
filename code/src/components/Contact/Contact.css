@@ -50,6 +50,11 @@
   width: 32px;
   height: 32px;
   color: var(--dark-text);
+  transition: color var(--transition-fast);
+}
+
+.contact-icon:hover svg {
+  color: var(--mint-green);
 }
 
 

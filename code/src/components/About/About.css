@@ -27,6 +27,7 @@
   border-radius: var(--border-radius-lg);
   overflow: hidden;
   box-shadow: 0 8px 24px var(--shadow);
+  max-width: 100%;
 }
 
 .about-image img {
@@ -64,7 +65,7 @@
   font-family: var(--font-heading);
   font-size: var(--font-size-xxl);
   font-weight: 700;
-  color: var(--cream-white);
+  color: var(--honey-gold);
   display: block;
 }
 

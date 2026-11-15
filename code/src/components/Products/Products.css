@@ -60,4 +60,5 @@
   height: 8px;
   border-radius: var(--border-radius-full);
   margin-bottom: var(--spacing-xs);
+  background-color: var(--mint-green);
 }

@@ -64,10 +64,41 @@ p {
   font-size: var(--font-size-md);
 }
 
+/* Browser surfaces — themed from the palette */
+::selection {
+  background-color: var(--honey-gold);
+  color: var(--dark-text);
+}
+
+* {
+  caret-color: var(--chocolate-brown);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--light-gray);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--warm-gray);
+  border-radius: var(--border-radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--chocolate-brown);
+}
+
+/* Underline offset for links */
 a {
   color: var(--chocolate-brown);
   text-decoration: none;
   transition: color var(--transition-fast);
+  text-underline-offset: 2px;
 }
 
 a:hover {
@@ -142,7 +173,7 @@ img {
 
 .btn-secondary {
   background-color: var(--mint-green);
-  color: var(--cream-white);
+  color: var(--dark-text);
 }
 
 .btn-secondary:hover {

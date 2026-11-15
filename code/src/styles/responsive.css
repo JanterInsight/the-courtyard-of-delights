@@ -198,25 +198,17 @@
   }
 
   .lightbox-close {
-    top: -35px;
+    top: -45px;
     right: 0;
-    width: 35px;
-    height: 35px;
+    width: 44px;
+    height: 44px;
     font-size: 1.2rem;
   }
 
   .lightbox-nav {
-    width: 35px;
-    height: 35px;
+    width: 44px;
+    height: 44px;
     font-size: 1rem;
-  }
-
-  .lightbox-prev {
-    left: 5px;
-  }
-
-  .lightbox-next {
-    right: 5px;
   }
 
   .lightbox-counter {

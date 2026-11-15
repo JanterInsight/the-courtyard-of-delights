@@ -9,6 +9,7 @@ export function ThemeToggle() {
       className="theme-toggle"
       onClick={toggleTheme}
       aria-label={isDark ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'}
+      aria-pressed={isDark}
     >
       <svg
         className="theme-icon"
@@ -18,8 +19,11 @@ export function ThemeToggle() {
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
+        role="img"
+        aria-labelledby="theme-toggle-title"
         aria-hidden="true"
       >
+        <title id="theme-toggle-title">Cambiar tema</title>
         {isDark ? (
           <>
             <circle cx="12" cy="12" r="5" />

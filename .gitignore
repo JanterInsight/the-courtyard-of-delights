@@ -36,3 +36,5 @@ package-lock.json
 
 # Auto-commit temporary message
 .agents/CHANGE_MSG.txt
+
+.agents/

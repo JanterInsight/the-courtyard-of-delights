@@ -31,12 +31,22 @@ export function Navbar() {
   const closeMenu = useCallback(() => {
     setIsMenuOpen(false);
     document.body.style.overflow = '';
+    const hamburger = document.querySelector('.hamburger');
+    if (hamburger) {
+      (hamburger as HTMLElement).focus();
+    }
   }, []);
 
   const toggleMenu = useCallback(() => {
     setIsMenuOpen((prev) => {
       const next = !prev;
       document.body.style.overflow = next ? 'hidden' : '';
+      if (next) {
+        const navLinks = document.querySelectorAll('.nav-link');
+        if (navLinks.length > 0) {
+          (navLinks[0] as HTMLElement).focus();
+        }
+      }
       return next;
     });
   }, []);

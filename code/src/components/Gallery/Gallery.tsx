@@ -65,7 +65,7 @@ export function Gallery() {
 
         {hasMore && (
           <div className="gallery-show-more">
-            <button className="btn btn-secondary" onClick={showMore}>
+            <button className="btn btn-secondary" type="button" onClick={showMore}>
               Ver más ({galleryImages.length - visibleCount} fotos restantes)
             </button>
           </div>
@@ -73,7 +73,7 @@ export function Gallery() {
 
         {isExpanded && (
           <div className="gallery-show-more">
-            <button className="btn btn-secondary" onClick={showLess}>
+            <button className="btn btn-secondary" type="button" onClick={showLess}>
               Ver menos
             </button>
           </div>

@@ -48,11 +48,11 @@
 }
 
 .stat-card {
-  background: linear-gradient(135deg, var(--vanilla-cream) 0%, var(--vanilla) 100%);
+  background-color: var(--section-bg-chocolate);
   padding: var(--spacing-lg);
   border-radius: var(--border-radius-md);
   text-align: center;
-  box-shadow: 0 4px 12px var(--shadow);
+  box-shadow: 0 4px 12px var(--shadow-strong);
   transition: transform var(--transition-normal);
 }
 
@@ -64,12 +64,12 @@
   font-family: var(--font-heading);
   font-size: var(--font-size-xxl);
   font-weight: 700;
-  color: var(--chocolate-brown);
+  color: var(--cream-white);
   display: block;
 }
 
 .stat-label {
   font-size: var(--font-size-sm);
-  color: var(--dark-text);
+  color: rgba(255, 253, 248, 0.9);
   margin-top: var(--spacing-xs);
 }

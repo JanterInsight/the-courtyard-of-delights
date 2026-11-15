@@ -53,3 +53,11 @@
   color: var(--dark-text);
   margin-bottom: var(--spacing-sm);
 }
+
+.product-flavor {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: var(--border-radius-full);
+  margin-bottom: var(--spacing-xs);
+}

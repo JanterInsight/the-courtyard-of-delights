@@ -59,6 +59,16 @@
   /* Layout */
   --max-width: 1200px;
   --header-height: 80px;
+
+  /* Bold section backgrounds */
+  --section-bg-chocolate: #6F4E37;
+  --section-bg-honey: #F4A261;
+
+  /* Flavor accents */
+  --accent-icecream: #E63946;
+  --accent-confiture: #F4A261;
+  --accent-croquette: #6BCB77;
+  --accent-mixed: #6F4E37;
 }
 
 /* ============================================
@@ -76,4 +86,14 @@
   --medium-gray: #808080;
   --shadow: rgba(0, 0, 0, 0.4);
   --shadow-strong: rgba(0, 0, 0, 0.6);
+
+  /* Bold section backgrounds - dark mode */
+  --section-bg-chocolate: #8B4513;
+  --section-bg-honey: #B8860B;
+
+  /* Flavor accents - dark mode */
+  --accent-icecream: #E63946;
+  --accent-confiture: #F4A261;
+  --accent-croquette: #6BCB77;
+  --accent-mixed: #8B4513;
 }

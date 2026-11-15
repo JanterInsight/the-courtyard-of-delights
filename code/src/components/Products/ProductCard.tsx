@@ -5,6 +5,13 @@ interface ProductCardProps {
   product: Product;
 }
 
+const FLAVOR_ACCENTS: Record<string, string> = {
+  'Helados Artesanales': 'var(--accent-icecream)',
+  Confituras: 'var(--accent-confiture)',
+  Croquetas: 'var(--accent-croquette)',
+  'Helados + Confituras': 'var(--accent-mixed)',
+};
+
 export function ProductCard({ product }: ProductCardProps) {
   const [imageLoaded, setImageLoaded] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
@@ -19,6 +26,8 @@ export function ProductCard({ product }: ProductCardProps) {
   const handleError = () => {
     setImageLoaded(true);
   };
+
+  const accentColor = FLAVOR_ACCENTS[product.title] ?? 'var(--chocolate-brown)';
 
   return (
     <article className="product-card">
@@ -45,7 +54,14 @@ export function ProductCard({ product }: ProductCardProps) {
         />
       </picture>
       <div className="product-content">
-        <h3 className="product-title">{product.title}</h3>
+        <span
+          className="product-flavor"
+          style={{ backgroundColor: accentColor }}
+          aria-hidden="true"
+        />
+        <h3 className="product-title" style={{ color: accentColor }}>
+          {product.title}
+        </h3>
         <p className="product-description">{product.description}</p>
       </div>
     </article>
